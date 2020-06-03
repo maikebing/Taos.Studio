@@ -38,15 +38,6 @@
     <ApplicationIcon>Taos.Studio.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Maikebing.Data.Taos, Version=1.0.53.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Maikebing.Data.Taos.1.0.53\lib\netstandard2.0\Maikebing.Data.Taos.dll</HintPath>
-    </Reference>
-    <Reference Include="NativeLibraryManager, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NativeLibraryManager.1.0.18\lib\netstandard2.0\NativeLibraryManager.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime" />
@@ -255,7 +246,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ICSharpCode.TextEditor\Resources\SQL-Mode.xshd" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -358,12 +348,31 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ILMerge">
+      <Version>3.0.40</Version>
+    </PackageReference>
+    <PackageReference Include="ILMerge.MSBuild.Tasks">
+      <Version>1.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Maikebing.Data.Taos">
+      <Version>1.0.64</Version>
+    </PackageReference>
+    <PackageReference Include="NativeLibraryManager">
+      <Version>1.0.18</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <UsingTask TaskName="ILMerge.MSBuild.Tasks.ILMerge" AssemblyFile="$(SolutionDir)\packages\ILMerge.MSBuild.Tasks.1.0.0.3\tools\ILMerge.MSBuild.Tasks.dll" />
   <Target Name="AfterBuild">
     <ItemGroup>
       <MergeAsm Include="$(OutputPath)$(TargetFileName)" />
       <MergeAsm Include="$(OutputPath)Maikebing.Data.Taos.dll" />
+      <MergeAsm Include="$(OutputPath)NativeLibraryManager.dll" />
+      <MergeAsm Include="$(OutputPath)Newtonsoft.Json.dll" />
     </ItemGroup>
     <PropertyGroup>
       <MergedAssembly>$(SolutionDir)Taos.Studio.exe</MergedAssembly>
