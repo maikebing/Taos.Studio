@@ -39,6 +39,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtServerIPAddress = new System.Windows.Forms.TextBox();
             this.txtPort = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
@@ -46,7 +47,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(56, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 43;
             this.label3.Text = "Server port:";
             // 
@@ -55,7 +56,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(56, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 41;
             this.label2.Text = "User name:";
             // 
@@ -64,7 +65,7 @@
             this.txtPassword.Location = new System.Drawing.Point(148, 167);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(327, 27);
+            this.txtPassword.Size = new System.Drawing.Size(327, 23);
             this.txtPassword.TabIndex = 40;
             // 
             // label1
@@ -72,7 +73,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 20);
+            this.label1.Size = new System.Drawing.Size(100, 15);
             this.label1.TabIndex = 39;
             this.label1.Text = "Server IP Address:";
             // 
@@ -81,7 +82,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(65, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 44;
             this.label4.Text = "Password:";
             // 
@@ -104,7 +105,7 @@
             this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtUsername.Location = new System.Drawing.Point(148, 126);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(327, 27);
+            this.txtUsername.Size = new System.Drawing.Size(327, 23);
             this.txtUsername.TabIndex = 42;
             this.txtUsername.Text = global::Taos.Studio.Properties.Settings.Default.UserName;
             // 
@@ -113,7 +114,7 @@
             this.txtServerIPAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "ServerIpAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtServerIPAddress.Location = new System.Drawing.Point(148, 22);
             this.txtServerIPAddress.Name = "txtServerIPAddress";
-            this.txtServerIPAddress.Size = new System.Drawing.Size(327, 27);
+            this.txtServerIPAddress.Size = new System.Drawing.Size(327, 23);
             this.txtServerIPAddress.TabIndex = 37;
             this.txtServerIPAddress.Text = global::Taos.Studio.Properties.Settings.Default.ServerIpAddress;
             // 
@@ -122,15 +123,27 @@
             this.txtPort.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "ServerPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtPort.Location = new System.Drawing.Point(148, 67);
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(114, 27);
+            this.txtPort.Size = new System.Drawing.Size(114, 23);
             this.txtPort.TabIndex = 38;
             this.txtPort.Text = global::Taos.Studio.Properties.Settings.Default.ServerPort;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(152, 228);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(59, 15);
+            this.linkLabel1.TabIndex = 45;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "隐私政策";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ConnectionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 280);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUsername);
@@ -164,5 +177,6 @@
         private System.Windows.Forms.TextBox txtServerIPAddress;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

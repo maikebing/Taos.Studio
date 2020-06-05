@@ -48,5 +48,9 @@ namespace Taos.Studio.Forms
             this.Close();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.maikebing.com/Taos.PrivacyPolicy");
+        }
     }
 }
