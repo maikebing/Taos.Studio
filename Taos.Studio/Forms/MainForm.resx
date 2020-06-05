@@ -117,15 +117,96 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="imgList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>212, 17</value>
-  </metadata>
+  <data name="&gt;&gt;tabSql.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtResult.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 6</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mnuInsert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 26</value>
+  </data>
+  <data name="btnRun.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitRight.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="tvwDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="mnuSep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 6</value>
+  </data>
+  <data name="&gt;&gt;lblElapsed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="stbStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;stbStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtResult.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblCursor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;txtResult.Type" xml:space="preserve">
+    <value>ICSharpCode.TextEditor.TextEditorControl, Taos.Studio, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="grdResult.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;tabResult.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;imgList.Name" xml:space="preserve">
+    <value>imgList</value>
+  </data>
+  <data name="ctxTableMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 114</value>
+  </data>
+  <data name="tabSql.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="&gt;&gt;tlbMain.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitMain.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="imgList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAE
-        DAAAAk1TRnQBSQFMAgEBBAEAASABBAEgAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABE
+        DQAAAk1TRnQBSQFMAgEBBQEAATgBBAE8AQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -153,53 +234,550 @@
         AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
         AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
         AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
-        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8ABwAB9AEH
-        Au0B7AJtAewC7QEHAfQSAAHvDSgB7wsAAesB6gUAAQcC7AGSAfcB7wEHAbwC8QHyAQcB7AEHEQABKAL/
-        AbwD/wG8A/8BvAL/ASgBAAEJBrQBkQFtAZEB9wHsAa4B6gGSAgAB6wHvAZIB9wLvAQcBvAHyAfQB/wH0
-        AfMB6wIAARoBmQtSARoBAAEoAv8BvAP/AbwD/wG8Av8BKAEAAbQC9ATzAfcBvAH3AbwBBwH3AQcBbQH/
-        AQAB6wHvAZIB9wLvAQcBvAHyAfQB/wH0AfMB6wIAAXQBGwEaBJoFegHDAVIBAAFJDbwBSQEAAbQB9AEJ
-        Af8BCQL/ArwBBwKSAe8CBwH/AQAB7AH3A+wB6wJtA+wB9wHwAewCAAFSAfYBoAKaA3oEWQHDAVIBAAFJ
-        Av8BvAP/AbwD/wG8Av8BSQEAAbQB9AQJAfcB7wHyAZICCQGSAfABkgFtAQAC7AHtAZIB9wHvAQcBvALx
-        AfIBvAHtAewCAAFSAfYBwwGgApoDegNZAcMBUgEAAUoC/wG8A/8BvAP/AbwC/wFKAQABtQH0AQkB/wEJ
-        Af8B7wG8AfMB7AL/AZIB8gHvAewBAAHsAe8BkgH3Au8BBwG8AfIB9AH/AfQB8wHsAgABUgH2AsMCoAGa
-        A3oCWQHDAVIBAAFKDbwBSgEAAbUB/wUJAQcB8AHvAuwB7wK8AgAB9wEHAe8CBwG8AfAB8QHzAv8C9AH3
-        AgABUgL/A/YBwwKaA3oBwwFSAQABSgL/AbwD/wG8A/8BvAL/AUoBAAEJAf8BCQH/AQkC/wEHAfEBBwHw
-        AfEBBwHwAewB/wEAAe8B8AGSA+wCbQPsAfcB8QHvAgABUgH2ApoBegEbBvYB/wFYAQABUAL/AbwD/wG8
-        A/8BvAL/AVABAAEJAf8FCQIHAQkCBwHwAfcB8AIAAe0B7AHtAZIB9wHvAQcBvALxAfIBvALtAgABWAH2
-        A5oCegKaA3oB9gFYAQABUA28AVABAAEJAf8BCQH/AQkD/wEJAf8BBwHvAfQBtAMAAewB7wGSAfcC7wEH
-        AbwB8gH0Af8B9AHzAewCAAFYAfYDmgEaBvYB/wF5AQABUAL/AbwD/wG8A/8BvAL/AVABAAEJAf8KCQH/
-        AbQDAAH3AQcB7wIHAbwB8AHxAfMC/wL0AfcCAAFYBf8B9gR5ApkBGwEAAVAC/wG8A/8BvAP/AbwC/wFQ
-        AQABCQz/AbQDAAHvAfAB9wPsAusB7ALtAe8B8QHvAgAHeQf/AQAPUAEAAQkB/weYAngBlwH/AbQDAAHv
-        AfcB8ALzAfQC/wH0AvMB8AH3Ae8RAAFyDXMBcgEAAQkM/wG0AwABvAEHAfIC8wH0Av8B9ALzAfIBBwG8
-        EQABcw2ZAXMBAAHzCAkDtQG0AQkEAAHzAfACvAQHArwB8AHzEgABCA1zAQgRAAFCAU0BPgcAAT4DAAEo
-        AwABQAMAASADAAEBAQABAQYAAQEWAAP/gQABwAEDAv8BAAEBAf8BzwGAAQEC/wEAAQEBAAEBAYABAQGA
-        AQEBAAEBAgABgAEBAYABAQEAAQECAAGAAQEBgAEBAQABAQIAAYABAQGAAQEBAAEBAgABgAEBAYABAQEA
-        AQEBAAEBAYABAQGAAQEBAAEBAgABgAEBAYABAQEAAQEBAAEBAYABAQGAAQEBAAEBAQABAwGAAQEBgAEB
-        AQABAQEAAQMBgAEBAYABAQEAAQEBAAEDAYABAQGAAQEBAAEBAQABAwGAAQEC/wEAAQEBAAEDAYABAQL/
-        AQABAQEAAQMBwAEDAv8BAAEBAv8L
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wUAAfQBGgGUAhYBlAEa
+        AfQ2AAH/AQcBRAXjAW8BRAEHAf8zAAH/ARoBSwJEAUsBkwF0AUsCRAFuARsB/zIAARsBoAFLAkQBkwIa
+        ARwCRAFuAaABGzEAAf8CoAFLAUQBHAHDAhoBwwEcAUQBbgKgAfYwAAEbAqABSwFEBsMBRAFuAqABGzAA
+        ARoCoAFLAW4GwwJuAqABGjAAA6ABSwFEBksBRAFuA6AwAAOgAXMIRAF0A6AwAAEaAqABmQhEAZoCoAEa
+        MAABGwOgAXQGRAF5A6ABwzAAAfQEoAGZAW4CSwFuAZkEoAH2MQABGwygARsyAAH/ARoKoAEaAf8zAAH/
+        ARsIoAEbAf82AAH0ARsBGgKgARoBGwH/NgAB9AEHAu0B7AJtAewC7QEHAfQSAAHvDSgB7wsAAesB6gUA
+        AQcC7AGSAfcB7wEHAbwC8QHyAQcB7AEHEQABKAL/AbwD/wG8A/8BvAL/ASgBAAEJBrQBkQFtAZEB9wHs
+        Aa4B6gGSAgAB6wHvAZIB9wLvAQcBvAHyAfQB/wH0AfMB6wIAARoBmQtSARoBAAEoAv8BvAP/AbwD/wG8
+        Av8BKAEAAbQC9ATzAfcBvAH3AbwBBwH3AQcBbQH/AQAB6wHvAZIB9wLvAQcBvAHyAfQB/wH0AfMB6wIA
+        AXQBGwEaBJoFegHDAVIBAAFJDbwBSQEAAbQB9AEJAf8BCQL/ArwBBwKSAe8CBwH/AQAB7AH3A+wB6wJt
+        A+wB9wHwAewCAAFSAfYBoAKaA3oEWQHDAVIBAAFJAv8BvAP/AbwD/wG8Av8BSQEAAbQB9AQJAfcB7wHy
+        AZICCQGSAfABkgFtAQAC7AHtAZIB9wHvAQcBvALxAfIBvAHtAewCAAFSAfYBwwGgApoDegNZAcMBUgEA
+        AUoC/wG8A/8BvAP/AbwC/wFKAQABtQH0AQkB/wEJAf8B7wG8AfMB7AL/AZIB8gHvAewBAAHsAe8BkgH3
+        Au8BBwG8AfIB9AH/AfQB8wHsAgABUgH2AsMCoAGaA3oCWQHDAVIBAAFKDbwBSgEAAbUB/wUJAQcB8AHv
+        AuwB7wK8AgAB9wEHAe8CBwG8AfAB8QHzAv8C9AH3AgABUgL/A/YBwwKaA3oBwwFSAQABSgL/AbwD/wG8
+        A/8BvAL/AUoBAAEJAf8BCQH/AQkC/wEHAfEBBwHwAfEBBwHwAewB/wEAAe8B8AGSA+wCbQPsAfcB8QHv
+        AgABUgH2ApoBegEbBvYB/wFYAQABUAL/AbwD/wG8A/8BvAL/AVABAAEJAf8FCQIHAQkCBwHwAfcB8AIA
+        Ae0B7AHtAZIB9wHvAQcBvALxAfIBvALtAgABWAH2A5oCegKaA3oB9gFYAQABUA28AVABAAEJAf8BCQH/
+        AQkD/wEJAf8BBwHvAfQBtAMAAewB7wGSAfcC7wEHAbwB8gH0Af8B9AHzAewCAAFYAfYDmgEaBvYB/wF5
+        AQABUAL/AbwD/wG8A/8BvAL/AVABAAEJAf8KCQH/AbQDAAH3AQcB7wIHAbwB8AHxAfMC/wL0AfcCAAFY
+        Bf8B9gR5ApkBGwEAAVAC/wG8A/8BvAP/AbwC/wFQAQABCQz/AbQDAAHvAfAB9wPsAusB7ALtAe8B8QHv
+        AgAHeQf/AQAPUAEAAQkB/weYAngBlwH/AbQDAAHvAfcB8ALzAfQC/wH0AvMB8AH3Ae8RAAFyDXMBcgEA
+        AQkM/wG0AwABvAEHAfIC8wH0Av8B9ALzAfIBBwG8EQABcw2ZAXMBAAHzCAkDtQG0AQkEAAHzAfACvAQH
+        ArwB8AHzEgABCA1zAQgRAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAB8AEP
+        BgABwAEDBgABgAEBBgABgAEBRgABgAEBBgABgAEBBgABwAEDBgAB8AEPBgABwAEDAv8BAAEBAf8BzwGA
+        AQEC/wEAAQEBAAEBAYABAQGAAQEBAAEBAgABgAEBAYABAQEAAQECAAGAAQEBgAEBAQABAQIAAYABAQGA
+        AQEBAAEBAgABgAEBAYABAQEAAQEBAAEBAYABAQGAAQEBAAEBAgABgAEBAYABAQEAAQEBAAEBAYABAQGA
+        AQEBAAEBAQABAwGAAQEBgAEBAQABAQEAAQMBgAEBAYABAQEAAQEBAAEDAYABAQGAAQEBAAEBAQABAwGA
+        AQEC/wEAAQEBAAEDAYABAQL/AQABAQEAAQMBwAEDAv8BAAEBAv8WAAs=
 </value>
   </data>
-  <metadata name="stbStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="tlbMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>119, 17</value>
-  </metadata>
-  <metadata name="ctxTableMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>307, 14</value>
-  </metadata>
-  <metadata name="ctxMenuRoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>424, 18</value>
-  </metadata>
-  <metadata name="imgCodeCompletion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>726, 18</value>
-  </metadata>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imgCodeCompletion.Name" xml:space="preserve">
+    <value>imgCodeCompletion</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
+    <value>toolStripMenuItem4</value>
+  </data>
+  <data name="lblResultCount.Text" xml:space="preserve">
+    <value>0 documents</value>
+  </data>
+  <data name="btnRefresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 26</value>
+  </data>
+  <data name="&gt;&gt;mnuInfo.Name" xml:space="preserve">
+    <value>mnuInfo</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Name" xml:space="preserve">
+    <value>splitMain</value>
+  </data>
+  <data name="tabSql.Size" type="System.Drawing.Size, System.Drawing">
+    <value>821, 24</value>
+  </data>
+  <data name="&gt;&gt;splitRight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tlbMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showConnectionsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Taos Studio</value>
+  </data>
+  <data name="&gt;&gt;tabResult.Parent" xml:space="preserve">
+    <value>splitRight.Panel2</value>
+  </data>
+  <data name="splitMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 36</value>
+  </data>
+  <data name="&gt;&gt;stbStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;mnuDropCollection.Name" xml:space="preserve">
+    <value>mnuDropCollection</value>
+  </data>
+  <data name="tabGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;stbStatus.Name" xml:space="preserve">
+    <value>stbStatus</value>
+  </data>
+  <data name="&gt;&gt;mnuInsert.Name" xml:space="preserve">
+    <value>mnuInsert</value>
+  </data>
+  <data name="grdResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="txtSql.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;tabResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tvwDatabase.Parent" xml:space="preserve">
+    <value>splitMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;prgRunning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tvwDatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel2.Name" xml:space="preserve">
+    <value>splitRight.Panel2</value>
+  </data>
+  <data name="&gt;&gt;mnuSep1.Name" xml:space="preserve">
+    <value>mnuSep1</value>
+  </data>
+  <data name="prgRunning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="mnuQueryCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 26</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="btnRun.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;txtSql.Type" xml:space="preserve">
+    <value>ICSharpCode.TextEditor.TextEditorControl, Taos.Studio, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
+    <value>btnAbout</value>
+  </data>
+  <data name="txtSql.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9.75pt</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 26</value>
+  </data>
+  <data name="&gt;&gt;btnRun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlbSep1.Name" xml:space="preserve">
+    <value>tlbSep1</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Use this </value>
+  </data>
+  <data name="mnuQueryCount.Text" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="txtResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 4</value>
+  </data>
+  <data name="&gt;&gt;tlbSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ctxDataBaseMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblElapsed.Text" xml:space="preserve">
+    <value>00:00:00.0000</value>
+  </data>
+  <data name="&gt;&gt;tlbSep2.Name" xml:space="preserve">
+    <value>tlbSep2</value>
+  </data>
+  <data name="ctxDataBaseMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 62</value>
+  </data>
+  <data name="btnAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="lblResultCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtSql.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="BtnShowConnections.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 30</value>
+  </data>
+  <data name="&gt;&gt;btnConnect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSql.Name" xml:space="preserve">
+    <value>txtSql</value>
+  </data>
+  <data name="showConnectionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show Connections</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;ctxTableMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSep1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grdResult.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnShowConnections.Name" xml:space="preserve">
+    <value>BtnShowConnections</value>
+  </data>
+  <data name="splitRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="tlbSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="&gt;&gt;lblCursor.Name" xml:space="preserve">
+    <value>lblCursor</value>
+  </data>
+  <data name="showConnectionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnConnect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 30</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblResultCount.Name" xml:space="preserve">
+    <value>lblResultCount</value>
+  </data>
+  <data name="mnuInfo.Text" xml:space="preserve">
+    <value>Database Info</value>
+  </data>
+  <data name="txtSql.Size" type="System.Drawing.Size, System.Drawing">
+    <value>828, 171</value>
+  </data>
+  <data name="tabGrid.Text" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="tabText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>824, 363</value>
+  </data>
+  <data name="&gt;&gt;tabText.Name" xml:space="preserve">
+    <value>tabText</value>
+  </data>
+  <data name="&gt;&gt;mnuQueryAll.Name" xml:space="preserve">
+    <value>mnuQueryAll</value>
+  </data>
+  <data name="splitRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>832, 570</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;tabText.Parent" xml:space="preserve">
+    <value>tabResult</value>
+  </data>
+  <data name="&gt;&gt;ctxDataBaseMenu.Name" xml:space="preserve">
+    <value>ctxDataBaseMenu</value>
+  </data>
+  <data name="&gt;&gt;mnuDropCollection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;ctxTableMenu.Name" xml:space="preserve">
+    <value>ctxTableMenu</value>
+  </data>
+  <data name="&gt;&gt;grdResult.Name" xml:space="preserve">
+    <value>grdResult</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 6</value>
+  </data>
+  <data name="&gt;&gt;prgRunning.Name" xml:space="preserve">
+    <value>prgRunning</value>
+  </data>
+  <data name="&gt;&gt;grdResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stbStatus.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="stbStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 636</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="lblResultCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="btnConnect.Text" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="grdResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="&gt;&gt;txtSql.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="&gt;&gt;grdResult.Parent" xml:space="preserve">
+    <value>tabGrid</value>
+  </data>
+  <data name="mnuQueryAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 26</value>
+  </data>
+  <data name="tvwDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 596</value>
+  </data>
+  <data name="mnuDropCollection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 26</value>
+  </data>
+  <data name="mnuDropCollection.Text" xml:space="preserve">
+    <value>Drop </value>
+  </data>
+  <data name="BtnShowConnections.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="splitRight.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tvwDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuQueryAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tlbSep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="btnAbout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tabText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel2.Parent" xml:space="preserve">
+    <value>splitMain</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="stbStatus.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="splitRight.SplitterDistance" type="System.Int32, mscorlib">
+    <value>174</value>
+  </data>
+  <data name="&gt;&gt;btnRun.Name" xml:space="preserve">
+    <value>btnRun</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel2.Parent" xml:space="preserve">
+    <value>splitRight</value>
+  </data>
+  <data name="tabResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel1.Parent" xml:space="preserve">
+    <value>splitRight</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCursor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tvwDatabase.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnShowConnections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabSql.Name" xml:space="preserve">
+    <value>tabSql</value>
+  </data>
+  <data name="txtResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="tlbMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;tabGrid.Name" xml:space="preserve">
+    <value>tabGrid</value>
+  </data>
+  <data name="&gt;&gt;txtResult.Name" xml:space="preserve">
+    <value>txtResult</value>
+  </data>
+  <data name="&gt;&gt;tlbMain.Name" xml:space="preserve">
+    <value>tlbMain</value>
+  </data>
+  <data name="splitMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1080, 599</value>
+  </data>
+  <data name="&gt;&gt;tabResult.Name" xml:space="preserve">
+    <value>tabResult</value>
+  </data>
+  <data name="tabGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>824, 361</value>
+  </data>
+  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 30</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel1.Parent" xml:space="preserve">
+    <value>splitMain</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ctxMenuRoot.Name" xml:space="preserve">
+    <value>ctxMenuRoot</value>
+  </data>
+  <data name="&gt;&gt;tabSql.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtSql.Parent" xml:space="preserve">
+    <value>splitRight.Panel1</value>
+  </data>
+  <data name="splitMain.SplitterDistance" type="System.Int32, mscorlib">
+    <value>234</value>
+  </data>
+  <data name="splitRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="tlbMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="grdResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 326</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;imgList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitMain.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 30</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabGrid.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="txtSql.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabSql.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="mnuInsert.Text" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="lblElapsed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 19</value>
+  </data>
+  <data name="tabSql.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblElapsed.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Panel1.Name" xml:space="preserve">
+    <value>splitRight.Panel1</value>
+  </data>
+  <data name="&gt;&gt;imgCodeCompletion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnConnect.Name" xml:space="preserve">
+    <value>btnConnect</value>
+  </data>
+  <data name="grdResult.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel1.Name" xml:space="preserve">
+    <value>splitMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;showConnectionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>showConnectionsToolStripMenuItem</value>
+  </data>
+  <data name="btnRun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 30</value>
+  </data>
   <data name="imgCodeCompletion.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA8
-        CwAAAk1TRnQBSQFMAgEBBgEAAfABAQHwAQEBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBgEAAQgBAgEMAQIBFAEAARQBAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -246,17 +824,10 @@
         AgkBHAGaAUoBeQHqAeUBFAFYAVIBMQEqARIBTwb/AewBkQOuA2wR/wH0AbYB3gLYAbYO/wEZAbQD3AG0
         ARkG/wMJAd0BBwGaAXMB5QEUAnoCWQEyAXMBTyH/A7YQ/wEZAbQB3AG0AfQM/wEcAeUBcwHlA3oCWQFz
         AVAG/wKRA64BbAHqAmwDZhD/AfAB9BH/ARkBugH0DP8B8gHDAW0D5QJ6AXkBbgFzAZhE/wHwARoB8wG8
-        AwcB7wEcAfEBCAG8//8H/wFCAU0BPgcAAT4DAAEoAwABUAMAASgDAAEBAQABAQUAAeABARYAA///AOIA
+        AwcB7wEcAfEBCAG8//8H/wFCAU0BPgcAAT4DAAEoAwABUAMAASgDAAEBAQABAQUAAeABARYAA///APgA
         Cw==
 </value>
   </data>
-  <metadata name="ctxDataBaseMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>936, 18</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>224</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAAAGAAoyAAAJgAAADAwAAAAABgAqBwAAE7IAAAoAAAAgAAAAAABAAABABgAAAAAAADA
@@ -1238,4 +1809,169 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
+  <data name="&gt;&gt;splitRight.Name" xml:space="preserve">
+    <value>splitRight</value>
+  </data>
+  <data name="lblCursor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>713, 19</value>
+  </data>
+  <data name="&gt;&gt;mnuQueryCount.Name" xml:space="preserve">
+    <value>mnuQueryCount</value>
+  </data>
+  <data name="tlbMain.Text" xml:space="preserve">
+    <value>toolStrip</value>
+  </data>
+  <data name="tabText.Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="&gt;&gt;tabGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlbMain.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;tabText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ctxMenuRoot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 88</value>
+  </data>
+  <data name="&gt;&gt;mnuQueryCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblResultCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuInsert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tlbMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1090, 37</value>
+  </data>
+  <data name="tabText.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="BtnShowConnections.Text" xml:space="preserve">
+    <value>Show Connections</value>
+  </data>
+  <data name="tabResult.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtResult.Parent" xml:space="preserve">
+    <value>tabText</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1090, 660</value>
+  </data>
+  <data name="&gt;&gt;tvwDatabase.Name" xml:space="preserve">
+    <value>tvwDatabase</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;mnuInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripMenuItem2.Text" xml:space="preserve">
+    <value>Create Database</value>
+  </data>
+  <data name="txtResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>812, 351</value>
+  </data>
+  <data name="&gt;&gt;tabGrid.Parent" xml:space="preserve">
+    <value>tabResult</value>
+  </data>
+  <data name="&gt;&gt;lblElapsed.Name" xml:space="preserve">
+    <value>lblElapsed</value>
+  </data>
+  <data name="&gt;&gt;tlbSep1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tvwDatabase.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;splitMain.Panel2.Name" xml:space="preserve">
+    <value>splitMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnConnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripMenuItem4.Text" xml:space="preserve">
+    <value>Drop </value>
+  </data>
+  <data name="&gt;&gt;ctxMenuRoot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>832, 389</value>
+  </data>
+  <data name="&gt;&gt;tabSql.Parent" xml:space="preserve">
+    <value>splitMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;splitRight.Parent" xml:space="preserve">
+    <value>splitMain.Panel2</value>
+  </data>
+  <data name="stbStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1090, 24</value>
+  </data>
+  <data name="&gt;&gt;tlbMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tvwDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mnuQueryAll.Text" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="lblElapsed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tvwDatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="tvwDatabase.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="stbStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ctxTableMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>307, 14</value>
+  </metadata>
+  <metadata name="imgCodeCompletion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>530, 7</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>130</value>
+  </metadata>
+  <metadata name="ctxMenuRoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>424, 18</value>
+  </metadata>
+  <metadata name="imgList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>212, 17</value>
+  </metadata>
+  <metadata name="ctxDataBaseMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>806, 34</value>
+  </metadata>
+  <metadata name="tlbMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
 </root>
