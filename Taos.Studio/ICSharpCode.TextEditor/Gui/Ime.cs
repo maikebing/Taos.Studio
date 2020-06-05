@@ -123,14 +123,15 @@ namespace ICSharpCode.TextEditor
 		private void SetIMEWindowFont(Font f)
 		{
 			if (disableIME || hIMEWnd == IntPtr.Zero) return;
-			
-			if (lf == null) {
+			try
+			{
+				if (lf == null) {
 				lf = new LOGFONT();
 				f.ToLogFont(lf);
 				lf.lfFaceName = f.Name;  // This is very important! "Font.ToLogFont" Method sets invalid value to LOGFONT.lfFaceName
 			}
 
-			try {
+		
 				SendMessage(
 					hIMEWnd,
 					WM_IME_CONTROL,
@@ -139,6 +140,11 @@ namespace ICSharpCode.TextEditor
 				);
 			} catch (AccessViolationException ex) {
 				Handle(ex);
+				
+			}
+			catch (Exception ex2)
+            {
+			//	Handle(ex2);
 			}
 		}
 

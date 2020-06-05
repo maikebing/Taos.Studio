@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Taos.Studio": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Data Source=114.116.231.247;Username=maikebing;Password=maikebing;Port=6060\""
+    }
+  }
+}
