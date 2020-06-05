@@ -9,46 +9,7 @@
     <Version>1.0.1</Version>
     <ApplicationIcon>Taos.Studio.ico</ApplicationIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="ICSharpCode.TextEditor\Resources\copyToolStripMenuItem.png" />
-    <None Remove="ICSharpCode.TextEditor\Resources\cutToolStripMenuItem.png" />
-    <None Remove="ICSharpCode.TextEditor\Resources\JSON-Mode.xshd" />
-    <None Remove="ICSharpCode.TextEditor\Resources\Mode.xsd" />
-    <None Remove="ICSharpCode.TextEditor\Resources\pasteToolStripMenuItem.png" />
-    <None Remove="ICSharpCode.TextEditor\Resources\RightArrow.cur" />
-    <None Remove="ICSharpCode.TextEditor\Resources\SQL-Mode.xshd" />
-    <None Remove="ICSharpCode.TextEditor\Resources\SyntaxModes.xml" />
-    <None Remove="ICSharpCode.TextEditor\Resources\TextEditorControl.bmp" />
-    <None Remove="Resources\application_put.png" />
-    <None Remove="Resources\application_view_tile.png" />
-    <None Remove="Resources\arrow_refresh.png" />
-    <None Remove="Resources\brick.png" />
-    <None Remove="Resources\bug_link.png" />
-    <None Remove="Resources\compress.png" />
-    <None Remove="Resources\database.png" />
-    <None Remove="Resources\database_connect.png" />
-    <None Remove="Resources\database_delete.png" />
-    <None Remove="Resources\database_save.png" />
-    <None Remove="Resources\disk.png" />
-    <None Remove="Resources\folder_explore.png" />
-    <None Remove="Resources\information.png" />
-    <None Remove="Resources\key.png" />
-    <None Remove="Resources\key_go.png" />
-    <None Remove="Resources\layout_add.png" />
-    <None Remove="Resources\lightning.png" />
-    <None Remove="Resources\logo.png" />
-    <None Remove="Resources\page_white_gear.png" />
-    <None Remove="Resources\resultset_next.png" />
-    <None Remove="Resources\table.png" />
-    <None Remove="Resources\table_delete.png" />
-    <None Remove="Resources\table_lightning.png" />
-    <None Remove="Resources\table_save.png" />
-    <None Remove="Resources\table_sort.png" />
-    <None Remove="Resources\taosdata-logo.png" />
-    <None Remove="Resources\textfield_rename.png" />
-    <None Remove="Taos.Studio.ico" />
-  </ItemGroup>
+ 
 
   <ItemGroup>
     <EmbeddedResource Include="ICSharpCode.TextEditor\Resources\copyToolStripMenuItem.png" />

@@ -12,6 +12,8 @@ namespace Taos.Studio
 {
     static class Program
     {
+#if   NETFRAMEWORK
+
         [DllImport("Shcore.dll")]
         static extern int SetProcessDpiAwareness(int PROCESS_DPI_AWARENESS);
 
@@ -22,12 +24,14 @@ namespace Taos.Studio
             SystemAware = 1,
             PerMonitorAware = 2
         }
+#endif
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main(string[] args)
         {
+#if NETFRAMEWORK
             try
             {
                 SetProcessDpiAwareness((int)DpiAwareness.SystemAware);
@@ -35,6 +39,9 @@ namespace Taos.Studio
             catch (Exception)
             {
             }
+#elif NETCOREAPP
+            Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
+#endif
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm(args.Length == 0 ? null : new Maikebing.Data.Taos.TaosConnectionStringBuilder( args[0])));
