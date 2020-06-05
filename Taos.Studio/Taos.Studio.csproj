@@ -267,9 +267,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\table_sort.png" />
   </ItemGroup>
   <ItemGroup>
