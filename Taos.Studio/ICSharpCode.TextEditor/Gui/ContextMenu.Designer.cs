@@ -1,4 +1,6 @@
-﻿namespace ICSharpCode.TextEditor {
+﻿using Taos.Studio.ICSharpCode.TextEditor.Properties;
+
+namespace ICSharpCode.TextEditor {
     partial class ContextMenu {
         /// <summary>
         /// Required designer variable.
@@ -49,43 +51,43 @@
             // 
             this.undo.Name = "undo";
             this.undo.Size = new System.Drawing.Size(144, 22);
-            this.undo.Text = "&Undo";
+            this.undo.Text = Resources.Undo;
             // 
             // cut
             // 
-            this.cut.Image = global::ICSharpCode.TextEditor.Properties.Resources.cutToolStripMenuItem;
+            this.cut.Image = Resources.cutToolStripMenuItem;
             this.cut.Name = "cut";
             this.cut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.cut.Size = new System.Drawing.Size(144, 22);
-            this.cut.Text = "&Cut";
+            this.cut.Text = Resources.Cut;
             // 
             // copy
             // 
-            this.copy.Image = global::ICSharpCode.TextEditor.Properties.Resources.copyToolStripMenuItem;
+            this.copy.Image = global::Taos.Studio. ICSharpCode.TextEditor.Properties.Resources.copyToolStripMenuItem;
             this.copy.Name = "copy";
             this.copy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copy.Size = new System.Drawing.Size(144, 22);
-            this.copy.Text = "&Copy";
+            this.copy.Text = Resources.Copy;
             // 
             // paste
             // 
-            this.paste.Image = global::ICSharpCode.TextEditor.Properties.Resources.pasteToolStripMenuItem;
+            this.paste.Image = global::Taos.Studio.ICSharpCode.TextEditor.Properties.Resources.pasteToolStripMenuItem;
             this.paste.Name = "paste";
             this.paste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.paste.Size = new System.Drawing.Size(144, 22);
-            this.paste.Text = "&Paste";
+            this.paste.Text = Resources.Paste;
             // 
             // delete
             // 
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(144, 22);
-            this.delete.Text = "&Delete";
+            this.delete.Text = Resources.Delete;
             // 
             // selectAll
             // 
             this.selectAll.Name = "selectAll";
             this.selectAll.Size = new System.Drawing.Size(144, 22);
-            this.selectAll.Text = "&Select All";
+            this.selectAll.Text = Resources.SelectAll;
             // 
             // ContextMenu
             // 

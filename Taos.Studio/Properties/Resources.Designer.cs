@@ -61,6 +61,24 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找类似 1 document 的本地化字符串。
+        /// </summary>
+        internal static string _1Document {
+            get {
+                return ResourceManager.GetString("_1Document", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 ERROR 的本地化字符串。
+        /// </summary>
+        internal static string _ERROR {
+            get {
+                return ResourceManager.GetString("_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap application_put {
@@ -111,12 +129,30 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Closing... 的本地化字符串。
+        /// </summary>
+        internal static string Closing {
+            get {
+                return ResourceManager.GetString("Closing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap compress {
             get {
                 object obj = ResourceManager.GetObject("compress", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Connect 的本地化字符串。
+        /// </summary>
+        internal static string Connect {
+            get {
+                return ResourceManager.GetString("Connect", resourceCulture);
             }
         }
         
@@ -161,12 +197,39 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Disconnect 的本地化字符串。
+        /// </summary>
+        internal static string Disconnect {
+            get {
+                return ResourceManager.GetString("Disconnect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap disk {
             get {
                 object obj = ResourceManager.GetObject("disk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似  documents 的本地化字符串。
+        /// </summary>
+        internal static string Documents {
+            get {
+                return ResourceManager.GetString("Documents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Error 的本地化字符串。
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
             }
         }
         
@@ -231,12 +294,57 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Limit exceeded 的本地化字符串。
+        /// </summary>
+        internal static string LimitExceeded {
+            get {
+                return ResourceManager.GetString("LimitExceeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 no documents 的本地化字符串。
+        /// </summary>
+        internal static string NoDocuments {
+            get {
+                return ResourceManager.GetString("NoDocuments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 no result 的本地化字符串。
+        /// </summary>
+        internal static string NoResult {
+            get {
+                return ResourceManager.GetString("NoResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 (null) 的本地化字符串。
+        /// </summary>
+        internal static string Null {
+            get {
+                return ResourceManager.GetString("Null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Opening  的本地化字符串。
+        /// </summary>
+        internal static string Opening {
+            get {
+                return ResourceManager.GetString("Opening", resourceCulture);
             }
         }
         
@@ -251,12 +359,30 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Reading... 的本地化字符串。
+        /// </summary>
+        internal static string Reading {
+            get {
+                return ResourceManager.GetString("Reading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap resultset_next {
             get {
                 object obj = ResourceManager.GetObject("resultset_next", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Running 的本地化字符串。
+        /// </summary>
+        internal static string Running {
+            get {
+                return ResourceManager.GetString("Running", resourceCulture);
             }
         }
         

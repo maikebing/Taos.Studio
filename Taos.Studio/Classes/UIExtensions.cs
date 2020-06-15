@@ -1,4 +1,5 @@
-﻿using ICSharpCode.TextEditor.Gui.CompletionWindow;
+﻿using ICSharpCode.TextEditor;
+using ICSharpCode.TextEditor.Gui.CompletionWindow;
 using Maikebing.Data.Taos;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -16,6 +17,8 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Taos.Studio.Properties;
+
 namespace Taos.Studio
 {
     static class UIExtensions
@@ -64,7 +67,7 @@ namespace Taos.Studio
                 limitRow.CreateCells(grd);
                 limitRow.DefaultCellStyle.ForeColor = Color.OrangeRed;
                 var cell = limitRow.Cells[0];
-                cell.Value = "Limit exceeded";
+                cell.Value = Resources.LimitExceeded;
                 cell.ReadOnly = true;
                 grd.Rows.Add(limitRow);
             }
@@ -78,7 +81,7 @@ namespace Taos.Studio
 
             if (grd.Rows.Count == 0)
             {
-                grd.Columns.Add("no-data", "[no result]");
+                grd.Columns.Add("no-data", Resources.NoResult);
             }
 
             grd.ReadOnly = grd.Columns["_id"] == null;
@@ -104,7 +107,7 @@ namespace Taos.Studio
                     cell.Value = value.Value<DateTime>().ToString();
                     break;
                 case JTokenType.Null:
-                    cell.Value = "(null)";
+                    cell.Value = Resources.Null;
                     cell.Style.ForeColor = Color.Silver;
                     break;
                 case JTokenType.Bytes:
@@ -139,7 +142,7 @@ namespace Taos.Studio
             grd.DataSource = null;
         }
 
-        public static void BindBsonData(this ICSharpCode.TextEditor.TextEditorControl txt, TaskData data)
+        public static void BindBsonData(this  TextEditorControl txt, TaskData data)
         {
             var index = 0;
             var sb = new StringBuilder();
@@ -168,7 +171,7 @@ namespace Taos.Studio
                 }
                 else
                 {
-                    sb.AppendLine("no result");
+                    sb.AppendLine(Resources.NoResult);
                 }
 
             txt.SetHighlighting("JSON");
@@ -183,7 +186,7 @@ namespace Taos.Studio
             grid.Rows.Add(ex.Message);
         }
 
-        public static void BindErrorMessage(this ICSharpCode.TextEditor.TextEditorControl txt, string sql, Exception ex)
+        public static void BindErrorMessage(this TextEditorControl txt, string sql, Exception ex)
         {
             var sb = new StringBuilder();
 
@@ -215,7 +218,7 @@ namespace Taos.Studio
             txt.Text = sb.ToString();
         }
 
-        public static void BindParameter(this ICSharpCode.TextEditor.TextEditorControl txt, TaskData data)
+        public static void BindParameter(this TextEditorControl txt, TaskData data)
         {
             //txt.SuspendLayout();
             //txt.Clear();

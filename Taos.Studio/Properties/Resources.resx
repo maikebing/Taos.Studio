@@ -199,4 +199,46 @@
   <data name="taosdata-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\taosdata-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Opening" xml:space="preserve">
+    <value>Opening </value>
+  </data>
+  <data name="Reading" xml:space="preserve">
+    <value>Reading...</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="Closing" xml:space="preserve">
+    <value>Closing...</value>
+  </data>
+  <data name="_ERROR" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="NoDocuments" xml:space="preserve">
+    <value>no documents</value>
+  </data>
+  <data name="_1Document" xml:space="preserve">
+    <value>1 document</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value> documents</value>
+  </data>
+  <data name="NoResult" xml:space="preserve">
+    <value>no result</value>
+  </data>
+  <data name="Null" xml:space="preserve">
+    <value>(null)</value>
+  </data>
+  <data name="LimitExceeded" xml:space="preserve">
+    <value>Limit exceeded</value>
+  </data>
 </root>

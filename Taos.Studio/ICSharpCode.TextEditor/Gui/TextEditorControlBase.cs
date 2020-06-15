@@ -760,5 +760,16 @@ namespace ICSharpCode.TextEditor
 		}
 		
 		public event EventHandler FileNameChanged;
-	}
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // TextEditorControlBase
+            // 
+            this.Name = "TextEditorControlBase";
+            this.ResumeLayout(false);
+
+        }
+    }
 }

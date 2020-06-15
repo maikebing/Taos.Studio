@@ -117,32 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="copyToolStripMenuItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copyToolStripMenuItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="labelCompanyName.Text" xml:space="preserve">
+    <value>公司名</value>
   </data>
-  <data name="cutToolStripMenuItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cutToolStripMenuItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="labelCopyright.Text" xml:space="preserve">
+    <value>版权所有</value>
   </data>
-  <data name="pasteToolStripMenuItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pasteToolStripMenuItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="labelProductName.Text" xml:space="preserve">
+    <value>产品名称</value>
   </data>
-  <data name="Undo" xml:space="preserve">
-    <value>&amp;Undo</value>
+  <data name="labelVersion.Text" xml:space="preserve">
+    <value>版本</value>
   </data>
-  <data name="Cut" xml:space="preserve">
-    <value>&amp;Cut</value>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>确认(&amp;O)</value>
   </data>
-  <data name="Copy" xml:space="preserve">
-    <value>&amp;Copy</value>
+  <data name="textBoxDescription.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
-  <data name="Paste" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>&amp;Delete</value>
-  </data>
-  <data name="SelectAll" xml:space="preserve">
-    <value>&amp;Select All</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
 </root>

@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Taos.Studio.Properties;
 
 namespace Taos.Studio
 {
@@ -65,7 +66,7 @@ namespace Taos.Studio
             };
 
             // set assembly version on window title
-            this.Text += $" (v.{typeof(MainForm).Assembly.GetName().Version.ToString()}) - (TDengine v.{typeof(TaosConnection).Assembly.GetName().Version.ToString()})";
+            this.Text += $" (v.{typeof(MainForm).Assembly.GetName().Version})";
         }
 
         private async Task<TaosConnection> AsyncConnect(TaosConnectionStringBuilder connectionString)
@@ -80,8 +81,8 @@ namespace Taos.Studio
 
         public async void Connect(TaosConnectionStringBuilder  connectionString)
         {
-            lblCursor.Text = "Opening " + connectionString.DataSource;
-            lblElapsed.Text = "Reading...";
+            lblCursor.Text = Resources.Opening + connectionString.DataSource;
+            lblElapsed.Text = Resources.Reading;
             prgRunning.Style = ProgressBarStyle.Marquee;
             btnConnect.Enabled = false;
 
@@ -97,7 +98,7 @@ namespace Taos.Studio
                 _db?.Dispose();
                 _db = null;
 
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
@@ -117,7 +118,7 @@ namespace Taos.Studio
 
             _codeCompletion.UpdateCodeCompletion(_db);
 
-            btnConnect.Text = "Disconnect";
+            btnConnect.Text = Resources.Disconnect;
 
             this.UIState(true);
 
@@ -146,14 +147,14 @@ namespace Taos.Studio
 
             tvwDatabase.Nodes.Clear();
 
-            btnConnect.Text = "Connect";
+            btnConnect.Text = Resources.Connect;
 
             this.UIState(false);
 
             tvwDatabase.Focus();
 
             tlbMain.Enabled = false;
-            lblCursor.Text = "Closing...";
+            lblCursor.Text = Resources.Closing;
 
             try
             {
@@ -167,7 +168,7 @@ namespace Taos.Studio
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(ex.Message, Resources._ERROR, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -330,7 +331,7 @@ namespace Taos.Studio
                 txtResult.Clear();
 
                 lblResultCount.Visible = false;
-                lblElapsed.Text = "Running";
+                lblElapsed.Text = Resources.Running;
                 prgRunning.Style = ProgressBarStyle.Marquee;
             }
             else
@@ -340,9 +341,9 @@ namespace Taos.Studio
                 prgRunning.Style = ProgressBarStyle.Blocks;
                 lblResultCount.Text = 
                     data.Result == null ? "" :
-                    data.Result.Count == 0 ? "no documents" :
-                    data.Result.Count  == 1 ? "1 document" : 
-                    data.Result.Count + (data.LimitExceeded ? "+" : "") + " documents";
+                    data.Result.Count == 0 ? Resources.NoDocuments :
+                    data.Result.Count  == 1 ? Resources._1Document : 
+                    data.Result.Count + (data.LimitExceeded ? "+" : "") + Resources.Documents;
 
                 if (data.Exception != null)
                 {
