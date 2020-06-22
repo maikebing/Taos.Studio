@@ -22,6 +22,12 @@
         "Entry"
         {
         "MsmKey" = "8:_040129F078AD27236BF6058AC729B1F3"
+        "OwnerKey" = "8:_1AFE76AD54AD7DF106F781256B610C8B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_040129F078AD27236BF6058AC729B1F3"
         "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -35,6 +41,12 @@
         {
         "MsmKey" = "8:_0A40E95715A75544B1F87319D1708810"
         "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0AF3641CC1204ED9975EFEFF19495614"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -388,13 +400,13 @@
         "Entry"
         {
         "MsmKey" = "8:_8EBEB367AF0F9428CD84F1DC150C41E9"
-        "OwnerKey" = "8:_1AFE76AD54AD7DF106F781256B610C8B"
+        "OwnerKey" = "8:_040129F078AD27236BF6058AC729B1F3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8EBEB367AF0F9428CD84F1DC150C41E9"
-        "OwnerKey" = "8:_040129F078AD27236BF6058AC729B1F3"
+        "OwnerKey" = "8:_1AFE76AD54AD7DF106F781256B610C8B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -503,6 +515,12 @@
         {
         "MsmKey" = "8:_BA6113D920AEABA422E76115BCDC06A7"
         "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C0A5045A2C5842199BE98B7A15EB18DF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1591,6 +1609,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0AF3641CC1204ED9975EFEFF19495614"
+            {
+            "SourcePath" = "8:..\\..\\EntityFrameworkCore.Taos\\src\\Maikebing.Data.Taos\\libs\\taos_x64.dll"
+            "TargetName" = "8:taos.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_C30158FD35634D63ADBD99B8223082E4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_12B6DC22B63C65ADEBBDADC584CA13EA"
@@ -3856,6 +3894,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0A5045A2C5842199BE98B7A15EB18DF"
+            {
+            "SourcePath" = "8:..\\..\\EntityFrameworkCore.Taos\\src\\Maikebing.Data.Taos\\libs\\taos_x64.dll"
+            "TargetName" = "8:taos.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_23BBBCB344C84EEDA32262DA8131F0A3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C633244F9C0F7B63C2FC45F590BE0F1E"
             {
             "AssemblyRegister" = "3:1"
@@ -5020,6 +5078,17 @@
                 {
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_23BBBCB344C84EEDA32262DA8131F0A3"
+            {
+            "Name" = "8:#1936"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:System64Folder"
+                "Folders"
+                {
+                }
+            }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_427716FFAE364352AADB65E024C1A33C"
             {
             "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
@@ -5043,6 +5112,17 @@
                 {
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_C30158FD35634D63ADBD99B8223082E4"
+            {
+            "Name" = "8:#1914"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:SystemFolder"
+                "Folders"
+                {
+                }
+            }
         }
         "LaunchCondition"
         {
@@ -5059,15 +5139,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Taos.Studio"
-        "ProductCode" = "8:{3F4F91C3-8931-4D12-923B-18A333B6AEE0}"
-        "PackageCode" = "8:{1EA868EE-2684-4CEA-97C2-D56285AF9ADA}"
+        "ProductCode" = "8:{F3FFB8D1-831C-4089-80EA-9A869E2A1BB7}"
+        "PackageCode" = "8:{13F80549-253E-46C3-B44C-38F976DCFA33}"
         "UpgradeCode" = "8:{7CF061CC-9020-4896-9F29-DF5932DA39E3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:maikebing"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
