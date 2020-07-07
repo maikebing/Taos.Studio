@@ -22,11 +22,8 @@ namespace Taos.Studio.Forms
         public ConnectionForm(TaosConnectionStringBuilder cs)
         {
             InitializeComponent();
-
-            txtServerIPAddress.Text = cs.DataSource;
-            txtPort.Text = cs.Port.ToString();
-            txtUsername.Text = cs.Username;
-            txtPassword.Text = cs.Password;
+            ConnectionString = cs;
+          
         }
 
         private void BtnConnect_Click(object sender, EventArgs e)
@@ -52,6 +49,14 @@ namespace Taos.Studio.Forms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.maikebing.com/Taos.PrivacyPolicy");
+        }
+
+        private void ConnectionForm_Load(object sender, EventArgs e)
+        {
+            txtServerIPAddress.Text = ConnectionString.DataSource;
+            txtPort.Text = ConnectionString.Port.ToString();
+            txtUsername.Text = ConnectionString.Username;
+            txtPassword.Text = ConnectionString.Password;
         }
     }
 }

@@ -82,7 +82,7 @@ namespace Taos.Studio
 
         public MainForm(TaosConnectionStringBuilder taosConnectionStringBuilder) :this()
         {
-      
+            Taos_Login(taosConnectionStringBuilder);
         }
 
        
@@ -148,24 +148,23 @@ namespace Taos.Studio
 
         private void NewFile_Click(object sender, EventArgs e)
         {
-                      Maikebing.Data.Taos.TaosConnection _db = null;
-          Maikebing.Data.Taos.TaosConnectionStringBuilder _connectionString = null;
+            Taos_Login(null);
 
-             
-                var dialog = new ConnectionForm(_connectionString ?? new TaosConnectionStringBuilder());
+        }
 
-                dialog.ShowDialog(this);
+        private void Taos_Login(TaosConnectionStringBuilder _connectionString)
+        {
+            var dialog = new ConnectionForm(_connectionString ?? new TaosConnectionStringBuilder());
+
+            dialog.ShowDialog(this);
 
             if (dialog.DialogResult != DialogResult.OK) return;
             Task.Run(async () => await ConnectAsync(dialog.ConnectionString)
              ).ContinueWith(t =>
-           {
-               _dockProject.LoadTree(t.Result);
-           });
-
-
+             {
+                 _dockProject.LoadTree(t.Result);
+             });
         }
-
 
         private async Task<TaosConnection> AsyncConnect(TaosConnectionStringBuilder connectionString)
         {

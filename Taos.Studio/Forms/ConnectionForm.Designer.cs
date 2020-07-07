@@ -138,6 +138,7 @@
             this.MinimizeBox = false;
             this.Name = "ConnectionForm";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.ConnectionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
