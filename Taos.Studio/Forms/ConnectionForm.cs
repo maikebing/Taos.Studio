@@ -1,4 +1,5 @@
-﻿using Maikebing.Data.Taos;
+﻿using DarkUI.Forms;
+using Maikebing.Data.Taos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Taos.Studio.Forms
 {
-    public partial class ConnectionForm : Form
+    public partial class ConnectionForm : DarkForm
     {
         private const long MB = 1024 * 1024;
 

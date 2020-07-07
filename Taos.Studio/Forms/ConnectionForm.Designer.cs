@@ -31,68 +31,83 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectionForm));
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtServerIPAddress = new System.Windows.Forms.TextBox();
-            this.txtPort = new System.Windows.Forms.TextBox();
+            this.label3 = new DarkUI.Controls.DarkLabel();
+            this.label2 = new DarkUI.Controls.DarkLabel();
+            this.txtPassword = new DarkUI.Controls.DarkTextBox();
+            this.label1 = new DarkUI.Controls.DarkLabel();
+            this.label4 = new DarkUI.Controls.DarkLabel();
+            this.btnOK = new DarkUI.Controls.DarkButton();
+            this.txtUsername = new DarkUI.Controls.DarkTextBox();
+            this.txtServerIPAddress = new DarkUI.Controls.DarkTextBox();
+            this.txtPort = new DarkUI.Controls.DarkTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.label3.Name = "label3";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.label2.Name = "label2";
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.label1.Name = "label1";
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.label4.Name = "label4";
             // 
             // btnOK
             // 
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             resources.ApplyResources(this.btnOK, "btnOK");
-            this.btnOK.Image = global::Taos.Studio.Properties.Resources.database_connect;
             this.btnOK.Name = "btnOK";
-            this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.BtnConnect_Click);
             // 
             // txtUsername
             // 
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Text = global::Taos.Studio.Properties.Settings.Default.UserName;
             // 
             // txtServerIPAddress
             // 
+            this.txtServerIPAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
+            this.txtServerIPAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtServerIPAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "ServerIpAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtServerIPAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             resources.ApplyResources(this.txtServerIPAddress, "txtServerIPAddress");
             this.txtServerIPAddress.Name = "txtServerIPAddress";
             this.txtServerIPAddress.Text = global::Taos.Studio.Properties.Settings.Default.ServerIpAddress;
             // 
             // txtPort
             // 
+            this.txtPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
+            this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPort.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "ServerPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             resources.ApplyResources(this.txtPort, "txtPort");
             this.txtPort.Name = "txtPort";
             this.txtPort.Text = global::Taos.Studio.Properties.Settings.Default.ServerPort;
@@ -129,16 +144,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnOK;
+        private DarkUI.Controls.DarkButton btnOK;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtServerIPAddress;
-        private System.Windows.Forms.TextBox txtPort;
-        private System.Windows.Forms.Label label4;
+        private DarkUI.Controls.DarkLabel label3;
+        private DarkUI.Controls.DarkTextBox txtUsername;
+        private DarkUI.Controls.DarkLabel label2;
+        private DarkUI.Controls.DarkTextBox txtPassword;
+        private DarkUI.Controls.DarkLabel label1;
+        private DarkUI.Controls.DarkTextBox txtServerIPAddress;
+        private DarkUI.Controls.DarkTextBox txtPort;
+        private DarkUI.Controls.DarkLabel label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
