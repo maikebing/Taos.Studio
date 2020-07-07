@@ -1,4 +1,5 @@
-﻿using ICSharpCode.TextEditor;
+﻿using DarkUI.Controls;
+using DarkUI.Docking;
 
 namespace Taos.Studio
 {
@@ -30,479 +31,400 @@ namespace Taos.Studio
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.splitMain = new System.Windows.Forms.SplitContainer();
-            this.tvwDatabase = new System.Windows.Forms.TreeView();
-            this.imgList = new System.Windows.Forms.ImageList(this.components);
-            this.splitRight = new System.Windows.Forms.SplitContainer();
-            this.txtSql = new  TextEditorControl();
-            this.tabResult = new System.Windows.Forms.TabControl();
-            this.tabGrid = new System.Windows.Forms.TabPage();
-            this.grdResult = new System.Windows.Forms.DataGridView();
-            this.tabText = new System.Windows.Forms.TabPage();
-            this.txtResult = new  TextEditorControl();
-            this.tabSql = new System.Windows.Forms.TabControl();
-            this.stbStatus = new System.Windows.Forms.StatusStrip();
-            this.lblCursor = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblResultCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.prgRunning = new System.Windows.Forms.ToolStripProgressBar();
-            this.lblElapsed = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tlbMain = new System.Windows.Forms.ToolStrip();
-            this.btnConnect = new System.Windows.Forms.ToolStripButton();
-            this.tlbSep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.tlbSep2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnRun = new System.Windows.Forms.ToolStripButton();
+            this.mnuMain = new DarkUI.Controls.DarkMenuStrip();
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.BtnShowConnections = new System.Windows.Forms.ToolStripButton();
-            this.btnAbout = new System.Windows.Forms.ToolStripButton();
-            this.ctxTableMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuQueryAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuInsert = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuQueryCount = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuDropCollection = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxMenuRoot = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.showConnectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.imgCodeCompletion = new System.Windows.Forms.ImageList(this.components);
-            this.ctxDataBaseMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuView = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDialog = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkableWithIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
-            this.splitMain.Panel1.SuspendLayout();
-            this.splitMain.Panel2.SuspendLayout();
-            this.splitMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitRight)).BeginInit();
-            this.splitRight.Panel1.SuspendLayout();
-            this.splitRight.Panel2.SuspendLayout();
-            this.splitRight.SuspendLayout();
-            this.tabResult.SuspendLayout();
-            this.tabGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdResult)).BeginInit();
-            this.tabText.SuspendLayout();
-            this.stbStatus.SuspendLayout();
-            this.tlbMain.SuspendLayout();
-            this.ctxTableMenu.SuspendLayout();
-            this.ctxMenuRoot.SuspendLayout();
-            this.ctxDataBaseMenu.SuspendLayout();
+            this.checkedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkedWithIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindow = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProject = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProperties = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuConsole = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLayers = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHistory = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolMain = new DarkUI.Controls.DarkToolStrip();
+            this.btnNewFile = new System.Windows.Forms.ToolStripButton();
+            this.stripMain = new DarkUI.Controls.DarkStatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.DockPanel = new DarkUI.Docking.DarkDockPanel();
+            this.darkSeparator1 = new DarkUI.Controls.DarkSeparator();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.mnuMain.SuspendLayout();
+            this.toolMain.SuspendLayout();
+            this.stripMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitMain
+            // mnuMain
             // 
-            resources.ApplyResources(this.splitMain, "splitMain");
-            this.splitMain.Name = "splitMain";
+            this.mnuMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.mnuMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuMain.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFile,
+            this.mnuView,
+            this.mnuTools,
+            this.mnuWindow,
+            this.mnuHelp});
+            this.mnuMain.Location = new System.Drawing.Point(0, 0);
+            this.mnuMain.Name = "mnuMain";
+            this.mnuMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
+            this.mnuMain.Size = new System.Drawing.Size(944, 25);
+            this.mnuMain.TabIndex = 0;
+            this.mnuMain.Text = "darkMenuStrip1";
             // 
-            // splitMain.Panel1
+            // mnuFile
             // 
-            this.splitMain.Panel1.Controls.Add(this.tvwDatabase);
-            // 
-            // splitMain.Panel2
-            // 
-            this.splitMain.Panel2.Controls.Add(this.splitRight);
-            this.splitMain.Panel2.Controls.Add(this.tabSql);
-            this.splitMain.TabStop = false;
-            // 
-            // tvwDatabase
-            // 
-            resources.ApplyResources(this.tvwDatabase, "tvwDatabase");
-            this.tvwDatabase.ImageList = this.imgList;
-            this.tvwDatabase.Name = "tvwDatabase";
-            this.tvwDatabase.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TvwCols_NodeMouseDoubleClick);
-            this.tvwDatabase.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TvwCols_MouseUp);
-            // 
-            // imgList
-            // 
-            this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
-            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgList.Images.SetKeyName(0, "database");
-            this.imgList.Images.SetKeyName(1, "folder");
-            this.imgList.Images.SetKeyName(2, "table");
-            this.imgList.Images.SetKeyName(3, "table_gear");
-            this.imgList.Images.SetKeyName(4, "");
-            // 
-            // splitRight
-            // 
-            resources.ApplyResources(this.splitRight, "splitRight");
-            this.splitRight.Name = "splitRight";
-            // 
-            // splitRight.Panel1
-            // 
-            this.splitRight.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitRight.Panel1.Controls.Add(this.txtSql);
-            // 
-            // splitRight.Panel2
-            // 
-            this.splitRight.Panel2.Controls.Add(this.tabResult);
-            // 
-            // txtSql
-            // 
-            resources.ApplyResources(this.txtSql, "txtSql");
-            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSql.ConvertTabsToSpaces = true;
-            this.txtSql.Highlighting = "SQL";
-            this.txtSql.Name = "txtSql";
-            this.txtSql.ShowLineNumbers = false;
-            this.txtSql.ShowVRuler = false;
-            // 
-            // tabResult
-            // 
-            resources.ApplyResources(this.tabResult, "tabResult");
-            this.tabResult.Controls.Add(this.tabGrid);
-            this.tabResult.Controls.Add(this.tabText);
-            this.tabResult.Name = "tabResult";
-            this.tabResult.SelectedIndex = 0;
-            this.tabResult.TabStop = false;
-            this.tabResult.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabResult_Selected);
-            // 
-            // tabGrid
-            // 
-            this.tabGrid.Controls.Add(this.grdResult);
-            resources.ApplyResources(this.tabGrid, "tabGrid");
-            this.tabGrid.Name = "tabGrid";
-            this.tabGrid.UseVisualStyleBackColor = true;
-            // 
-            // grdResult
-            // 
-            this.grdResult.AllowUserToAddRows = false;
-            this.grdResult.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.grdResult, "grdResult");
-            this.grdResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdResult.Name = "grdResult";
-            this.grdResult.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.GrdResult_CellBeginEdit);
-            this.grdResult.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdResult_CellEndEdit);
-            this.grdResult.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.GrdResult_RowPostPaint);
-            // 
-            // tabText
-            // 
-            this.tabText.Controls.Add(this.txtResult);
-            resources.ApplyResources(this.tabText, "tabText");
-            this.tabText.Name = "tabText";
-            this.tabText.UseVisualStyleBackColor = true;
-            // 
-            // txtResult
-            // 
-            resources.ApplyResources(this.txtResult, "txtResult");
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtResult.Highlighting = "JSON";
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.ShowLineNumbers = false;
-            this.txtResult.ShowVRuler = false;
-            // 
-            // tabSql
-            // 
-            resources.ApplyResources(this.tabSql, "tabSql");
-            this.tabSql.Name = "tabSql";
-            this.tabSql.SelectedIndex = 0;
-            this.tabSql.TabStop = false;
-            this.tabSql.SelectedIndexChanged += new System.EventHandler(this.TabSql_SelectedIndexChanged);
-            this.tabSql.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabSql_Selected);
-            this.tabSql.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabSql_MouseClick);
-            // 
-            // stbStatus
-            // 
-            this.stbStatus.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.stbStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblCursor,
-            this.lblResultCount,
-            this.prgRunning,
-            this.lblElapsed});
-            resources.ApplyResources(this.stbStatus, "stbStatus");
-            this.stbStatus.Name = "stbStatus";
-            // 
-            // lblCursor
-            // 
-            this.lblCursor.Name = "lblCursor";
-            resources.ApplyResources(this.lblCursor, "lblCursor");
-            this.lblCursor.Spring = true;
-            // 
-            // lblResultCount
-            // 
-            resources.ApplyResources(this.lblResultCount, "lblResultCount");
-            this.lblResultCount.Name = "lblResultCount";
-            // 
-            // prgRunning
-            // 
-            this.prgRunning.Name = "prgRunning";
-            resources.ApplyResources(this.prgRunning, "prgRunning");
-            // 
-            // lblElapsed
-            // 
-            resources.ApplyResources(this.lblElapsed, "lblElapsed");
-            this.lblElapsed.Name = "lblElapsed";
-            // 
-            // tlbMain
-            // 
-            this.tlbMain.GripMargin = new System.Windows.Forms.Padding(3);
-            this.tlbMain.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tlbMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnConnect,
-            this.tlbSep1,
-            this.btnRefresh,
-            this.tlbSep2,
-            this.btnRun,
+            this.mnuFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuNewFile,
             this.toolStripSeparator1,
-            this.BtnShowConnections,
-            this.btnAbout});
-            resources.ApplyResources(this.tlbMain, "tlbMain");
-            this.tlbMain.Name = "tlbMain";
+            this.mnuClose});
+            this.mnuFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuFile.Name = "mnuFile";
+            this.mnuFile.Size = new System.Drawing.Size(57, 21);
+            this.mnuFile.Text = "&Server";
             // 
-            // btnConnect
+            // mnuNewFile
             // 
-            this.btnConnect.Image = global::Taos.Studio.Properties.Resources.database_connect;
-            resources.ApplyResources(this.btnConnect, "btnConnect");
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Padding = new System.Windows.Forms.Padding(3);
-            this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
-            // 
-            // tlbSep1
-            // 
-            this.tlbSep1.Name = "tlbSep1";
-            resources.ApplyResources(this.tlbSep1, "tlbSep1");
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::Taos.Studio.Properties.Resources.arrow_refresh;
-            resources.ApplyResources(this.btnRefresh, "btnRefresh");
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Padding = new System.Windows.Forms.Padding(3);
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
-            // 
-            // tlbSep2
-            // 
-            this.tlbSep2.Name = "tlbSep2";
-            resources.ApplyResources(this.tlbSep2, "tlbSep2");
-            // 
-            // btnRun
-            // 
-            this.btnRun.Image = global::Taos.Studio.Properties.Resources.resultset_next;
-            resources.ApplyResources(this.btnRun, "btnRun");
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Padding = new System.Windows.Forms.Padding(3);
-            this.btnRun.Click += new System.EventHandler(this.BtnRun_Click);
+            this.mnuNewFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuNewFile.Image = global::Taos.Studio.Properties.Resources.NewFile_6276;
+            this.mnuNewFile.Name = "mnuNewFile";
+            this.mnuNewFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.mnuNewFile.Size = new System.Drawing.Size(264, 26);
+            this.mnuNewFile.Text = "&Create New Connection";
             // 
             // toolStripSeparator1
             // 
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Size = new System.Drawing.Size(261, 6);
             // 
-            // BtnShowConnections
+            // mnuClose
             // 
-            this.BtnShowConnections.Image = global::Taos.Studio.Properties.Resources.information;
-            resources.ApplyResources(this.BtnShowConnections, "BtnShowConnections");
-            this.BtnShowConnections.Name = "BtnShowConnections";
-            this.BtnShowConnections.Click += new System.EventHandler(this.BtnShowConnections_Click);
+            this.mnuClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuClose.Image = global::Taos.Studio.Properties.Resources.Close_16xLG;
+            this.mnuClose.Name = "mnuClose";
+            this.mnuClose.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.mnuClose.Size = new System.Drawing.Size(264, 26);
+            this.mnuClose.Text = "&Close";
             // 
-            // btnAbout
+            // mnuView
             // 
-            this.btnAbout.Image = global::Taos.Studio.Properties.Resources.logo;
-            resources.ApplyResources(this.btnAbout, "btnAbout");
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.mnuView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.mnuView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDialog});
+            this.mnuView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuView.Name = "mnuView";
+            this.mnuView.Size = new System.Drawing.Size(47, 21);
+            this.mnuView.Text = "&View";
             // 
-            // ctxTableMenu
+            // mnuDialog
             // 
-            this.ctxTableMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctxTableMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuQueryAll,
-            this.mnuInsert,
-            this.mnuQueryCount,
-            this.mnuSep1,
-            this.mnuDropCollection});
-            this.ctxTableMenu.Name = "ctxMenu";
-            resources.ApplyResources(this.ctxTableMenu, "ctxTableMenu");
-            this.ctxTableMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenu_ItemClicked);
+            this.mnuDialog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuDialog.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
+            this.mnuDialog.Name = "mnuDialog";
+            this.mnuDialog.Size = new System.Drawing.Size(184, 26);
+            this.mnuDialog.Text = "&Dialog test";
             // 
-            // mnuQueryAll
+            // mnuTools
             // 
-            this.mnuQueryAll.Image = global::Taos.Studio.Properties.Resources.table_lightning;
-            this.mnuQueryAll.Name = "mnuQueryAll";
-            resources.ApplyResources(this.mnuQueryAll, "mnuQueryAll");
-            this.mnuQueryAll.Tag = "SELECT * FROM {0};";
-            // 
-            // mnuInsert
-            // 
-            this.mnuInsert.Image = global::Taos.Studio.Properties.Resources.table_save;
-            this.mnuInsert.Name = "mnuInsert";
-            resources.ApplyResources(this.mnuInsert, "mnuInsert");
-            this.mnuInsert.Tag = "INSERT INTO  {0}  VALUES (   )";
-            // 
-            // mnuQueryCount
-            // 
-            this.mnuQueryCount.Image = global::Taos.Studio.Properties.Resources.table;
-            this.mnuQueryCount.Name = "mnuQueryCount";
-            resources.ApplyResources(this.mnuQueryCount, "mnuQueryCount");
-            this.mnuQueryCount.Tag = "SELECT COUNT(*) FROM {0};";
-            // 
-            // mnuSep1
-            // 
-            this.mnuSep1.Name = "mnuSep1";
-            resources.ApplyResources(this.mnuSep1, "mnuSep1");
-            // 
-            // mnuDropCollection
-            // 
-            this.mnuDropCollection.Image = global::Taos.Studio.Properties.Resources.table_delete;
-            this.mnuDropCollection.Name = "mnuDropCollection";
-            resources.ApplyResources(this.mnuDropCollection, "mnuDropCollection");
-            this.mnuDropCollection.Tag = "DROP TABLE {0};";
-            // 
-            // ctxMenuRoot
-            // 
-            this.ctxMenuRoot.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctxMenuRoot.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuInfo,
-            this.toolStripSeparator3,
-            this.showConnectionsToolStripMenuItem,
-            this.toolStripMenuItem2});
-            this.ctxMenuRoot.Name = "ctxMenu";
-            resources.ApplyResources(this.ctxMenuRoot, "ctxMenuRoot");
-            this.ctxMenuRoot.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenuRoot_ItemClicked);
-            // 
-            // mnuInfo
-            // 
-            this.mnuInfo.Image = global::Taos.Studio.Properties.Resources.information;
-            this.mnuInfo.Name = "mnuInfo";
-            resources.ApplyResources(this.mnuInfo, "mnuInfo");
-            this.mnuInfo.Tag = "SELECT server_version();";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-            // 
-            // showConnectionsToolStripMenuItem
-            // 
-            this.showConnectionsToolStripMenuItem.Name = "showConnectionsToolStripMenuItem";
-            resources.ApplyResources(this.showConnectionsToolStripMenuItem, "showConnectionsToolStripMenuItem");
-            this.showConnectionsToolStripMenuItem.Click += new System.EventHandler(this.BtnShowConnections_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            this.toolStripMenuItem2.Tag = "CREATE DATABASE  IF NOT EXISTS db_name ";
-            // 
-            // imgCodeCompletion
-            // 
-            this.imgCodeCompletion.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCodeCompletion.ImageStream")));
-            this.imgCodeCompletion.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgCodeCompletion.Images.SetKeyName(0, "METHOD");
-            this.imgCodeCompletion.Images.SetKeyName(1, "COLLECTION");
-            this.imgCodeCompletion.Images.SetKeyName(2, "FIELD");
-            this.imgCodeCompletion.Images.SetKeyName(3, "KEYWORD");
-            this.imgCodeCompletion.Images.SetKeyName(4, "SYSTEM");
-            this.imgCodeCompletion.Images.SetKeyName(5, "SYSTEM_FN");
-            // 
-            // ctxDataBaseMenu
-            // 
-            this.ctxDataBaseMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctxDataBaseMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
+            this.mnuTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkableToolStripMenuItem,
+            this.checkableWithIconToolStripMenuItem,
             this.toolStripSeparator2,
-            this.toolStripMenuItem4});
-            this.ctxDataBaseMenu.Name = "ctxMenu";
-            resources.ApplyResources(this.ctxDataBaseMenu, "ctxDataBaseMenu");
+            this.checkedToolStripMenuItem,
+            this.checkedWithIconToolStripMenuItem});
+            this.mnuTools.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuTools.Name = "mnuTools";
+            this.mnuTools.Size = new System.Drawing.Size(52, 21);
+            this.mnuTools.Text = "&Tools";
             // 
-            // toolStripMenuItem1
+            // checkableToolStripMenuItem
             // 
-            this.toolStripMenuItem1.Image = global::Taos.Studio.Properties.Resources.table_lightning;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Tag = "USE {0};";
+            this.checkableToolStripMenuItem.CheckOnClick = true;
+            this.checkableToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.checkableToolStripMenuItem.Name = "checkableToolStripMenuItem";
+            this.checkableToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkableToolStripMenuItem.Text = "Checkable";
+            // 
+            // checkableWithIconToolStripMenuItem
+            // 
+            this.checkableWithIconToolStripMenuItem.CheckOnClick = true;
+            this.checkableWithIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.checkableWithIconToolStripMenuItem.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
+            this.checkableWithIconToolStripMenuItem.Name = "checkableWithIconToolStripMenuItem";
+            this.checkableWithIconToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkableWithIconToolStripMenuItem.Text = "Checkable with icon";
             // 
             // toolStripSeparator2
             // 
+            this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Size = new System.Drawing.Size(192, 6);
             // 
-            // toolStripMenuItem4
+            // checkedToolStripMenuItem
             // 
-            this.toolStripMenuItem4.Image = global::Taos.Studio.Properties.Resources.table_delete;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
-            this.toolStripMenuItem4.Tag = "DROP DATABASE  IF EXISTS {0};";
+            this.checkedToolStripMenuItem.Checked = true;
+            this.checkedToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkedToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.checkedToolStripMenuItem.Name = "checkedToolStripMenuItem";
+            this.checkedToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkedToolStripMenuItem.Text = "Checked";
+            // 
+            // checkedWithIconToolStripMenuItem
+            // 
+            this.checkedWithIconToolStripMenuItem.Checked = true;
+            this.checkedWithIconToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkedWithIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.checkedWithIconToolStripMenuItem.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
+            this.checkedWithIconToolStripMenuItem.Name = "checkedWithIconToolStripMenuItem";
+            this.checkedWithIconToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkedWithIconToolStripMenuItem.Text = "Checked with icon";
+            // 
+            // mnuWindow
+            // 
+            this.mnuWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.mnuWindow.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProject,
+            this.mnuProperties,
+            this.mnuConsole,
+            this.mnuLayers,
+            this.mnuHistory});
+            this.mnuWindow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuWindow.Name = "mnuWindow";
+            this.mnuWindow.Size = new System.Drawing.Size(67, 21);
+            this.mnuWindow.Text = "&Window";
+            // 
+            // mnuProject
+            // 
+            this.mnuProject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuProject.Image = global::Taos.Studio.Properties.Resources.application_16x;
+            this.mnuProject.Name = "mnuProject";
+            this.mnuProject.Size = new System.Drawing.Size(184, 26);
+            this.mnuProject.Text = "&Project Explorer";
+            // 
+            // mnuProperties
+            // 
+            this.mnuProperties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuProperties.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
+            this.mnuProperties.Name = "mnuProperties";
+            this.mnuProperties.Size = new System.Drawing.Size(184, 26);
+            this.mnuProperties.Text = "P&roperties";
+            // 
+            // mnuConsole
+            // 
+            this.mnuConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuConsole.Image = global::Taos.Studio.Properties.Resources.Console;
+            this.mnuConsole.Name = "mnuConsole";
+            this.mnuConsole.Size = new System.Drawing.Size(184, 26);
+            this.mnuConsole.Text = "&Console";
+            // 
+            // mnuLayers
+            // 
+            this.mnuLayers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuLayers.Image = global::Taos.Studio.Properties.Resources.Collection_16xLG;
+            this.mnuLayers.Name = "mnuLayers";
+            this.mnuLayers.Size = new System.Drawing.Size(184, 26);
+            this.mnuLayers.Text = "&Layers";
+            // 
+            // mnuHistory
+            // 
+            this.mnuHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuHistory.Image = ((System.Drawing.Image)(resources.GetObject("mnuHistory.Image")));
+            this.mnuHistory.Name = "mnuHistory";
+            this.mnuHistory.Size = new System.Drawing.Size(184, 26);
+            this.mnuHistory.Text = "&History";
+            // 
+            // mnuHelp
+            // 
+            this.mnuHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAbout});
+            this.mnuHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuHelp.Name = "mnuHelp";
+            this.mnuHelp.Size = new System.Drawing.Size(47, 21);
+            this.mnuHelp.Text = "&Help";
+            // 
+            // mnuAbout
+            // 
+            this.mnuAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.mnuAbout.Image = global::Taos.Studio.Properties.Resources.StatusAnnotations_Information_16xLG_color;
+            this.mnuAbout.Name = "mnuAbout";
+            this.mnuAbout.Size = new System.Drawing.Size(184, 26);
+            this.mnuAbout.Text = "&About DarkUI";
+            // 
+            // toolMain
+            // 
+            this.toolMain.AutoSize = false;
+            this.toolMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.toolMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.toolMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolMain.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNewFile});
+            this.toolMain.Location = new System.Drawing.Point(0, 27);
+            this.toolMain.Name = "toolMain";
+            this.toolMain.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
+            this.toolMain.Size = new System.Drawing.Size(944, 28);
+            this.toolMain.TabIndex = 1;
+            this.toolMain.Text = "darkToolStrip1";
+            // 
+            // btnNewFile
+            // 
+            this.btnNewFile.AutoSize = false;
+            this.btnNewFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.btnNewFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnNewFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnNewFile.Image = global::Taos.Studio.Properties.Resources.NewFile_6276;
+            this.btnNewFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNewFile.Name = "btnNewFile";
+            this.btnNewFile.Size = new System.Drawing.Size(24, 24);
+            this.btnNewFile.Text = "New file";
+            // 
+            // stripMain
+            // 
+            this.stripMain.AutoSize = false;
+            this.stripMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.stripMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.stripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel6,
+            this.toolStripStatusLabel5,
+            this.toolStripProgressBar1});
+            this.stripMain.Location = new System.Drawing.Point(0, 618);
+            this.stripMain.Name = "stripMain";
+            this.stripMain.Padding = new System.Windows.Forms.Padding(0, 5, 0, 3);
+            this.stripMain.Size = new System.Drawing.Size(944, 24);
+            this.stripMain.SizingGrip = false;
+            this.stripMain.TabIndex = 2;
+            this.stripMain.Text = "darkStatusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.AutoSize = false;
+            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(1, 0, 50, 0);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 16);
+            this.toolStripStatusLabel1.Text = "Ready";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel6
+            // 
+            this.toolStripStatusLabel6.Margin = new System.Windows.Forms.Padding(0, 0, 50, 2);
+            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(648, 14);
+            this.toolStripStatusLabel6.Spring = true;
+            this.toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel5
+            // 
+            this.toolStripStatusLabel5.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(53, 16);
+            this.toolStripStatusLabel5.Text = "120 MB";
+            this.toolStripStatusLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // DockPanel
+            // 
+            this.DockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.DockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DockPanel.Location = new System.Drawing.Point(0, 55);
+            this.DockPanel.Name = "DockPanel";
+            this.DockPanel.Size = new System.Drawing.Size(944, 563);
+            this.DockPanel.TabIndex = 3;
+            // 
+            // darkSeparator1
+            // 
+            this.darkSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.darkSeparator1.Location = new System.Drawing.Point(0, 25);
+            this.darkSeparator1.Name = "darkSeparator1";
+            this.darkSeparator1.Size = new System.Drawing.Size(944, 2);
+            this.darkSeparator1.TabIndex = 4;
+            this.darkSeparator1.Text = "darkSeparator1";
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 10);
             // 
             // MainForm
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tlbMain);
-            this.Controls.Add(this.stbStatus);
-            this.Controls.Add(this.splitMain);
-            this.KeyPreview = true;
+            this.ClientSize = new System.Drawing.Size(944, 642);
+            this.Controls.Add(this.DockPanel);
+            this.Controls.Add(this.stripMain);
+            this.Controls.Add(this.toolMain);
+            this.Controls.Add(this.darkSeparator1);
+            this.Controls.Add(this.mnuMain);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.mnuMain;
+            this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "MainForm";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-            this.splitMain.Panel1.ResumeLayout(false);
-            this.splitMain.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitMain)).EndInit();
-            this.splitMain.ResumeLayout(false);
-            this.splitRight.Panel1.ResumeLayout(false);
-            this.splitRight.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitRight)).EndInit();
-            this.splitRight.ResumeLayout(false);
-            this.tabResult.ResumeLayout(false);
-            this.tabGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdResult)).EndInit();
-            this.tabText.ResumeLayout(false);
-            this.stbStatus.ResumeLayout(false);
-            this.stbStatus.PerformLayout();
-            this.tlbMain.ResumeLayout(false);
-            this.tlbMain.PerformLayout();
-            this.ctxTableMenu.ResumeLayout(false);
-            this.ctxMenuRoot.ResumeLayout(false);
-            this.ctxDataBaseMenu.ResumeLayout(false);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Taos.Studio";
+            this.mnuMain.ResumeLayout(false);
+            this.mnuMain.PerformLayout();
+            this.toolMain.ResumeLayout(false);
+            this.toolMain.PerformLayout();
+            this.stripMain.ResumeLayout(false);
+            this.stripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.SplitContainer splitMain;
-        private System.Windows.Forms.TreeView tvwDatabase;
-        private System.Windows.Forms.StatusStrip stbStatus;
-        private System.Windows.Forms.SplitContainer splitRight;
-        private System.Windows.Forms.ToolStripStatusLabel lblElapsed;
-        private System.Windows.Forms.TabControl tabResult;
-        private System.Windows.Forms.TabPage tabGrid;
-        private System.Windows.Forms.DataGridView grdResult;
-        private System.Windows.Forms.TabPage tabText;
-        private System.Windows.Forms.ToolStripStatusLabel lblResultCount;
-        private System.Windows.Forms.ToolStrip tlbMain;
-        private System.Windows.Forms.ToolStripButton btnConnect;
-        private System.Windows.Forms.ToolStripButton btnRun;
-        private System.Windows.Forms.ToolStripSeparator tlbSep1;
-        private System.Windows.Forms.ToolStripButton btnRefresh;
-        private System.Windows.Forms.ToolStripSeparator tlbSep2;
-        private System.Windows.Forms.ToolStripStatusLabel lblCursor;
-        private System.Windows.Forms.ToolStripProgressBar prgRunning;
-        private System.Windows.Forms.ImageList imgList;
-        private System.Windows.Forms.ContextMenuStrip ctxTableMenu;
-        private TextEditorControl txtSql;
-        private System.Windows.Forms.TabControl tabSql;
-        private System.Windows.Forms.ToolStripMenuItem mnuDropCollection;
-        private System.Windows.Forms.ToolStripSeparator mnuSep1;
+
+        private DarkMenuStrip mnuMain;
+        private DarkToolStrip toolMain;
+        private DarkStatusStrip stripMain;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+        private System.Windows.Forms.ToolStripMenuItem mnuFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuView;
+        private System.Windows.Forms.ToolStripMenuItem mnuDialog;
+        private System.Windows.Forms.ToolStripMenuItem mnuClose;
+        private System.Windows.Forms.ToolStripMenuItem mnuTools;
+        private System.Windows.Forms.ToolStripMenuItem mnuWindow;
+        private System.Windows.Forms.ToolStripMenuItem mnuHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuAbout;
+        private System.Windows.Forms.ToolStripButton btnNewFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuNewFile;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem mnuQueryAll;
-        private System.Windows.Forms.ContextMenuStrip ctxMenuRoot;
-        private System.Windows.Forms.ToolStripMenuItem mnuInfo;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem mnuQueryCount;
-        private TextEditorControl txtResult;
-        private System.Windows.Forms.ImageList imgCodeCompletion;
-        private System.Windows.Forms.ToolStripButton BtnShowConnections;
-        private System.Windows.Forms.ToolStripButton btnAbout;
-        private System.Windows.Forms.ToolStripMenuItem showConnectionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mnuInsert;
-        private System.Windows.Forms.ContextMenuStrip ctxDataBaseMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private DarkDockPanel DockPanel;
+        private System.Windows.Forms.ToolStripMenuItem mnuProject;
+        private System.Windows.Forms.ToolStripMenuItem mnuProperties;
+        private System.Windows.Forms.ToolStripMenuItem mnuConsole;
+        private System.Windows.Forms.ToolStripMenuItem mnuLayers;
+        private System.Windows.Forms.ToolStripMenuItem mnuHistory;
+        private DarkSeparator darkSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem checkableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkableWithIconToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem checkedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkedWithIconToolStripMenuItem;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }
 

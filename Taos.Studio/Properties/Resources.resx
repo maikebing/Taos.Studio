@@ -241,4 +241,43 @@
   <data name="LimitExceeded" xml:space="preserve">
     <value>Limit exceeded</value>
   </data>
+  <data name="application_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Collection_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collection_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Console" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\console.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="files" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\files_7954.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder_closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_closed_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewFile_6276" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newfile_6276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="properties_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\properties_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RefactoringLog_12810" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refactoringlog_12810.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StatusAnnotations_Information_16xLG_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statusannotations_information_16xlg_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StatusAnnotations_Information_16xMD_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statusannotations_information_16xmd_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

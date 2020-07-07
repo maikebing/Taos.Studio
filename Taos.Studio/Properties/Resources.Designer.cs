@@ -81,6 +81,16 @@ namespace Taos.Studio.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap application_16x {
+            get {
+                object obj = ResourceManager.GetObject("application_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap application_put {
             get {
                 object obj = ResourceManager.GetObject("application_put", resourceCulture);
@@ -129,11 +139,31 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_16xLG {
+            get {
+                object obj = ResourceManager.GetObject("Close_16xLG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Closing... 的本地化字符串。
         /// </summary>
         internal static string Closing {
             get {
                 return ResourceManager.GetString("Closing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Collection_16xLG {
+            get {
+                object obj = ResourceManager.GetObject("Collection_16xLG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -153,6 +183,16 @@ namespace Taos.Studio.Properties {
         internal static string Connect {
             get {
                 return ResourceManager.GetString("Connect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Console {
+            get {
+                object obj = ResourceManager.GetObject("Console", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -216,6 +256,16 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap document_16xLG {
+            get {
+                object obj = ResourceManager.GetObject("document_16xLG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似  documents 的本地化字符串。
         /// </summary>
         internal static string Documents {
@@ -236,9 +286,39 @@ namespace Taos.Studio.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap files {
+            get {
+                object obj = ResourceManager.GetObject("files", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_closed {
+            get {
+                object obj = ResourceManager.GetObject("folder_closed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap folder_explore {
             get {
                 object obj = ResourceManager.GetObject("folder_explore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_open {
+            get {
+                object obj = ResourceManager.GetObject("folder_open", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +393,16 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap NewFile_6276 {
+            get {
+                object obj = ResourceManager.GetObject("NewFile_6276", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 no documents 的本地化字符串。
         /// </summary>
         internal static string NoDocuments {
@@ -359,11 +449,31 @@ namespace Taos.Studio.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap properties_16xLG {
+            get {
+                object obj = ResourceManager.GetObject("properties_16xLG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Reading... 的本地化字符串。
         /// </summary>
         internal static string Reading {
             get {
                 return ResourceManager.GetString("Reading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap RefactoringLog_12810 {
+            get {
+                object obj = ResourceManager.GetObject("RefactoringLog_12810", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -383,6 +493,26 @@ namespace Taos.Studio.Properties {
         internal static string Running {
             get {
                 return ResourceManager.GetString("Running", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap StatusAnnotations_Information_16xLG_color {
+            get {
+                object obj = ResourceManager.GetObject("StatusAnnotations_Information_16xLG_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap StatusAnnotations_Information_16xMD_color {
+            get {
+                object obj = ResourceManager.GetObject("StatusAnnotations_Information_16xMD_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
