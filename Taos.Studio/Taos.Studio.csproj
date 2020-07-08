@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\NodeTag.cs" />
     <Compile Include="Classes\SqlCodeCompletion.cs" />
     <Compile Include="Classes\UIExtensions.cs" />
     <Compile Include="Forms\Dialogs\DialogAbout.cs">

@@ -59,9 +59,9 @@ namespace Taos.Studio
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.DockPanel = new DarkUI.Docking.DarkDockPanel();
             this.darkSeparator1 = new DarkUI.Controls.DarkSeparator();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.mnuMain.SuspendLayout();
             this.toolMain.SuspendLayout();
             this.stripMain.SuspendLayout();
@@ -81,7 +81,7 @@ namespace Taos.Studio
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.mnuMain.Size = new System.Drawing.Size(944, 25);
+            this.mnuMain.Size = new System.Drawing.Size(944, 28);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "darkMenuStrip1";
             // 
@@ -94,7 +94,7 @@ namespace Taos.Studio
             this.mnuClose});
             this.mnuFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(57, 21);
+            this.mnuFile.Size = new System.Drawing.Size(70, 24);
             this.mnuFile.Text = "&Server";
             // 
             // mnuNewFile
@@ -103,15 +103,16 @@ namespace Taos.Studio
             this.mnuNewFile.Image = global::Taos.Studio.Properties.Resources.NewFile_6276;
             this.mnuNewFile.Name = "mnuNewFile";
             this.mnuNewFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.mnuNewFile.Size = new System.Drawing.Size(264, 26);
+            this.mnuNewFile.Size = new System.Drawing.Size(323, 26);
             this.mnuNewFile.Text = "&Create New Connection";
+            this.mnuNewFile.Click += new System.EventHandler(this.NewFile_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(261, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(320, 6);
             // 
             // mnuClose
             // 
@@ -119,8 +120,9 @@ namespace Taos.Studio
             this.mnuClose.Image = global::Taos.Studio.Properties.Resources.Close_16xLG;
             this.mnuClose.Name = "mnuClose";
             this.mnuClose.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.mnuClose.Size = new System.Drawing.Size(264, 26);
+            this.mnuClose.Size = new System.Drawing.Size(323, 26);
             this.mnuClose.Text = "&Close";
+            this.mnuClose.Click += new System.EventHandler(this.Close_Click);
             // 
             // mnuView
             // 
@@ -129,7 +131,7 @@ namespace Taos.Studio
             this.mnuDialog});
             this.mnuView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuView.Name = "mnuView";
-            this.mnuView.Size = new System.Drawing.Size(47, 21);
+            this.mnuView.Size = new System.Drawing.Size(58, 24);
             this.mnuView.Text = "&View";
             // 
             // mnuDialog
@@ -137,8 +139,9 @@ namespace Taos.Studio
             this.mnuDialog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuDialog.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
             this.mnuDialog.Name = "mnuDialog";
-            this.mnuDialog.Size = new System.Drawing.Size(184, 26);
+            this.mnuDialog.Size = new System.Drawing.Size(224, 26);
             this.mnuDialog.Text = "&Dialog test";
+            this.mnuDialog.Click += new System.EventHandler(this.Dialog_Click);
             // 
             // mnuTools
             // 
@@ -151,7 +154,7 @@ namespace Taos.Studio
             this.checkedWithIconToolStripMenuItem});
             this.mnuTools.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuTools.Name = "mnuTools";
-            this.mnuTools.Size = new System.Drawing.Size(52, 21);
+            this.mnuTools.Size = new System.Drawing.Size(63, 24);
             this.mnuTools.Text = "&Tools";
             // 
             // checkableToolStripMenuItem
@@ -159,7 +162,7 @@ namespace Taos.Studio
             this.checkableToolStripMenuItem.CheckOnClick = true;
             this.checkableToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.checkableToolStripMenuItem.Name = "checkableToolStripMenuItem";
-            this.checkableToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkableToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.checkableToolStripMenuItem.Text = "Checkable";
             // 
             // checkableWithIconToolStripMenuItem
@@ -168,7 +171,7 @@ namespace Taos.Studio
             this.checkableWithIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.checkableWithIconToolStripMenuItem.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
             this.checkableWithIconToolStripMenuItem.Name = "checkableWithIconToolStripMenuItem";
-            this.checkableWithIconToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkableWithIconToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.checkableWithIconToolStripMenuItem.Text = "Checkable with icon";
             // 
             // toolStripSeparator2
@@ -176,7 +179,7 @@ namespace Taos.Studio
             this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(192, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(234, 6);
             // 
             // checkedToolStripMenuItem
             // 
@@ -184,7 +187,7 @@ namespace Taos.Studio
             this.checkedToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkedToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.checkedToolStripMenuItem.Name = "checkedToolStripMenuItem";
-            this.checkedToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkedToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.checkedToolStripMenuItem.Text = "Checked";
             // 
             // checkedWithIconToolStripMenuItem
@@ -194,7 +197,7 @@ namespace Taos.Studio
             this.checkedWithIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.checkedWithIconToolStripMenuItem.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
             this.checkedWithIconToolStripMenuItem.Name = "checkedWithIconToolStripMenuItem";
-            this.checkedWithIconToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.checkedWithIconToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.checkedWithIconToolStripMenuItem.Text = "Checked with icon";
             // 
             // mnuWindow
@@ -208,7 +211,7 @@ namespace Taos.Studio
             this.mnuHistory});
             this.mnuWindow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuWindow.Name = "mnuWindow";
-            this.mnuWindow.Size = new System.Drawing.Size(67, 21);
+            this.mnuWindow.Size = new System.Drawing.Size(83, 24);
             this.mnuWindow.Text = "&Window";
             // 
             // mnuProject
@@ -216,40 +219,45 @@ namespace Taos.Studio
             this.mnuProject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuProject.Image = global::Taos.Studio.Properties.Resources.application_16x;
             this.mnuProject.Name = "mnuProject";
-            this.mnuProject.Size = new System.Drawing.Size(184, 26);
+            this.mnuProject.Size = new System.Drawing.Size(224, 26);
             this.mnuProject.Text = "&Project Explorer";
+            this.mnuProject.Click += new System.EventHandler(this.Project_Click);
             // 
             // mnuProperties
             // 
             this.mnuProperties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuProperties.Image = global::Taos.Studio.Properties.Resources.properties_16xLG;
             this.mnuProperties.Name = "mnuProperties";
-            this.mnuProperties.Size = new System.Drawing.Size(184, 26);
+            this.mnuProperties.Size = new System.Drawing.Size(224, 26);
             this.mnuProperties.Text = "P&roperties";
+            this.mnuProperties.Click += new System.EventHandler(this.Properties_Click);
             // 
             // mnuConsole
             // 
             this.mnuConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuConsole.Image = global::Taos.Studio.Properties.Resources.Console;
             this.mnuConsole.Name = "mnuConsole";
-            this.mnuConsole.Size = new System.Drawing.Size(184, 26);
+            this.mnuConsole.Size = new System.Drawing.Size(224, 26);
             this.mnuConsole.Text = "&Console";
+            this.mnuConsole.Click += new System.EventHandler(this.Console_Click);
             // 
             // mnuLayers
             // 
             this.mnuLayers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuLayers.Image = global::Taos.Studio.Properties.Resources.Collection_16xLG;
             this.mnuLayers.Name = "mnuLayers";
-            this.mnuLayers.Size = new System.Drawing.Size(184, 26);
+            this.mnuLayers.Size = new System.Drawing.Size(224, 26);
             this.mnuLayers.Text = "&Layers";
+            this.mnuLayers.Click += new System.EventHandler(this.Layers_Click);
             // 
             // mnuHistory
             // 
             this.mnuHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuHistory.Image = ((System.Drawing.Image)(resources.GetObject("mnuHistory.Image")));
             this.mnuHistory.Name = "mnuHistory";
-            this.mnuHistory.Size = new System.Drawing.Size(184, 26);
+            this.mnuHistory.Size = new System.Drawing.Size(224, 26);
             this.mnuHistory.Text = "&History";
+            this.mnuHistory.Click += new System.EventHandler(this.History_Click);
             // 
             // mnuHelp
             // 
@@ -258,7 +266,7 @@ namespace Taos.Studio
             this.mnuAbout});
             this.mnuHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(47, 21);
+            this.mnuHelp.Size = new System.Drawing.Size(58, 24);
             this.mnuHelp.Text = "&Help";
             // 
             // mnuAbout
@@ -266,8 +274,9 @@ namespace Taos.Studio
             this.mnuAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.mnuAbout.Image = global::Taos.Studio.Properties.Resources.StatusAnnotations_Information_16xLG_color;
             this.mnuAbout.Name = "mnuAbout";
-            this.mnuAbout.Size = new System.Drawing.Size(184, 26);
+            this.mnuAbout.Size = new System.Drawing.Size(224, 26);
             this.mnuAbout.Text = "&About DarkUI";
+            this.mnuAbout.Click += new System.EventHandler(this.About_Click);
             // 
             // toolMain
             // 
@@ -278,7 +287,7 @@ namespace Taos.Studio
             this.toolMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNewFile});
-            this.toolMain.Location = new System.Drawing.Point(0, 27);
+            this.toolMain.Location = new System.Drawing.Point(0, 30);
             this.toolMain.Name = "toolMain";
             this.toolMain.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
             this.toolMain.Size = new System.Drawing.Size(944, 28);
@@ -329,7 +338,7 @@ namespace Taos.Studio
             // 
             this.toolStripStatusLabel6.Margin = new System.Windows.Forms.Padding(0, 0, 50, 2);
             this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(648, 14);
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(637, 14);
             this.toolStripStatusLabel6.Spring = true;
             this.toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -337,36 +346,36 @@ namespace Taos.Studio
             // 
             this.toolStripStatusLabel5.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(53, 16);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(64, 16);
             this.toolStripStatusLabel5.Text = "120 MB";
             this.toolStripStatusLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 8);
             // 
             // DockPanel
             // 
             this.DockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.DockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DockPanel.Location = new System.Drawing.Point(0, 55);
+            this.DockPanel.Location = new System.Drawing.Point(0, 58);
             this.DockPanel.Name = "DockPanel";
-            this.DockPanel.Size = new System.Drawing.Size(944, 563);
+            this.DockPanel.Size = new System.Drawing.Size(944, 560);
             this.DockPanel.TabIndex = 3;
             // 
             // darkSeparator1
             // 
             this.darkSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkSeparator1.Location = new System.Drawing.Point(0, 25);
+            this.darkSeparator1.Location = new System.Drawing.Point(0, 28);
             this.darkSeparator1.Name = "darkSeparator1";
             this.darkSeparator1.Size = new System.Drawing.Size(944, 2);
             this.darkSeparator1.TabIndex = 4;
             this.darkSeparator1.Text = "darkSeparator1";
             // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 10);
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 642);
             this.Controls.Add(this.DockPanel);

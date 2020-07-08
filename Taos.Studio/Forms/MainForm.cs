@@ -43,8 +43,7 @@ namespace Taos.Studio
             // input before letting events pass through to the rest of the application.
             Application.AddMessageFilter(DockPanel.DockResizeFilter);
 
-            // Hook in all the UI events manually for clarity.
-            HookEvents();
+         
 
             // Build the tool windows and add them to the dock panel
             _dockProject = new DockProject();
@@ -85,31 +84,7 @@ namespace Taos.Studio
             Taos_Login(taosConnectionStringBuilder);
         }
 
-       
-
-        private void HookEvents()
-        {
-            FormClosing += MainForm_FormClosing;
-
-            DockPanel.ContentAdded += DockPanel_ContentAdded;
-            DockPanel.ContentRemoved += DockPanel_ContentRemoved;
-
-            mnuNewFile.Click += NewFile_Click;
-            mnuClose.Click += Close_Click;
-
-            btnNewFile.Click += NewFile_Click;
-
-            mnuDialog.Click += Dialog_Click;
-
-            mnuProject.Click += Project_Click;
-            mnuProperties.Click += Properties_Click;
-            mnuConsole.Click += Console_Click;
-            mnuLayers.Click += Layers_Click;
-            mnuHistory.Click += History_Click;
-
-            mnuAbout.Click += About_Click;
-        }
-
+        
         private void ToggleToolWindow(DarkToolWindow toolWindow)
         {
             if (toolWindow.DockPanel == null)
