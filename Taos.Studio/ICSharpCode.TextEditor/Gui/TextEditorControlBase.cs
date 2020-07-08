@@ -767,6 +767,7 @@ namespace ICSharpCode.TextEditor
             // 
             // TextEditorControlBase
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.Name = "TextEditorControlBase";
             this.ResumeLayout(false);
 

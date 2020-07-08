@@ -76,7 +76,17 @@ namespace Taos.Studio
 
             // Check window menu items which are contained in the dock panel
             BuildWindowMenu();
-             
+
+
+            _dockProject.ShowDocument += _dockProject_ShowDocument1; ;
+
+
+        }
+
+        private void _dockProject_ShowDocument1(string title, string sql, Classes.NodeTag nt)
+        {
+        
+            DockPanel.AddContent(new DockDocument(this, title, sql,nt, Properties.Resources.document_16xLG));
         }
 
         public MainForm(TaosConnectionStringBuilder taosConnectionStringBuilder) :this()
@@ -261,5 +271,12 @@ namespace Taos.Studio
         }
 
         #endregion
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            var doc = DockPanel.ActiveDocument as DockDocument;
+            doc?.Run();
+
+        }
     }
 }

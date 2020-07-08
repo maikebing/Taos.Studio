@@ -31,7 +31,7 @@ namespace Taos.Studio
         private void InitializeComponent()
         {
             this.cmbOptions = new DarkUI.Controls.DarkDropdownList();
-            this.txtSql = new  TextEditorControl();
+            this.txtSql = new TextEditorControl();
             this.tabResult = new System.Windows.Forms.TabControl();
             this.tabGrid = new System.Windows.Forms.TabPage();
             this.grdResult = new System.Windows.Forms.DataGridView();
@@ -62,7 +62,7 @@ namespace Taos.Studio
             this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSql.ConvertTabsToSpaces = true;
             this.txtSql.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSql.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.txtSql.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSql.Highlighting = "SQL";
             this.txtSql.Location = new System.Drawing.Point(0, 0);
             this.txtSql.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -101,15 +101,13 @@ namespace Taos.Studio
             // 
             this.grdResult.AllowUserToAddRows = false;
             this.grdResult.AllowUserToDeleteRows = false;
-            this.grdResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.grdResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdResult.Location = new System.Drawing.Point(7, 7);
+            this.grdResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdResult.Location = new System.Drawing.Point(3, 5);
             this.grdResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdResult.Name = "grdResult";
             this.grdResult.RowHeadersWidth = 51;
-            this.grdResult.Size = new System.Drawing.Size(845, 173);
+            this.grdResult.Size = new System.Drawing.Size(855, 222);
             this.grdResult.TabIndex = 0;
             // 
             // tabText
@@ -119,7 +117,7 @@ namespace Taos.Studio
             this.tabText.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.tabText.Name = "tabText";
             this.tabText.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.tabText.Size = new System.Drawing.Size(942, 484);
+            this.tabText.Size = new System.Drawing.Size(861, 232);
             this.tabText.TabIndex = 3;
             this.tabText.Text = "Text";
             this.tabText.UseVisualStyleBackColor = true;

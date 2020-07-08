@@ -941,7 +941,18 @@ namespace ICSharpCode.TextEditor
 		#endregion
 		public event KeyEventHandler    KeyEventHandler;
 		public event DialogKeyProcessor DoProcessDialogKey;
-		
-		//internal void
-	}
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // TextArea
+            // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.ResumeLayout(false);
+
+        }
+
+        //internal void
+    }
 }

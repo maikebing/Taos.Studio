@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -349,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ICSharpCode.TextEditor\Gui\ContextMenu.resx">
       <DependentUpon>ContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICSharpCode.TextEditor\Gui\TextArea.resx">
+      <DependentUpon>TextArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ICSharpCode.TextEditor\Gui\TextEditorControlBase.resx">
       <DependentUpon>TextEditorControlBase.cs</DependentUpon>
