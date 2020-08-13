@@ -16,8 +16,6 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Taos.Studio.Installer", "Ta
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Taos.Studio.WS", "Taos.Studio.WapProj\Taos.Studio.WS.wapproj", "{19BEDDF6-48CD-46BA-9DAA-98FC65AB2C4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maikebing.Data.Taos", "..\EntityFrameworkCore.Taos\src\Maikebing.Data.Taos\Maikebing.Data.Taos.csproj", "{50319474-5AD7-4456-A9B5-7321ABDAD635}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,26 +94,6 @@ Global
 		{19BEDDF6-48CD-46BA-9DAA-98FC65AB2C4A}.Release|x86.ActiveCfg = Release|x86
 		{19BEDDF6-48CD-46BA-9DAA-98FC65AB2C4A}.Release|x86.Build.0 = Release|x86
 		{19BEDDF6-48CD-46BA-9DAA-98FC65AB2C4A}.Release|x86.Deploy.0 = Release|x86
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|ARM.Build.0 = Debug|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|x64.ActiveCfg = Debug|x64
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|x64.Build.0 = Debug|x64
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|x86.ActiveCfg = Debug|x86
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Debug|x86.Build.0 = Debug|x86
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|ARM.ActiveCfg = Release|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|ARM.Build.0 = Release|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|ARM64.Build.0 = Release|Any CPU
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|x64.ActiveCfg = Release|x64
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|x64.Build.0 = Release|x64
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|x86.ActiveCfg = Release|x86
-		{50319474-5AD7-4456-A9B5-7321ABDAD635}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -160,10 +160,10 @@
     <value>显示连接</value>
   </data>
   <data name="tabGrid.Text" xml:space="preserve">
-    <value>表格</value>
+    <value>数据</value>
   </data>
   <data name="tabText.Text" xml:space="preserve">
-    <value>文本</value>
+    <value>消息</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>使用</value>
@@ -173,5 +173,26 @@
   </data>
   <data name="toolStripMenuItem4.Text" xml:space="preserve">
     <value>删除</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="mnDataBase.Text" xml:space="preserve">
+    <value>数据库</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="tableToolStripMenuItem.Text" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="menuRun.Text" xml:space="preserve">
+    <value>自动执行活动SQL</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
 </root>

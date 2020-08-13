@@ -36,12 +36,10 @@ namespace Taos.Studio
             this.tvwDatabase = new System.Windows.Forms.TreeView();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.splitRight = new System.Windows.Forms.SplitContainer();
-            this.txtSql = new  TextEditorControl();
             this.tabResult = new System.Windows.Forms.TabControl();
             this.tabGrid = new System.Windows.Forms.TabPage();
             this.grdResult = new System.Windows.Forms.DataGridView();
             this.tabText = new System.Windows.Forms.TabPage();
-            this.txtResult = new  TextEditorControl();
             this.tabSql = new System.Windows.Forms.TabControl();
             this.stbStatus = new System.Windows.Forms.StatusStrip();
             this.lblCursor = new System.Windows.Forms.ToolStripStatusLabel();
@@ -73,6 +71,15 @@ namespace Taos.Studio
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnDataBase = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRun = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
+            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.Panel2.SuspendLayout();
@@ -90,6 +97,7 @@ namespace Taos.Studio
             this.ctxTableMenu.SuspendLayout();
             this.ctxMenuRoot.SuspendLayout();
             this.ctxDataBaseMenu.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitMain
@@ -139,16 +147,6 @@ namespace Taos.Studio
             // 
             this.splitRight.Panel2.Controls.Add(this.tabResult);
             // 
-            // txtSql
-            // 
-            resources.ApplyResources(this.txtSql, "txtSql");
-            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSql.ConvertTabsToSpaces = true;
-            this.txtSql.Highlighting = "SQL";
-            this.txtSql.Name = "txtSql";
-            this.txtSql.ShowLineNumbers = false;
-            this.txtSql.ShowVRuler = false;
-            // 
             // tabResult
             // 
             resources.ApplyResources(this.tabResult, "tabResult");
@@ -183,16 +181,6 @@ namespace Taos.Studio
             resources.ApplyResources(this.tabText, "tabText");
             this.tabText.Name = "tabText";
             this.tabText.UseVisualStyleBackColor = true;
-            // 
-            // txtResult
-            // 
-            resources.ApplyResources(this.txtResult, "txtResult");
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtResult.Highlighting = "JSON";
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.ShowLineNumbers = false;
-            this.txtResult.ShowVRuler = false;
             // 
             // tabSql
             // 
@@ -315,6 +303,7 @@ namespace Taos.Studio
             this.mnuSep1,
             this.mnuDropCollection});
             this.ctxTableMenu.Name = "ctxMenu";
+            this.ctxTableMenu.OwnerItem = this.tableToolStripMenuItem;
             resources.ApplyResources(this.ctxTableMenu, "ctxTableMenu");
             this.ctxTableMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenu_ItemClicked);
             // 
@@ -360,6 +349,7 @@ namespace Taos.Studio
             this.showConnectionsToolStripMenuItem,
             this.toolStripMenuItem2});
             this.ctxMenuRoot.Name = "ctxMenu";
+            this.ctxMenuRoot.OwnerItem = this.mnDataBase;
             resources.ApplyResources(this.ctxMenuRoot, "ctxMenuRoot");
             this.ctxMenuRoot.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenuRoot_ItemClicked);
             // 
@@ -379,6 +369,7 @@ namespace Taos.Studio
             // 
             this.showConnectionsToolStripMenuItem.Name = "showConnectionsToolStripMenuItem";
             resources.ApplyResources(this.showConnectionsToolStripMenuItem, "showConnectionsToolStripMenuItem");
+            this.showConnectionsToolStripMenuItem.Tag = "SHOW CONNECTIONS";
             this.showConnectionsToolStripMenuItem.Click += new System.EventHandler(this.BtnShowConnections_Click);
             // 
             // toolStripMenuItem2
@@ -427,14 +418,87 @@ namespace Taos.Studio
             resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             this.toolStripMenuItem4.Tag = "DROP DATABASE  IF EXISTS {0};";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnDataBase,
+            this.tableToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // mnDataBase
+            // 
+            this.mnDataBase.DropDown = this.ctxMenuRoot;
+            this.mnDataBase.Name = "mnDataBase";
+            resources.ApplyResources(this.mnDataBase, "mnDataBase");
+            // 
+            // tableToolStripMenuItem
+            // 
+            this.tableToolStripMenuItem.DropDown = this.ctxTableMenu;
+            this.tableToolStripMenuItem.Name = "tableToolStripMenuItem";
+            resources.ApplyResources(this.tableToolStripMenuItem, "tableToolStripMenuItem");
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuRun});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // menuRun
+            // 
+            this.menuRun.Checked = global::Taos.Studio.Properties.Settings.Default.autoexcueing;
+            this.menuRun.CheckOnClick = true;
+            this.menuRun.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.menuRun.Name = "menuRun";
+            resources.ApplyResources(this.menuRun, "menuRun");
+            this.menuRun.CheckedChanged += new System.EventHandler(this.menuExcueing_CheckedChanged);
+            // 
+            // txtSql
+            // 
+            resources.ApplyResources(this.txtSql, "txtSql");
+            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSql.ConvertTabsToSpaces = true;
+            this.txtSql.Highlighting = "SQL";
+            this.txtSql.Name = "txtSql";
+            this.txtSql.ShowLineNumbers = false;
+            this.txtSql.ShowVRuler = false;
+            // 
+            // txtResult
+            // 
+            resources.ApplyResources(this.txtResult, "txtResult");
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResult.Highlighting = "JSON";
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.ShowLineNumbers = false;
+            this.txtResult.ShowVRuler = false;
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tlbMain);
-            this.Controls.Add(this.stbStatus);
             this.Controls.Add(this.splitMain);
+            this.Controls.Add(this.tlbMain);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.stbStatus);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.splitMain.Panel1.ResumeLayout(false);
@@ -456,6 +520,8 @@ namespace Taos.Studio
             this.ctxTableMenu.ResumeLayout(false);
             this.ctxMenuRoot.ResumeLayout(false);
             this.ctxDataBaseMenu.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,6 +569,13 @@ namespace Taos.Studio
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mnDataBase;
+        private System.Windows.Forms.ToolStripMenuItem tableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuRun;
     }
 }
 

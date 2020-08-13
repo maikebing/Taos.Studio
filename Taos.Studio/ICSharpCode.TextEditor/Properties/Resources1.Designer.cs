@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Taos.Studio.ICSharpCode.TextEditor.Properties {
+namespace  ICSharpCode.TextEditor.Properties {
     using System;
     
     

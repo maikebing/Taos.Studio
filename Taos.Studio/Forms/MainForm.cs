@@ -124,7 +124,7 @@ namespace Taos.Studio
 
             tabSql.TabPages.Add("+", "+");
             this.LoadTreeView();
-            this.AddNewTab("");
+            this.AddNewTab("(none)", "");
 
             txtSql.Focus();
         }
@@ -188,10 +188,10 @@ namespace Taos.Studio
 
         private TaskData ActiveTask => tabSql.SelectedTab?.Tag as TaskData;
 
-        private void AddNewTab(string content)
+        private void AddNewTab(string title, string content)
         {
             // find + tab
-            var tab = tabSql.TabPages.Cast<TabPage>().Where(x => x.Text == "+").Single();
+            var tab = tabSql.TabPages.Cast<TabPage>().Where(x => x.Name == "+").Single();
 
             var task = new TaskData();
 
@@ -201,7 +201,7 @@ namespace Taos.Studio
 
             task.Id = task.Thread.ManagedThreadId;
 
-            tab.Text = tab.Name = task.Id.ToString();
+             tab.Name = task.Id.ToString();
             tab.Tag = task;
 
             if (tabSql.SelectedTab != tab)
@@ -211,7 +211,7 @@ namespace Taos.Studio
 
             // adding new + tab at end
             tabSql.TabPages.Add("+", "+");
-
+            tab.Text = title;
             tabResult.SelectTab("tabGrid");
         }
         private void CreateThread(TaskData task)
@@ -367,7 +367,7 @@ namespace Taos.Studio
             }
         }
 
-        private void AddSqlSnippet(string sql)
+        private void AddSqlSnippet(string title,string sql)
         {
             if (txtSql.Text.Trim().Length == 0)
             {
@@ -375,7 +375,7 @@ namespace Taos.Studio
             }
             else
             {
-                AddNewTab(sql.Replace("\\n", "\n"));
+                AddNewTab(title, sql.Replace("\\n", "\n"));
             }
         }
 
@@ -444,10 +444,14 @@ namespace Taos.Studio
 
         private void BtnRun_Click(object sender, EventArgs e)
         {
+            RunActive();
+        }
+
+        private void RunActive()
+        {
             var sql = txtSql.ActiveTextAreaControl.SelectionManager.SelectedText.Length > 0 ?
                 txtSql.ActiveTextAreaControl.SelectionManager.SelectedText :
                 txtSql.Text;
-
             this.ExecuteSql(sql);
         }
 
@@ -477,16 +481,26 @@ namespace Taos.Studio
 
         private void CtxMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            var colname = tvwDatabase.SelectedNode.Text;
-
-            var sql = string.Format(e.ClickedItem.Tag.ToString(), colname);
-            this.AddSqlSnippet(sql);
+            if (tvwDatabase.SelectedNode != null)
+            {
+                var colname = tvwDatabase.SelectedNode.Text;
+                var sql = string.Format(e.ClickedItem.Tag.ToString(), colname);
+                this.AddSqlSnippet($"{e.ClickedItem.Text} {colname}", sql);
+                if (menuRun.Checked)
+                {
+                    RunActive();
+                }
+            }
         }
 
         private void CtxMenuRoot_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            var sql = e.ClickedItem.Tag.ToString();
-            this.AddSqlSnippet(sql);
+            var sql = e.ClickedItem.Tag?.ToString();
+            this.AddSqlSnippet(e.ClickedItem.Text,sql);
+            if (menuRun.Checked)
+            {
+                RunActive();
+            }
         }
 
         #endregion
@@ -532,7 +546,7 @@ namespace Taos.Studio
                             node.Tag = a;
                         }
                     });
-                    AddSqlSnippet($"SELECT  {string.Join(",", _fields)} FROM  {e.Node.Name} LIMIT  100");
+                    AddSqlSnippet(e.Node.Text ,$"SELECT  {string.Join(",", _fields)} FROM  {e.Node.Name} LIMIT  100");
                     break;
                 default:
                     break;
@@ -602,7 +616,7 @@ namespace Taos.Studio
 
             if (e.TabPage.Name == "+")
             {
-                this.AddNewTab("");
+                this.AddNewTab("(none)", "");
             }
             else
             {
@@ -632,7 +646,8 @@ namespace Taos.Studio
 
         private void BtnShowConnections_Click(object sender, EventArgs e)
         {
-            this.ExecuteSql("SHOW CONNECTIONS");
+            AddNewTab("显示链接", "SHOW CONNECTIONS");
+            RunActive();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -640,6 +655,9 @@ namespace Taos.Studio
            new AboutBox().ShowDialog(this);
         }
 
-      
+        private void menuExcueing_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
     }
 }

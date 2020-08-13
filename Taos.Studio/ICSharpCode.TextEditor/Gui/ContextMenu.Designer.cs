@@ -1,4 +1,4 @@
-﻿using Taos.Studio.ICSharpCode.TextEditor.Properties;
+﻿using ICSharpCode.TextEditor.Properties;
 
 namespace ICSharpCode.TextEditor {
     partial class ContextMenu {
@@ -63,7 +63,7 @@ namespace ICSharpCode.TextEditor {
             // 
             // copy
             // 
-            this.copy.Image = global::Taos.Studio. ICSharpCode.TextEditor.Properties.Resources.copyToolStripMenuItem;
+            this.copy.Image = ICSharpCode.TextEditor.Properties.Resources.copyToolStripMenuItem;
             this.copy.Name = "copy";
             this.copy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copy.Size = new System.Drawing.Size(144, 22);
@@ -71,7 +71,7 @@ namespace ICSharpCode.TextEditor {
             // 
             // paste
             // 
-            this.paste.Image = global::Taos.Studio.ICSharpCode.TextEditor.Properties.Resources.pasteToolStripMenuItem;
+            this.paste.Image =ICSharpCode.TextEditor.Properties.Resources.pasteToolStripMenuItem;
             this.paste.Name = "paste";
             this.paste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.paste.Size = new System.Drawing.Size(144, 22);
