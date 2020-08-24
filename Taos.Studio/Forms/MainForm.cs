@@ -310,7 +310,7 @@ namespace Taos.Studio
             var table = _db.CreateCommand("SHOW DATABASES").ExecuteReader().ToJson();
             table.ToList().ForEach(a =>
             {
-                var name = Encoding.UTF8.GetString(a.Value<byte[]>("name")).TrimEnd('\0');
+                var name =a.Value<string>("name")?.RemoveNull();
                 var node = root.Nodes.Add(name, name, "database");
                 node.ContextMenuStrip = ctxDataBaseMenu;
             });
@@ -524,10 +524,11 @@ namespace Taos.Studio
                     var jtable = _db.CreateCommand("SHOW TABLES ").ExecuteReader().ToJson();
                     jtable.ToList().ForEach(a =>
                     {
-                        var name = Encoding.UTF8.GetString(a.Value<byte[]>("table_name")).TrimEnd('\0');
+                        var name = a.Value<string>("table_name").RemoveNull();
+                       
                         if (!e.Node.Nodes.ContainsKey(name))
                         {
-                           var node=  e.Node.Nodes.Add(name, name, "table");
+                            var node = e.Node.Nodes.Add(name, name, "table");
                             node.Tag = a;
                             node.ContextMenuStrip = ctxTableMenu;
                         }
@@ -538,7 +539,7 @@ namespace Taos.Studio
                     List<string> _fields = new List<string>();
                     jrows.ToList().ForEach(a =>
                     {
-                        var name = Encoding.UTF8.GetString(a.Value<byte[]>("Field")).TrimEnd('\0');
+                        var name = a.Value<string>("Field").RemoveNull();
                         _fields.Add(name);
                         if (!e.Node.Nodes.ContainsKey(name))
                         {
@@ -555,6 +556,8 @@ namespace Taos.Studio
 
 
         }
+
+    
 
         #endregion
 

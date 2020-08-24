@@ -6,10 +6,10 @@
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="ServerPort" Type="System.String" Scope="User">
-      <Value Profile="(Default)">6060</Value>
+      <Value Profile="(Default)">6030</Value>
     </Setting>
     <Setting Name="UserName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">taos</Value>
+      <Value Profile="(Default)">root</Value>
     </Setting>
     <Setting Name="autoexcueing" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

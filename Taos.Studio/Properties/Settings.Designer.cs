@@ -37,7 +37,7 @@ namespace Taos.Studio.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("6060")]
+        [global::System.Configuration.DefaultSettingValueAttribute("6030")]
         public string ServerPort {
             get {
                 return ((string)(this["ServerPort"]));
@@ -49,7 +49,7 @@ namespace Taos.Studio.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("taos")]
+        [global::System.Configuration.DefaultSettingValueAttribute("root")]
         public string UserName {
             get {
                 return ((string)(this["UserName"]));
