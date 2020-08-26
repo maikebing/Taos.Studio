@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD713406-4325-4EA9-A0E5-5B200E3A6C1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ICSharpCode.TextEditor</RootNamespace>
+    <AssemblyName>ICSharpCode.TextEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\BookmarkActions.cs" />
+    <Compile Include="Actions\CaretActions.cs" />
+    <Compile Include="Actions\ClipBoardActions.cs" />
+    <Compile Include="Actions\FoldActions.cs" />
+    <Compile Include="Actions\FormatActions.cs" />
+    <Compile Include="Actions\HomeEndActions.cs" />
+    <Compile Include="Actions\IEditAction.cs" />
+    <Compile Include="Actions\MiscActions.cs" />
+    <Compile Include="Actions\SelectionActions.cs" />
+    <Compile Include="Document\AbstractSegment.cs" />
+    <Compile Include="Document\BookmarkManager\Bookmark.cs" />
+    <Compile Include="Document\BookmarkManager\BookmarkEventHandler.cs" />
+    <Compile Include="Document\BookmarkManager\BookmarkManager.cs" />
+    <Compile Include="Document\BookmarkManager\BookmarkManagerMemento.cs" />
+    <Compile Include="Document\DefaultDocument.cs" />
+    <Compile Include="Document\DefaultTextEditorProperties.cs" />
+    <Compile Include="Document\DocumentEventArgs.cs" />
+    <Compile Include="Document\DocumentFactory.cs" />
+    <Compile Include="Document\FoldingStrategy\FoldingManager.cs" />
+    <Compile Include="Document\FoldingStrategy\FoldMarker.cs" />
+    <Compile Include="Document\FoldingStrategy\IFoldingStrategy.cs" />
+    <Compile Include="Document\FoldingStrategy\IndentFoldingStrategy.cs" />
+    <Compile Include="Document\FormattingStrategy\DefaultFormattingStrategy.cs" />
+    <Compile Include="Document\FormattingStrategy\IFormattingStrategy.cs" />
+    <Compile Include="Document\HighlightingStrategy\DefaultHighlightingStrategy.cs" />
+    <Compile Include="Document\HighlightingStrategy\FontContainer.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightBackground.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightColor.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightInfo.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightingColorNotFoundException.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightingDefinitionInvalidException.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightingDefinitionParser.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightingManager.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightingStrategyFactory.cs" />
+    <Compile Include="Document\HighlightingStrategy\HighlightRuleSet.cs" />
+    <Compile Include="Document\HighlightingStrategy\IHighlightingStrategy.cs" />
+    <Compile Include="Document\HighlightingStrategy\NextMarker.cs" />
+    <Compile Include="Document\HighlightingStrategy\PrevMarker.cs" />
+    <Compile Include="Document\HighlightingStrategy\Span.cs" />
+    <Compile Include="Document\HighlightingStrategy\SpanStack.cs" />
+    <Compile Include="Document\HighlightingStrategy\SyntaxModes\FileSyntaxModeProvider.cs" />
+    <Compile Include="Document\HighlightingStrategy\SyntaxModes\ISyntaxModeFileProvider.cs" />
+    <Compile Include="Document\HighlightingStrategy\SyntaxModes\ResourceSyntaxModeProvider.cs" />
+    <Compile Include="Document\HighlightingStrategy\SyntaxModes\SyntaxMode.cs" />
+    <Compile Include="Document\HighlightingStrategy\TextWord.cs" />
+    <Compile Include="Document\IDocument.cs" />
+    <Compile Include="Document\ISegment.cs" />
+    <Compile Include="Document\ITextEditorProperties.cs" />
+    <Compile Include="Document\LineManager\DeferredEventList.cs" />
+    <Compile Include="Document\LineManager\LineManager.cs" />
+    <Compile Include="Document\LineManager\LineManagerEventArgs.cs" />
+    <Compile Include="Document\LineManager\LineSegment.cs" />
+    <Compile Include="Document\LineManager\LineSegmentTree.cs" />
+    <Compile Include="Document\MarkerStrategy\MarkerStrategy.cs" />
+    <Compile Include="Document\MarkerStrategy\TextMarker.cs" />
+    <Compile Include="Document\Selection\ColumnRange.cs" />
+    <Compile Include="Document\Selection\DefaultSelection.cs" />
+    <Compile Include="Document\Selection\ISelection.cs" />
+    <Compile Include="Document\Selection\SelectionManager.cs" />
+    <Compile Include="Document\TextAnchor.cs" />
+    <Compile Include="Document\TextBufferStrategy\GapTextBufferStrategy.cs" />
+    <Compile Include="Document\TextBufferStrategy\ITextBufferStrategy.cs" />
+    <Compile Include="Document\TextBufferStrategy\StringTextBufferStrategy.cs" />
+    <Compile Include="Document\TextLocation.cs" />
+    <Compile Include="Document\TextUtilities.cs" />
+    <Compile Include="Gui\AbstractMargin.cs" />
+    <Compile Include="Gui\BracketHighlighter.cs" />
+    <Compile Include="Gui\BrushRegistry.cs" />
+    <Compile Include="Gui\Caret.cs" />
+    <Compile Include="Gui\CompletionWindow\AbstractCompletionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\CompletionWindow\CodeCompletionListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\CompletionWindow\CodeCompletionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\CompletionWindow\DeclarationViewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\CompletionWindow\ICompletionData.cs" />
+    <Compile Include="Gui\CompletionWindow\ICompletionDataProvider.cs" />
+    <Compile Include="Gui\ContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\ContextMenu.Designer.cs">
+      <DependentUpon>ContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DrawableLine.cs" />
+    <Compile Include="Gui\FoldMargin.cs" />
+    <Compile Include="Gui\GutterMargin.cs" />
+    <Compile Include="Gui\HighlightStringConverter.cs" />
+    <Compile Include="Gui\HRuler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\IconBarMargin.cs" />
+    <Compile Include="Gui\Ime.cs" />
+    <Compile Include="Gui\InsightWindow\IInsightDataProvider.cs" />
+    <Compile Include="Gui\InsightWindow\InsightWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\TextArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\TextAreaClipboardHandler.cs" />
+    <Compile Include="Gui\TextAreaControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\TextAreaDragDropHandler.cs" />
+    <Compile Include="Gui\TextAreaMouseHandler.cs" />
+    <Compile Include="Gui\TextAreaUpdate.cs" />
+    <Compile Include="Gui\TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\TextEditorControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\TextView.cs" />
+    <Compile Include="Gui\ToolTipRequestEventArgs.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Undo\IUndoableOperation.cs" />
+    <Compile Include="Undo\UndoableDelete.cs" />
+    <Compile Include="Undo\UndoableInsert.cs" />
+    <Compile Include="Undo\UndoableReplace.cs" />
+    <Compile Include="Undo\UndoQueue.cs" />
+    <Compile Include="Undo\UndoStack.cs" />
+    <Compile Include="Util\AugmentableRedBlackTree.cs" />
+    <Compile Include="Util\CheckedList.cs" />
+    <Compile Include="Util\FileReader.cs" />
+    <Compile Include="Util\LoggingService.cs" />
+    <Compile Include="Util\LookupTable.cs" />
+    <Compile Include="Util\MouseWheelHandler.cs" />
+    <Compile Include="Util\RedBlackTreeIterator.cs" />
+    <Compile Include="Util\RtfWriter.cs" />
+    <Compile Include="Util\TextUtility.cs" />
+    <Compile Include="Util\TipPainter.cs" />
+    <Compile Include="Util\TipPainterTools.cs" />
+    <Compile Include="Util\TipSection.cs" />
+    <Compile Include="Util\TipSpacer.cs" />
+    <Compile Include="Util\TipSplitter.cs" />
+    <Compile Include="Util\TipText.cs" />
+    <Compile Include="Util\WeakCollection.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\ContextMenu.resx">
+      <DependentUpon>ContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\TextEditorControlBase.resx">
+      <DependentUpon>TextEditorControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\copyToolStripMenuItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cutToolStripMenuItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\JSON-Mode.xshd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Mode.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\pasteToolStripMenuItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RightArrow.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SQL-Mode.xshd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SyntaxModes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TextEditorControl.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

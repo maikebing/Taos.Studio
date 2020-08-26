@@ -354,7 +354,7 @@ namespace Taos.Studio
                 {
                     if (tabResult.SelectedTab == tabGrid && data.IsGridLoaded == false)
                     {
-                        grdResult.BindBsonData(data);
+                        grdResult.BindBsonData(chartMain,data);
                         data.IsGridLoaded = true;
                     }
                     else if(tabResult.SelectedTab == tabText && data.IsTextLoaded == false)
@@ -661,6 +661,17 @@ namespace Taos.Studio
         private void menuExcueing_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
+        }
+
+      
+
+        private void grdResult_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (grdResult.Columns[ e.ColumnIndex].Name=="ts")
+            {
+                var dt = e.Value as DateTime?;
+                e.Value = dt.GetValueOrDefault().ToString("yyyy-MM-dd HH:mm:ss.fff zz");
+            }
         }
     }
 }

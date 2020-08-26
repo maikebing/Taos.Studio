@@ -26,7 +26,7 @@ namespace ICSharpCode.TextEditor.Document
 		public ResourceSyntaxModeProvider()
 		{
 			Assembly assembly = typeof(SyntaxMode).Assembly;
-			Stream syntaxModeStream = assembly.GetManifestResourceStream("Taos.Studio.ICSharpCode.TextEditor.Resources.SyntaxModes.xml");
+			Stream syntaxModeStream = assembly.GetManifestResourceStream("ICSharpCode.TextEditor.Resources.SyntaxModes.xml");
 			if (syntaxModeStream != null) {
 				syntaxModes = SyntaxMode.GetSyntaxModes(syntaxModeStream);
 			} else {
@@ -37,7 +37,7 @@ namespace ICSharpCode.TextEditor.Document
 		public XmlTextReader GetSyntaxModeFile(SyntaxMode syntaxMode)
 		{
 			Assembly assembly = typeof(SyntaxMode).Assembly;
-			return new XmlTextReader(assembly.GetManifestResourceStream("Taos.Studio.ICSharpCode.TextEditor.Resources." + syntaxMode.FileName));
+			return new XmlTextReader(assembly.GetManifestResourceStream("ICSharpCode.TextEditor.Resources." + syntaxMode.FileName));
 		}
 		
 		public void UpdateSyntaxModeList()

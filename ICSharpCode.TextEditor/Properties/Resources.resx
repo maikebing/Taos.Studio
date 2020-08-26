@@ -145,4 +145,22 @@
   <data name="SelectAll" xml:space="preserve">
     <value>&amp;Select All</value>
   </data>
+  <data name="JSON_Mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\json-mode.xshd;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\mode.xsd;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  </data>
+  <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\rightarrow.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SQL_Mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sql-mode.xshd;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SyntaxModes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\syntaxmodes.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  </data>
+  <data name="TextEditorControl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\texteditorcontrol.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

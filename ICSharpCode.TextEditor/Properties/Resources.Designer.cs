@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace  ICSharpCode.TextEditor.Properties {
+namespace ICSharpCode.TextEditor.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace  ICSharpCode.TextEditor.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Taos.Studio.ICSharpCode.TextEditor.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ICSharpCode.TextEditor.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -108,6 +108,36 @@ namespace  ICSharpCode.TextEditor.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] JSON_Mode {
+            get {
+                object obj = ResourceManager.GetObject("JSON_Mode", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; &gt;
+        ///	&lt;xsd:annotation&gt;
+        ///		&lt;xsd:documentation&gt;
+        ///		This schema defines the syntax for mode definitions in SharpDevelop.
+        ///		The schema can be simplified quite a bit but it does the job as is.
+        ///		
+        ///		
+        ///		If you are using this file as a reference it is probably easiest to scroll to
+        ///		the botton to find the definition of the root element called SyntaxDefinition and
+        ///		then unwind the different type definitions and refernces.
+        ///		 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Mode {
+            get {
+                return ResourceManager.GetString("Mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 &amp;Paste 的本地化字符串。
         /// </summary>
         internal static string Paste {
@@ -127,11 +157,61 @@ namespace  ICSharpCode.TextEditor.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] RightArrow {
+            get {
+                object obj = ResourceManager.GetObject("RightArrow", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 &amp;Select All 的本地化字符串。
         /// </summary>
         internal static string SelectAll {
             get {
                 return ResourceManager.GetString("SelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] SQL_Mode {
+            get {
+                object obj = ResourceManager.GetObject("SQL_Mode", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 &lt;SyntaxModes version=&quot;1.0&quot;&gt;
+        ///
+        ///  &lt;Mode file       = &quot;JSON-Mode.xshd&quot;
+        ///	      name       = &quot;JSON&quot;
+        ///	      extensions = &quot;.json&quot;/&gt;
+        ///
+        ///  &lt;Mode file       = &quot;SQL-Mode.xshd&quot;
+        ///	      name       = &quot;SQL&quot;
+        ///	      extensions = &quot;.sql&quot;/&gt;
+        ///  
+        ///&lt;/SyntaxModes&gt;
+        /// 的本地化字符串。
+        /// </summary>
+        internal static string SyntaxModes {
+            get {
+                return ResourceManager.GetString("SyntaxModes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap TextEditorControl {
+            get {
+                object obj = ResourceManager.GetObject("TextEditorControl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

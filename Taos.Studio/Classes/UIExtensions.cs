@@ -17,50 +17,79 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Taos.Studio.Properties;
 
 namespace Taos.Studio
 {
     static class UIExtensions
     {
-        public static void BindBsonData(this DataGridView grd, TaskData data)
+        public static void AddSeries(this Chart chartMain,string ymembers, ChartValueType  valueType )
+        {
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            series1.Name = $"series_{ymembers}";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.XValueMember = "ts";
+            series1.YValueMembers = ymembers;
+            series1.YValueType = valueType;
+            chartMain.Series.Add(series1);
+        }
+        public static void BindBsonData(this DataGridView grd,Chart  chart, TaskData data)
         {
             // hide grid if has more than 100 rows
             grd.Visible = data.Result.Count < 100;
             grd.Clear();
-
+            DataTable dt = new DataTable();
             foreach (var doc in data.Result)
             {
-                var row = new DataGridViewRow();
+
                 foreach (JProperty key in doc.Children())
                 {
-                
-                    var col = grd.Columns[key.Name];
+                    var col = dt.Columns[key.Name];
                     if (col == null)
                     {
-                        grd.Columns.Add(key.Name, key.Name);
-                        col = grd.Columns[key.Name];
-                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        col.ReadOnly = key.Path == "ts";
+                         dt.Columns.Add(key.Name).SetBsonType(key.Value);
                     }
                 }
-
-                row.DefaultCellStyle.BackColor = Color.Silver;
-                row.CreateCells(grd);
-
+                DataRow dr = dt.NewRow();
                 foreach (JProperty key in doc.Children())
                 {
-                    var col = grd.Columns[key.Name];
-                    var cell = row.Cells[col.Index];
-
-                    cell.Style.BackColor = Color.White;
-                    cell.SetBsonValue(key.Value);
-                    row.ReadOnly = key.Name == "ts";
+                    dr.SetBsonValue(key.Name, key.Value);
                 }
-
-                grd.Rows.Add(row);
+                dt.Rows.Add(dr);
             }
-
+            grd.DataSource = dt;
+            chart.Series.Clear();
+            chart.DataSource = dt;
+            if (dt.Columns.OfType<DataColumn>().Any(col => col.ColumnName == "ts"))
+            {
+                foreach (DataColumn col in dt.Columns)
+                {
+                    if (col.ColumnName != "ts")
+                    {
+                        if (col.DataType == typeof(int))
+                        {
+                            chart.AddSeries(col.ColumnName, ChartValueType.Int32);
+                        }
+                        else if (col.DataType == typeof(float))
+                        {
+                            chart.AddSeries(col.ColumnName, ChartValueType.Single);
+                        }
+                        else if (col.DataType == typeof(double))
+                        {
+                            chart.AddSeries(col.ColumnName, ChartValueType.Double);
+                        }
+                        else if (col.DataType == typeof(DateTime))
+                        {
+                            chart.AddSeries(col.ColumnName, ChartValueType.DateTime);
+                        }
+                    }
+                }
+                chart.DataBind();
+            }
             if (data.LimitExceeded)
             {
                 var limitRow = new DataGridViewRow();
@@ -87,7 +116,82 @@ namespace Taos.Studio
             grd.ReadOnly = grd.Columns["_id"] == null;
             grd.Visible = true;
         }
-
+        public static void SetBsonType(this DataColumn row,  JToken value)
+        {
+            if (value == null)
+            {
+                row.DataType = typeof(object);
+                return;
+            }
+            switch (value.Type)
+            {
+                case JTokenType.Boolean:
+                    row.DataType = typeof(bool);
+                    break;
+                case JTokenType.Date:
+                    row.DataType = typeof(DateTime);
+                    break;
+                case JTokenType.Bytes:
+                    row.DataType = typeof(string);
+                    break;
+                case JTokenType.Integer:
+                    row.DataType = typeof(int);
+                    break;
+                case JTokenType.Float:
+                    row.DataType = typeof(float);
+                    break;
+                case JTokenType.String:
+                    row.DataType = typeof(string);
+                    break;
+                case JTokenType.Guid:
+                    row.DataType = typeof(Guid);
+                    break;
+                case JTokenType.TimeSpan:
+                    row.DataType = typeof(TimeSpan);
+                    break;
+                default:
+                    row.DataType = typeof(object);
+                    break;
+            }
+        }
+        public static void SetBsonValue(this DataRow row,string colname, JToken value)
+        {
+            if (value == null)
+            {
+                row.SetField(colname, "");
+                return;
+            }
+            switch (value.Type)
+            {
+                case JTokenType.Boolean:
+                    row.SetField(colname,   value.Value<bool>());
+                    break;
+                case JTokenType.Date:
+                    row.SetField(colname, value.Value<DateTime>());
+                    break;
+                case JTokenType.Bytes:
+                    row.SetField(colname, Encoding.Default.GetString(value.Value<byte[]>()).TrimEnd('\0'));
+                    break;
+                case JTokenType.Integer:
+                    row.SetField(colname, value.Value<int>());
+                    break;
+                case JTokenType.Float:
+                    row.SetField(colname, value.Value<float>());
+                    break;
+                case JTokenType.String:
+                    row.SetField(colname, value.Value<string>());
+                    break;
+                case JTokenType.Guid:
+                    row.SetField(colname, value.Value<Guid>());
+                    break;
+                case JTokenType.TimeSpan:
+                    row.SetField(colname, value.Value<TimeSpan>());
+                    break;
+                default:
+                    row.SetField(colname, value.ToString());
+                    break;
+            }
+        }
         public static void SetBsonValue(this DataGridViewCell cell, JToken value)
         {
             if (value == null)
