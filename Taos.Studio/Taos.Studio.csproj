@@ -206,6 +206,7 @@
   <ItemGroup>
     <None Include="Resources\logo.png" />
     <None Include="Resources\taosdata-logo.png" />
+    <None Include="Resources\stable.png" />
     <Content Include="Taos.Studio.ico" />
     <None Include="Resources\bug_link.png" />
   </ItemGroup>

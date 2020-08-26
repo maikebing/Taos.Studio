@@ -14,6 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Taos.Studio.Properties;
+using System.Runtime.CompilerServices;
 
 namespace Taos.Studio
 {
@@ -243,13 +244,13 @@ namespace Taos.Studio
 
                     task.Parameters = null;
 
-                    
- 
+
+                    task.StartDateTime = DateTime.Now;
                         using (var reader = _db.CreateCommand(task.Sql).ExecuteReader())
                         {
                             task.ReadResult(reader);
                         }
-
+                    task.EndDateTime = DateTime.Now;
                     task.Elapsed = sw.Elapsed;
                     task.Exception = null;
                     task.Executing = false;
@@ -341,9 +342,9 @@ namespace Taos.Studio
                 prgRunning.Style = ProgressBarStyle.Blocks;
                 lblResultCount.Text = 
                     data.Result == null ? "" :
-                    data.Result.Count == 0 ? Resources.NoDocuments :
-                    data.Result.Count  == 1 ? Resources._1Document : 
-                    data.Result.Count + (data.LimitExceeded ? "+" : "") + Resources.Documents;
+                    data.Result.Rows.Count == 0 ? Resources.NoDocuments :
+                    data.Result.Rows.Count  == 1 ? Resources._1Document : 
+                    data.Result.Rows.Count + (data.LimitExceeded ? "+" : "") + Resources.Documents;
 
                 if (data.Exception != null)
                 {
@@ -354,12 +355,12 @@ namespace Taos.Studio
                 {
                     if (tabResult.SelectedTab == tabGrid && data.IsGridLoaded == false)
                     {
-                        grdResult.BindBsonData(chartMain,data);
+                        grdResult.BindBsonData(chartMain,data, txtResult);
                         data.IsGridLoaded = true;
                     }
                     else if(tabResult.SelectedTab == tabText && data.IsTextLoaded == false)
                     {
-                        txtResult.BindBsonData(data);
+                        txtResult.AppendLine($"{DateTime.Now}-开始时间:{data.StartDateTime}\r\b\t\t耗时:{data.EndDateTime.Subtract(data.StartDateTime)}\r\b\t\t共计:{data.Result.Columns.Count}列{data.Result.Rows.Count}调数据 ");
                         data.IsTextLoaded = true;
                     }
                    
@@ -521,33 +522,26 @@ namespace Taos.Studio
             {
                 case "database":
                     _db.ChangeDatabase(e.Node.Name);
-                    var jtable = _db.CreateCommand("SHOW TABLES ").ExecuteReader().ToJson();
-                    jtable.ToList().ForEach(a =>
-                    {
-                        var name = a.Value<string>("table_name").RemoveNull();
-                       
-                        if (!e.Node.Nodes.ContainsKey(name))
-                        {
-                            var node = e.Node.Nodes.Add(name, name, "table");
-                            node.Tag = a;
-                            node.ContextMenuStrip = ctxTableMenu;
-                        }
-                    });
+                    e.FillTableToTree(_db, ctxTableMenu, "dbtable", "TABLES", "table", "SHOW TABLES", "table_name");
+                    e.FillTableToTree(_db, ctxTableMenu, "dbstable", "STABLES", "stable", "SHOW STABLES ","name");
                     break;
                 case "table":
-                    var jrows = _db.CreateCommand($"DESCRIBE  {e.Node.Name}").ExecuteReader().ToJson();
-                    List<string> _fields = new List<string>();
-                    jrows.ToList().ForEach(a =>
+                    if (e.Node.Tag != null)
                     {
-                        var name = a.Value<string>("Field").RemoveNull();
-                        _fields.Add(name);
-                        if (!e.Node.Nodes.ContainsKey(name))
+                        var jrows = _db.CreateCommand($"DESCRIBE  {e.Node.Name}").ExecuteReader().ToJson();
+                        List<string> _fields = new List<string>();
+                        jrows.ToList().ForEach(a =>
                         {
-                            var node = e.Node.Nodes.Add(name, name, "field");
-                            node.Tag = a;
-                        }
-                    });
-                    AddSqlSnippet(e.Node.Text ,$"SELECT  {string.Join(",", _fields)} FROM  {e.Node.Name} LIMIT  100");
+                            var name = a.Value<string>("Field").RemoveNull();
+                            _fields.Add(name);
+                            if (!e.Node.Nodes.ContainsKey(name))
+                            {
+                                var node = e.Node.Nodes.Add(name, name, "field");
+                                node.Tag = a;
+                            }
+                        });
+                        AddSqlSnippet(e.Node.Text, $"SELECT  {string.Join(",", _fields)} FROM  {e.Node.Name} LIMIT  100");
+                    }
                     break;
                 default:
                     break;
@@ -557,7 +551,8 @@ namespace Taos.Studio
 
         }
 
-    
+        
+
 
         #endregion
 

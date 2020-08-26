@@ -40,12 +40,12 @@ namespace Taos.Studio
             this.tvwDatabase = new System.Windows.Forms.TreeView();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.splitRight = new System.Windows.Forms.SplitContainer();
-            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
             this.tabResult = new System.Windows.Forms.TabControl();
             this.tabGrid = new System.Windows.Forms.TabPage();
             this.grdResult = new System.Windows.Forms.DataGridView();
             this.tabText = new System.Windows.Forms.TabPage();
-            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
+            this.tpChart = new System.Windows.Forms.TabPage();
+            this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabSql = new System.Windows.Forms.TabControl();
             this.stbStatus = new System.Windows.Forms.StatusStrip();
             this.lblCursor = new System.Windows.Forms.ToolStripStatusLabel();
@@ -84,8 +84,10 @@ namespace Taos.Studio
             this.menuRun = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tpChart = new System.Windows.Forms.TabPage();
-            this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
+            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.Panel2.SuspendLayout();
@@ -98,14 +100,14 @@ namespace Taos.Studio
             this.tabGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdResult)).BeginInit();
             this.tabText.SuspendLayout();
+            this.tpChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
             this.stbStatus.SuspendLayout();
             this.tlbMain.SuspendLayout();
             this.ctxTableMenu.SuspendLayout();
             this.ctxMenuRoot.SuspendLayout();
             this.ctxDataBaseMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tpChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
             this.SuspendLayout();
             // 
             // splitMain
@@ -140,6 +142,8 @@ namespace Taos.Studio
             this.imgList.Images.SetKeyName(2, "table");
             this.imgList.Images.SetKeyName(3, "table_gear");
             this.imgList.Images.SetKeyName(4, "");
+            this.imgList.Images.SetKeyName(5, "stable");
+            this.imgList.Images.SetKeyName(6, "table_lightning");
             // 
             // splitRight
             // 
@@ -154,16 +158,6 @@ namespace Taos.Studio
             // splitRight.Panel2
             // 
             this.splitRight.Panel2.Controls.Add(this.tabResult);
-            // 
-            // txtSql
-            // 
-            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSql.ConvertTabsToSpaces = true;
-            resources.ApplyResources(this.txtSql, "txtSql");
-            this.txtSql.Highlighting = "SQL";
-            this.txtSql.Name = "txtSql";
-            this.txtSql.ShowLineNumbers = false;
-            this.txtSql.ShowVRuler = false;
             // 
             // tabResult
             // 
@@ -202,15 +196,35 @@ namespace Taos.Studio
             this.tabText.Name = "tabText";
             this.tabText.UseVisualStyleBackColor = true;
             // 
-            // txtResult
+            // tpChart
             // 
-            resources.ApplyResources(this.txtResult, "txtResult");
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtResult.Highlighting = "JSON";
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.ShowLineNumbers = false;
-            this.txtResult.ShowVRuler = false;
+            this.tpChart.Controls.Add(this.chartMain);
+            this.tpChart.Controls.Add(this.splitter1);
+            this.tpChart.Controls.Add(this.propertyGrid1);
+            resources.ApplyResources(this.tpChart, "tpChart");
+            this.tpChart.Name = "tpChart";
+            this.tpChart.UseVisualStyleBackColor = true;
+            // 
+            // chartMain
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartMain.ChartAreas.Add(chartArea1);
+            resources.ApplyResources(this.chartMain, "chartMain");
+            legend1.Name = "Legend1";
+            this.chartMain.Legends.Add(legend1);
+            this.chartMain.Name = "chartMain";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series2";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartMain.Series.Add(series1);
+            this.chartMain.Series.Add(series2);
             // 
             // tabSql
             // 
@@ -499,33 +513,37 @@ namespace Taos.Studio
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // tpChart
+            // txtSql
             // 
-            this.tpChart.Controls.Add(this.chartMain);
-            resources.ApplyResources(this.tpChart, "tpChart");
-            this.tpChart.Name = "tpChart";
-            this.tpChart.UseVisualStyleBackColor = true;
+            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSql.ConvertTabsToSpaces = true;
+            resources.ApplyResources(this.txtSql, "txtSql");
+            this.txtSql.Highlighting = "SQL";
+            this.txtSql.Name = "txtSql";
+            this.txtSql.ShowLineNumbers = false;
+            this.txtSql.ShowVRuler = false;
             // 
-            // chartMain
+            // txtResult
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartMain.ChartAreas.Add(chartArea1);
-            resources.ApplyResources(this.chartMain, "chartMain");
-            legend1.Name = "Legend1";
-            this.chartMain.Legends.Add(legend1);
-            this.chartMain.Name = "chartMain";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series2";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartMain.Series.Add(series1);
-            this.chartMain.Series.Add(series2);
+            resources.ApplyResources(this.txtResult, "txtResult");
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResult.Highlighting = "JSON";
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.ShowLineNumbers = false;
+            this.txtResult.ShowVRuler = false;
+            // 
+            // propertyGrid1
+            // 
+            resources.ApplyResources(this.propertyGrid1, "propertyGrid1");
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.SelectedObject = this.chartMain;
+            // 
+            // splitter1
+            // 
+            resources.ApplyResources(this.splitter1, "splitter1");
+            this.splitter1.Name = "splitter1";
+            this.splitter1.TabStop = false;
             // 
             // MainForm
             // 
@@ -551,6 +569,8 @@ namespace Taos.Studio
             this.tabGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdResult)).EndInit();
             this.tabText.ResumeLayout(false);
+            this.tpChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).EndInit();
             this.stbStatus.ResumeLayout(false);
             this.stbStatus.PerformLayout();
             this.tlbMain.ResumeLayout(false);
@@ -560,8 +580,6 @@ namespace Taos.Studio
             this.ctxDataBaseMenu.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tpChart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,6 +636,8 @@ namespace Taos.Studio
         private System.Windows.Forms.ToolStripMenuItem menuRun;
         private System.Windows.Forms.TabPage tpChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMain;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }
 

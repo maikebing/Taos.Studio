@@ -24,6 +24,46 @@ namespace Taos.Studio
 {
     static class UIExtensions
     {
+        internal static void FillTableToTree(this TreeNodeMouseClickEventArgs e, TaosConnection _db, ContextMenuStrip contextMenu,  string rootkey, string title, string imgkey, string sql, string tablename)
+        {
+
+            TreeNode stable = null;
+            if (!e.Node.Nodes.ContainsKey(rootkey))
+            {
+                stable = e.Node.Nodes.Add(rootkey, title, imgkey);
+                stable.SelectedImageKey = "";
+            }
+            else
+            {
+                stable = e.Node.Nodes[rootkey];
+            }
+            var sjtable = _db.CreateCommand(sql).ExecuteReader().ToJson();
+            List<string> stlst = new List<string>();
+
+            sjtable.ToList().ForEach(a =>
+            {
+                var name = a.Value<string>(tablename).RemoveNull();
+                stlst.Add(name);
+                if (!stable.Nodes.ContainsKey(name))
+                {
+                    var node = stable.Nodes.Add(name, name, imgkey);
+                    node.Tag = a;
+                    node.ContextMenuStrip = contextMenu;
+                }
+            });
+            foreach (TreeNode item in stable.Nodes)
+            {
+                if (stlst.Contains(item.Name))
+                {
+                    stlst.Remove(item.Name);
+                }
+            }
+            stlst.ForEach(s =>
+            {
+                stable.Nodes.RemoveByKey(s);
+            });
+        }
+
         public static void AddSeries(this Chart chartMain,string ymembers, ChartValueType  valueType )
         {
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -37,40 +77,73 @@ namespace Taos.Studio
             series1.YValueType = valueType;
             chartMain.Series.Add(series1);
         }
-        public static void BindBsonData(this DataGridView grd,Chart  chart, TaskData data)
-        {
-            // hide grid if has more than 100 rows
-            grd.Visible = data.Result.Count < 100;
-            grd.Clear();
-            DataTable dt = new DataTable();
-            foreach (var doc in data.Result)
-            {
 
-                foreach (JProperty key in doc.Children())
+        internal static DataTable RemoveDataTableNullColumns(this  DataTable dt)
+        {
+            foreach (var column in dt.Columns.Cast<DataColumn>().ToArray())
+            {
+                var rows = dt.Rows.OfType<DataRow>();
+                if (rows.All(dr => dr.IsNull(column)))
                 {
-                    var col = dt.Columns[key.Name];
-                    if (col == null)
+                    dt.Columns.Remove(column);
+                }
+                else
+                {
+                    if (column.DataType == typeof(int))
                     {
-                         dt.Columns.Add(key.Name).SetBsonType(key.Value);
+                        if (rows.Max(r => (int)r[column]) == rows.Min(r => (int)r[column]))
+                        {
+                            dt.Columns.Remove(column);
+                        }
+                    }
+                    if (column.DataType == typeof(long))
+                    {
+                        if (rows.Max(r => (long)r[column]) == rows.Min(r => (long)r[column]))
+                        {
+                            dt.Columns.Remove(column);
+                        }
+                    }
+                    else if (column.DataType == typeof(double))
+                    {
+                        if (rows.Max(r => (double)r[column]) == rows.Min(r => (double)r[column]))
+                        {
+                            dt.Columns.Remove(column);
+                        }
+                    }
+                    else if (column.DataType == typeof(float))
+                    {
+                        if (rows.Max(r => (float)r[column]) == rows.Min(r => (float)r[column]))
+                        {
+                            dt.Columns.Remove(column);
+                        }
                     }
                 }
-                DataRow dr = dt.NewRow();
-                foreach (JProperty key in doc.Children())
-                {
-                    dr.SetBsonValue(key.Name, key.Value);
-                }
-                dt.Rows.Add(dr);
             }
-            grd.DataSource = dt;
+            return dt;
+        }
+
+        public static void BindBsonData(this DataGridView grd,Chart  chart, TaskData data, TextEditorControl text)
+        {
+            text.AppendLine($"{DateTime.Now}-准备数据..");
+            grd.Clear();
+            text.Clear();
             chart.Series.Clear();
+        
+            grd.DataSource = data.Result;
+            DataTable dt = data.Result?.Copy().RemoveDataTableNullColumns();
             chart.DataSource = dt;
-            if (dt.Columns.OfType<DataColumn>().Any(col => col.ColumnName == "ts"))
+            text.AppendLine($"{DateTime.Now}-合成曲线图..");
+
+            if (dt?.Columns.OfType<DataColumn>().Any(col => col.ColumnName == "ts")==true)
             {
                 foreach (DataColumn col in dt.Columns)
                 {
                     if (col.ColumnName != "ts")
                     {
-                        if (col.DataType == typeof(int))
+                        if (col.DataType == typeof(long))
+                        {
+                            chart.AddSeries(col.ColumnName, ChartValueType.Int64);
+                        }else if (col.DataType == typeof(int))
                         {
                             chart.AddSeries(col.ColumnName, ChartValueType.Int32);
                         }
@@ -81,10 +154,6 @@ namespace Taos.Studio
                         else if (col.DataType == typeof(double))
                         {
                             chart.AddSeries(col.ColumnName, ChartValueType.Double);
-                        }
-                        else if (col.DataType == typeof(DateTime))
-                        {
-                            chart.AddSeries(col.ColumnName, ChartValueType.DateTime);
                         }
                     }
                 }
@@ -115,6 +184,7 @@ namespace Taos.Studio
 
             grd.ReadOnly = grd.Columns["_id"] == null;
             grd.Visible = true;
+            text.AppendLine($"{DateTime.Now}-完成..");
         }
         public static void SetBsonType(this DataColumn row,  JToken value)
         {
@@ -246,41 +316,7 @@ namespace Taos.Studio
             grd.DataSource = null;
         }
 
-        public static void BindBsonData(this  TextEditorControl txt, TaskData data)
-        {
-            var index = 0;
-            var sb = new StringBuilder();
-
-       
-                 
-                 
-                if (data.Result.Count > 0)
-                {
-                    foreach (var value in data.Result)
-                    {
-                        if (data.Result?.Count > 1)
-                        {
-                            sb.AppendLine($"/* {index++ + 1} */");
-                        }
-
-                    sb.Append( JsonConvert.SerializeObject(value));
-                        sb.AppendLine();
-                    }
-
-                    if (data.LimitExceeded)
-                    {
-                        sb.AppendLine();
-                        sb.AppendLine("/* Limit exceeded */");
-                    }
-                }
-                else
-                {
-                    sb.AppendLine(Resources.NoResult);
-                }
-
-            txt.SetHighlighting("JSON");
-            txt.Text = sb.ToString();
-        }
+     
 
         public static void BindErrorMessage(this DataGridView grid, string sql, Exception ex)
         {

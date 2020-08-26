@@ -241,4 +241,7 @@
   <data name="LimitExceeded" xml:space="preserve">
     <value>Limit exceeded</value>
   </data>
+  <data name="stable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -139,8 +139,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABC
-        DQAAAk1TRnQBSQFMAgEBBQEAAaQBBAGkAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACu
+        DwAAAk1TRnQBSQFMAgEBBwEAAbwBBAG8AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -169,34 +169,44 @@
         AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
         AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
         AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wUAAfQBGgGUAhYBlAEa
-        AfQ2AAH/AQcBRAXjAW8BRAEHAf8zAAH/ARoBSwJEAUsBkwF0AUsCRAFuARsB/zIAARsBoAFLAkQBkwIa
-        ARwCRAFuAaABGzEAAf8CoAFLAUQBHAHDAhoBwwEcAUQBbgKgAfYwAAEbAqABSwFEBsMBRAFuAqABGzAA
-        ARoCoAFLAW4GwwJuAqABGjAAA6ABSwFEBksBRAFuA6AwAAOgAXMIRAF0A6AwAAEaAqABmQhEAZoCoAEa
-        MAABGwOgAXQGRAF5A6ABwzAAAfQEoAGZAW4CSwFuAZkEoAH2MQABGwygARsyAAH/ARoKoAEaAf8zAAH/
-        ARsIoAEbAf82AAH0ARsBGgKgARoBGwH/NgAB9AEHAu0B7AJtAewC7QEHAfQSAAHvDSgB7wsAAesB6gUA
-        AQcC7AGSAfcB7wEHAbwC8QHyAQcB7AEHEQABKAL/AbwD/wG8A/8BvAL/ASgBAAEJBrQBkQFtAZEB9wHs
-        Aa4B6gGSAgAB6wHvAZIB9wLvAQcBvAHyAfQB/wH0AfMB6wIAARoBmQtSARoBAAEoAv8BvAP/AbwD/wG8
-        Av8BKAEAAbQC9ATzAfcBvAH3AbwBBwH3AQcBbQH/AQAB6wHvAZIB9wLvAQcBvAHyAfQB/wH0AfMB6wIA
-        AXQBGwEaBJoFegHDAVIBAAFJDbwBSQEAAbQB9AEJAf8BCQL/ArwBBwKSAe8CBwH/AQAB7AH3A+wB6wJt
-        A+wB9wHwAewCAAFSAfYBoAKaA3oEWQHDAVIBAAFJAv8BvAP/AbwD/wG8Av8BSQEAAbQB9AQJAfcB7wHy
-        AZICCQGSAfABkgFtAQAC7AHtAZIB9wHvAQcBvALxAfIBvAHtAewCAAFSAfYBwwGgApoDegNZAcMBUgEA
-        AUoC/wG8A/8BvAP/AbwC/wFKAQABtQH0AQkB/wEJAf8B7wG8AfMB7AL/AZIB8gHvAewBAAHsAe8BkgH3
-        Au8BBwG8AfIB9AH/AfQB8wHsAgABUgH2AsMCoAGaA3oCWQHDAVIBAAFKDbwBSgEAAbUB/wUJAQcB8AHv
-        AuwB7wK8AgAB9wEHAe8CBwG8AfAB8QHzAv8C9AH3AgABUgL/A/YBwwKaA3oBwwFSAQABSgL/AbwD/wG8
-        A/8BvAL/AUoBAAEJAf8BCQH/AQkC/wEHAfEBBwHwAfEBBwHwAewB/wEAAe8B8AGSA+wCbQPsAfcB8QHv
-        AgABUgH2ApoBegEbBvYB/wFYAQABUAL/AbwD/wG8A/8BvAL/AVABAAEJAf8FCQIHAQkCBwHwAfcB8AIA
-        Ae0B7AHtAZIB9wHvAQcBvALxAfIBvALtAgABWAH2A5oCegKaA3oB9gFYAQABUA28AVABAAEJAf8BCQH/
-        AQkD/wEJAf8BBwHvAfQBtAMAAewB7wGSAfcC7wEHAbwB8gH0Af8B9AHzAewCAAFYAfYDmgEaBvYB/wF5
-        AQABUAL/AbwD/wG8A/8BvAL/AVABAAEJAf8KCQH/AbQDAAH3AQcB7wIHAbwB8AHxAfMC/wL0AfcCAAFY
-        Bf8B9gR5ApkBGwEAAVAC/wG8A/8BvAP/AbwC/wFQAQABCQz/AbQDAAHvAfAB9wPsAusB7ALtAe8B8QHv
-        AgAHeQf/AQAPUAEAAQkB/weYAngBlwH/AbQDAAHvAfcB8ALzAfQC/wH0AvMB8AH3Ae8RAAFyDXMBcgEA
-        AQkM/wG0AwABvAEHAfIC8wH0Av8B9ALzAfIBBwG8EQABcw2ZAXMBAAHzCAkDtQG0AQkEAAHzAfACvAQH
-        ArwB8AHzEgABCA1zAQgRAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAB8AEP
-        BgABwAEDBgABgAEBBgABgAEBRgABgAEBBgABgAEBBgABwAEDBgAB8AEPBgABwAEDAv8BAAEBAf8BzwGA
-        AQEC/wEAAQEBAAEBAYABAQGAAQEBAAEBAgABgAEBAYABAQEAAQECAAGAAQEBgAEBAQABAQIAAYABAQGA
-        AQEBAAEBAgABgAEBAYABAQEAAQEBAAEBAYABAQGAAQEBAAEBAgABgAEBAYABAQEAAQEBAAEBAYABAQGA
-        AQEBAAEBAQABAwGAAQEBgAEBAQABAQEAAQMBgAEBAYABAQEAAQEBAAEDAYABAQGAAQEBAAEBAQABAwGA
-        AQEC/wEAAQEBAAEDAYABAQL/AQABAQEAAQMBwAEDAv8BAAEBAv8L
+        AfQ2AAH/AQcBRAXjAW8BRAEHAf8DAAEJDLQBuwMAAQkMtAG7EQAB/wEaAUsCRAFLAZMBdAFLAkQBbgEb
+        Af8CAAG0AvQK8wG0AwAB9wEbAfQK8wG0EQABGwGgAUsCRAGTAhoBHAJEAW4BoAEbAgABtAH0AQkB/wEJ
+        Af8BvQH/AQkD/wHzAbQDAAH3AVgBBwH/AQkD/wEJA/8B8wG0EAAB/wKgAUsBRAEcAcMCGgHDARwBRAFu
+        AqAB9gEAAbQB9AIJAW8B+QFHAfkBjgMJAfMBtAMAAbQBeQFYAXkBvAcJAfMBtBAAARsCoAFLAUQGwwFE
+        AW4CoAEbAQABtQH0AQkB/wFvAv8BvQH5A/8B8wG0AwABtQHzAVIBeQFSARoC/wEJA/8B8wG0EAABGgKg
+        AUsBbgbDAm4CoAEaAQABtQH/BQkBtgH5AwkB8wG0AQABGwEaARwBmgFYAnoBWAF0AQcECQHzAbQQAAOg
+        AUsBRAZLAUQBbgOgAQABCQH/AQkB/wEJAf8BFgH5AW8D/wHzAbQBAAR6ApoCegF5AVIBHAH2Av8B8wG0
+        EAADoAFzCEQBdAOgAQABCQH/AgkBBwFHAWkBtgQJAfMBtAEAAfQBegKaAXoBmgFYAXkBmQF5ARwBBwIJ
+        AfMBtBAAARoCoAGZCEQBmgKgARoBAAEJAf8BCQH/AY4BFwL/AQkD/wH0AbQBAAH/ARoBegGaAVkBmgFY
+        AZoC/wEJA/8B9AG0EAABGwOgAXQGRAF5A6ABwwEAAQkB/wIJAe8BRwG2AZMB+QMJAf8BtAIAAfYBWAGa
+        AXoBmgJ6AZkFCQH/AbQQAAH0BKABmQFuAksBbgGZBKAB9gEAAQkE/wGUAuMBvQT/AbQCAAH/AZkBegOa
+        AnoBGgX/AbQRAAEbDKABGwIAAQkB/weYAngBlwH/AbQDAAEHAXoGWAN4AZcB/wG0EQAB/wEaCqABGgH/
+        AgABCQz/AbQDAAEJDP8BtBIAAf8BGwigARsB/wMAAfMICQO1AbQBCQMAAfMICQO1AbQBCRQAAfQBGwEa
+        AqABGgEbAf82AAH0AQcC7QHsAm0B7ALtAQcB9BIAAe8NKAHvCwAB6wHqBQABBwLsAZIB9wHvAQcBvALx
+        AfIBBwHsAQcRAAEoAv8BvAP/AbwD/wG8Av8BKAEAAQkGtAGRAW0BkQH3AewBrgHqAZICAAHrAe8BkgH3
+        Au8BBwG8AfIB9AH/AfQB8wHrAgABGgGZC1IBGgEAASgC/wG8A/8BvAP/AbwC/wEoAQABtAL0BPMB9wG8
+        AfcBvAEHAfcBBwFtAf8BAAHrAe8BkgH3Au8BBwG8AfIB9AH/AfQB8wHrAgABdAEbARoEmgV6AcMBUgEA
+        AUkNvAFJAQABtAH0AQkB/wEJAv8CvAEHApIB7wIHAf8BAAHsAfcD7AHrAm0D7AH3AfAB7AIAAVIB9gGg
+        ApoDegRZAcMBUgEAAUkC/wG8A/8BvAP/AbwC/wFJAQABtAH0BAkB9wHvAfIBkgIJAZIB8AGSAW0BAALs
+        Ae0BkgH3Ae8BBwG8AvEB8gG8Ae0B7AIAAVIB9gHDAaACmgN6A1kBwwFSAQABSgL/AbwD/wG8A/8BvAL/
+        AUoBAAG1AfQBCQH/AQkB/wHvAbwB8wHsAv8BkgHyAe8B7AEAAewB7wGSAfcC7wEHAbwB8gH0Af8B9AHz
+        AewCAAFSAfYCwwKgAZoDegJZAcMBUgEAAUoNvAFKAQABtQH/BQkBBwHwAe8C7AHvArwCAAH3AQcB7wIH
+        AbwB8AHxAfMC/wL0AfcCAAFSAv8D9gHDApoDegHDAVIBAAFKAv8BvAP/AbwD/wG8Av8BSgEAAQkB/wEJ
+        Af8BCQL/AQcB8QEHAfAB8QEHAfAB7AH/AQAB7wHwAZID7AJtA+wB9wHxAe8CAAFSAfYCmgF6ARsG9gH/
+        AVgBAAFQAv8BvAP/AbwD/wG8Av8BUAEAAQkB/wUJAgcBCQIHAfAB9wHwAgAB7QHsAe0BkgH3Ae8BBwG8
+        AvEB8gG8Au0CAAFYAfYDmgJ6ApoDegH2AVgBAAFQDbwBUAEAAQkB/wEJAf8BCQP/AQkB/wEHAe8B9AG0
+        AwAB7AHvAZIB9wLvAQcBvAHyAfQB/wH0AfMB7AIAAVgB9gOaARoG9gH/AXkBAAFQAv8BvAP/AbwD/wG8
+        Av8BUAEAAQkB/woJAf8BtAMAAfcBBwHvAgcBvAHwAfEB8wL/AvQB9wIAAVgF/wH2BHkCmQEbAQABUAL/
+        AbwD/wG8A/8BvAL/AVABAAEJDP8BtAMAAe8B8AH3A+wC6wHsAu0B7wHxAe8CAAd5B/8BAA9QAQABCQH/
+        B5gCeAGXAf8BtAMAAe8B9wHwAvMB9AL/AfQC8wHwAfcB7xEAAXINcwFyAQABCQz/AbQDAAG8AQcB8gLz
+        AfQC/wH0AvMB8gEHAbwRAAFzDZkBcwEAAfMICQO1AbQBCQQAAfMB8AK8BAcCvAHwAfMSAAEIDXMBCBEA
+        AUIBTQE+BwABPgMAASgDAAFAAwABIAMAAQEBAAEBBgABARYAA/8BAAHwAQ8E/wIAAcABAwGAAQEBwAMA
+        AYABAQGAAQEBwAMAAYABAQGAAQEBwAUAAYABAQHABQABgAEBAcAFAAGAAQEGAAGAAQEGAAGAAQEGAAGA
+        AQEGAAGAAQEBgAUAAYABAQGAAwABgAEBAYABAQHAAwABgAEBAYABAQHAAwABwAEDAYABAQHAAwAB8AEP
+        BP8CAAHAAQMC/wEAAQEB/wHPAYABAQL/AQABAQEAAQEBgAEBAYABAQEAAQECAAGAAQEBgAEBAQABAQIA
+        AYABAQGAAQEBAAEBAgABgAEBAYABAQEAAQECAAGAAQEBgAEBAQABAQEAAQEBgAEBAYABAQEAAQECAAGA
+        AQEBgAEBAQABAQEAAQEBgAEBAYABAQEAAQEBAAEDAYABAQGAAQEBAAEBAQABAwGAAQEBgAEBAQABAQEA
+        AQMBgAEBAYABAQEAAQEBAAEDAYABAQL/AQABAQEAAQMBgAEBAv8BAAEBAQABAwHAAQMC/wEAAQEC/ws=
 </value>
   </data>
   <data name="tvwDatabase.Location" type="System.Drawing.Point, System.Drawing">
@@ -299,7 +309,7 @@
     <value>51</value>
   </data>
   <data name="grdResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>820, 297</value>
+    <value>820, 295</value>
   </data>
   <data name="grdResult.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -371,13 +381,13 @@
     <value>0</value>
   </data>
   <data name="tabText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+    <value>4, 22</value>
   </data>
   <data name="tabText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>834, 308</value>
+    <value>834, 310</value>
   </data>
   <data name="tabText.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -404,7 +414,7 @@
     <value>3, 3</value>
   </data>
   <data name="chartMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>828, 302</value>
+    <value>638, 302</value>
   </data>
   <data name="chartMain.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -423,6 +433,54 @@
   </data>
   <data name="&gt;&gt;chartMain.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="splitter1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 3</value>
+  </data>
+  <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 302</value>
+  </data>
+  <data name="splitter1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Name" xml:space="preserve">
+    <value>splitter1</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Parent" xml:space="preserve">
+    <value>tpChart</value>
+  </data>
+  <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="propertyGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="propertyGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 3</value>
+  </data>
+  <data name="propertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 302</value>
+  </data>
+  <data name="propertyGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;propertyGrid1.Name" xml:space="preserve">
+    <value>propertyGrid1</value>
+  </data>
+  <data name="&gt;&gt;propertyGrid1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PropertyGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyGrid1.Parent" xml:space="preserve">
+    <value>tpChart</value>
+  </data>
+  <data name="&gt;&gt;propertyGrid1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tpChart.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
@@ -789,7 +847,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA8
-        CwAAAk1TRnQBSQFMAgEBBgEAAXQBAgF0AQIBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBgEAAYwBAgGMAQIBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -1913,6 +1971,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>

@@ -24,7 +24,7 @@ namespace Taos.Studio
 
         public string Sql { get; set; } = "";
         public string Collection { get; set; } = "";
-        public JArray Result { get; set; } = null;
+        public DataTable Result { get; set; } = null;
         public object Parameters { get; set; } = new object();
 
         public bool LimitExceeded { get; set; }
@@ -37,11 +37,14 @@ namespace Taos.Studio
 
         public Thread Thread { get; set; }
         public bool ThreadRunning { get; set; } = true;
+        public DateTime EndDateTime { get; internal set; }
+        public DateTime StartDateTime { get; internal set; }
+
         public ManualResetEventSlim WaitHandle = new ManualResetEventSlim(false);
 
         public void ReadResult(IDataReader reader)
         {
-            this.Result = reader.ToJson();
+            this.Result = reader.ToDataTable();
         }
     }
 }
