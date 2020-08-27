@@ -356,6 +356,7 @@ namespace Taos.Studio
                     if (tabResult.SelectedTab == tabGrid && data.IsGridLoaded == false)
                     {
                         grdResult.BindBsonData(chartMain,data, txtResult);
+                        grdResult.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
                         data.IsGridLoaded = true;
                     }
                     else if(tabResult.SelectedTab == tabText && data.IsTextLoaded == false)
