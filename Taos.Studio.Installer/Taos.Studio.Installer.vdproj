@@ -196,13 +196,13 @@
         "Entry"
         {
         "MsmKey" = "8:_4ABCA2E206C66D323AADD168F4AFEEE9"
-        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "OwnerKey" = "8:_BF0D10FEC1D567BAB00833914EC1035B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4ABCA2E206C66D323AADD168F4AFEEE9"
-        "OwnerKey" = "8:_BF0D10FEC1D567BAB00833914EC1035B"
+        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -376,7 +376,7 @@
         "Entry"
         {
         "MsmKey" = "8:_8EBEB367AF0F9428CD84F1DC150C41E9"
-        "OwnerKey" = "8:_BF0D10FEC1D567BAB00833914EC1035B"
+        "OwnerKey" = "8:_942303D795441FA965FFA09347CE346A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -388,19 +388,19 @@
         "Entry"
         {
         "MsmKey" = "8:_8EBEB367AF0F9428CD84F1DC150C41E9"
-        "OwnerKey" = "8:_942303D795441FA965FFA09347CE346A"
+        "OwnerKey" = "8:_BF0D10FEC1D567BAB00833914EC1035B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_942303D795441FA965FFA09347CE346A"
+        "OwnerKey" = "8:_4ABCA2E206C66D323AADD168F4AFEEE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_942303D795441FA965FFA09347CE346A"
         "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_942303D795441FA965FFA09347CE346A"
-        "OwnerKey" = "8:_4ABCA2E206C66D323AADD168F4AFEEE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -580,13 +580,13 @@
         "Entry"
         {
         "MsmKey" = "8:_D7CE12FE4B30C6FFC05D23582C5ABE07"
-        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "OwnerKey" = "8:_BF0D10FEC1D567BAB00833914EC1035B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_D7CE12FE4B30C6FFC05D23582C5ABE07"
-        "OwnerKey" = "8:_BF0D10FEC1D567BAB00833914EC1035B"
+        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -699,6 +699,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FA6CF5AAD571C8B6122B359D13CF8CF6"
+        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FB52A7C3E41D4E7F1B93FEE19D4F0E28"
         "OwnerKey" = "8:_8EBEB367AF0F9428CD84F1DC150C41E9"
         "MsmSig" = "8:_UNDEFINED"
@@ -761,6 +767,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FA6CF5AAD571C8B6122B359D13CF8CF6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -4779,6 +4791,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FA6CF5AAD571C8B6122B359D13CF8CF6"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ICSharpCode.TextEditor, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FA6CF5AAD571C8B6122B359D13CF8CF6"
+                    {
+                    "Name" = "8:ICSharpCode.TextEditor.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ICSharpCode.TextEditor.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_427716FFAE364352AADB65E024C1A33C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FB52A7C3E41D4E7F1B93FEE19D4F0E28"
             {
             "AssemblyRegister" = "3:1"
@@ -5114,15 +5157,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Taos.Studio"
-        "ProductCode" = "8:{335C4D31-AF2A-4288-97AF-DA87114CD26F}"
-        "PackageCode" = "8:{731CC1DE-10AA-4DD8-811A-6741B29EF5C5}"
+        "ProductCode" = "8:{13616E15-F91B-413C-8674-2A89A8879BF1}"
+        "PackageCode" = "8:{BC632E3B-D332-43FF-9748-F5C6E4105D78}"
         "UpgradeCode" = "8:{7CF061CC-9020-4896-9F29-DF5932DA39E3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:2.0.0"
+        "ProductVersion" = "8:2.0.3"
         "Manufacturer" = "8:maikebing"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -5130,7 +5173,7 @@
         "Subject" = "8:"
         "ARPCONTACT" = "8:mysticboy@live.com"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "ARPCOMMENTS" = "8:Taos.Studio  is a GUI tool for viewing and editing documents for TDengine, It's based LiteDB.Studio!"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
         "ARPIconIndex" = "3:32512"
@@ -5664,7 +5707,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0154E6C0A0E047AB8C5CE73D753A1D76"
             {
-            "SourcePath" = "8:..\\Taos.Studio\\obj\\Debug\\Taos.Studio.exe"
+            "SourcePath" = "8:..\\Taos.Studio\\obj\\Release\\Taos.Studio.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_427716FFAE364352AADB65E024C1A33C"
