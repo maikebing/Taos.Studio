@@ -221,15 +221,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Maikebing.Data.Taos">
-      <Version>2.0.123</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\EntityFrameworkCore.Taos\src\Maikebing.Data.Taos\Maikebing.Data.Taos.csproj">
+      <Project>{e9fdbc7e-6071-4a1c-9483-94fb9277260a}</Project>
+      <Name>Maikebing.Data.Taos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ICSharpCode.TextEditor\ICSharpCode.TextEditor.csproj">
       <Project>{fd713406-4325-4ea9-a0e5-5b200e3a6c1c}</Project>
       <Name>ICSharpCode.TextEditor</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

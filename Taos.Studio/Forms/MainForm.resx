@@ -140,7 +140,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACu
-        DwAAAk1TRnQBSQFMAgEBBwEAAbwBBAG8AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBwEAAdwBBAHcAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -309,7 +309,7 @@
     <value>51</value>
   </data>
   <data name="grdResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>820, 295</value>
+    <value>820, 293</value>
   </data>
   <data name="grdResult.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -381,13 +381,13 @@
     <value>0</value>
   </data>
   <data name="tabText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 24</value>
   </data>
   <data name="tabText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>834, 310</value>
+    <value>834, 308</value>
   </data>
   <data name="tabText.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -436,6 +436,9 @@
   </data>
   <data name="splitter1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
+  </data>
+  <data name="splitter1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 3</value>
@@ -824,20 +827,29 @@
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Create Database</value>
   </data>
-  <data name="mnDataBase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 21</value>
+  <data name="dropDatabaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
   </data>
-  <data name="mnDataBase.Text" xml:space="preserve">
-    <value>DataBase</value>
+  <data name="dropDatabaseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Drop Database</value>
+  </data>
+  <data name="dropDatabaseToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="ctxMenuRoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 88</value>
+    <value>187, 114</value>
   </data>
   <data name="&gt;&gt;ctxMenuRoot.Name" xml:space="preserve">
     <value>ctxMenuRoot</value>
   </data>
   <data name="&gt;&gt;ctxMenuRoot.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mnDataBase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
+  </data>
+  <data name="mnDataBase.Text" xml:space="preserve">
+    <value>DataBase</value>
   </data>
   <metadata name="imgCodeCompletion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>530, 7</value>
@@ -847,7 +859,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA8
-        CwAAAk1TRnQBSQFMAgEBBgEAAYwBAgGMAQIBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBgEAAawBAgGsAQIBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -1972,9 +1984,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
@@ -2120,6 +2129,12 @@
     <value>toolStripMenuItem2</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dropDatabaseToolStripMenuItem.Name" xml:space="preserve">
+    <value>dropDatabaseToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;dropDatabaseToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnDataBase.Name" xml:space="preserve">

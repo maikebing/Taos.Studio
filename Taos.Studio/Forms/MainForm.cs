@@ -487,21 +487,35 @@ namespace Taos.Studio
                 var colname = tvwDatabase.SelectedNode.Text;
                 var sql = string.Format(e.ClickedItem.Tag.ToString(), colname);
                 this.AddSqlSnippet($"{e.ClickedItem.Text} {colname}", sql);
-                if (menuRun.Checked)
-                {
-                    RunActive();
-                }
+                RunSQL(sql);
+            }
+        }
+
+        private void RunSQL(string sql)
+        {
+            if (sql.ToLower().Contains("drop") ||
+                sql.ToLower().Contains("delete"))
+            {
+                Debug.WriteLine("不自动执行:" + sql);
+            }
+            else if (menuRun.Checked)
+            {
+                RunActive();
             }
         }
 
         private void CtxMenuRoot_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             var sql = e.ClickedItem.Tag?.ToString();
-            this.AddSqlSnippet(e.ClickedItem.Text,sql);
-            if (menuRun.Checked)
+            if (tvwDatabase.SelectedNode != null)
             {
-                RunActive();
+                var colname = tvwDatabase.SelectedNode.Text;
+                var sql1 = string.Format(sql, colname);
+                sql = sql1;
             }
+            this.AddSqlSnippet(e.ClickedItem.Text,  sql);
+
+            RunSQL(sql);
         }
 
         #endregion
@@ -681,6 +695,16 @@ namespace Taos.Studio
                 var dt = e.Value as DateTime?;
                 e.Value = dt.GetValueOrDefault().ToString("yyyy-MM-dd HH:mm:ss.fff zz");
             }
+        }
+
+        private void dropDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewTab("显示链接", "SHOW CONNECTIONS");
+        }
+
+        private void tvwDatabase_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            dropDatabaseToolStripMenuItem.Visible = e.Node.ImageKey == "database";
         }
     }
 }

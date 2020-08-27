@@ -40,12 +40,16 @@ namespace Taos.Studio
             this.tvwDatabase = new System.Windows.Forms.TreeView();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.splitRight = new System.Windows.Forms.SplitContainer();
+            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
             this.tabResult = new System.Windows.Forms.TabControl();
             this.tabGrid = new System.Windows.Forms.TabPage();
             this.grdResult = new System.Windows.Forms.DataGridView();
             this.tabText = new System.Windows.Forms.TabPage();
+            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
             this.tpChart = new System.Windows.Forms.TabPage();
             this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.tabSql = new System.Windows.Forms.TabControl();
             this.stbStatus = new System.Windows.Forms.StatusStrip();
             this.lblCursor = new System.Windows.Forms.ToolStripStatusLabel();
@@ -73,6 +77,7 @@ namespace Taos.Studio
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.showConnectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnDataBase = new System.Windows.Forms.ToolStripMenuItem();
             this.imgCodeCompletion = new System.Windows.Forms.ImageList(this.components);
             this.ctxDataBaseMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -84,10 +89,6 @@ namespace Taos.Studio
             this.menuRun = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
-            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.Panel2.SuspendLayout();
@@ -130,6 +131,7 @@ namespace Taos.Studio
             resources.ApplyResources(this.tvwDatabase, "tvwDatabase");
             this.tvwDatabase.ImageList = this.imgList;
             this.tvwDatabase.Name = "tvwDatabase";
+            this.tvwDatabase.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwDatabase_NodeMouseClick);
             this.tvwDatabase.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TvwCols_NodeMouseDoubleClick);
             this.tvwDatabase.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TvwCols_MouseUp);
             // 
@@ -158,6 +160,16 @@ namespace Taos.Studio
             // splitRight.Panel2
             // 
             this.splitRight.Panel2.Controls.Add(this.tabResult);
+            // 
+            // txtSql
+            // 
+            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSql.ConvertTabsToSpaces = true;
+            resources.ApplyResources(this.txtSql, "txtSql");
+            this.txtSql.Highlighting = "SQL";
+            this.txtSql.Name = "txtSql";
+            this.txtSql.ShowLineNumbers = false;
+            this.txtSql.ShowVRuler = false;
             // 
             // tabResult
             // 
@@ -196,6 +208,16 @@ namespace Taos.Studio
             this.tabText.Name = "tabText";
             this.tabText.UseVisualStyleBackColor = true;
             // 
+            // txtResult
+            // 
+            resources.ApplyResources(this.txtResult, "txtResult");
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResult.Highlighting = "JSON";
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.ShowLineNumbers = false;
+            this.txtResult.ShowVRuler = false;
+            // 
             // tpChart
             // 
             this.tpChart.Controls.Add(this.chartMain);
@@ -225,6 +247,18 @@ namespace Taos.Studio
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.chartMain.Series.Add(series1);
             this.chartMain.Series.Add(series2);
+            // 
+            // splitter1
+            // 
+            resources.ApplyResources(this.splitter1, "splitter1");
+            this.splitter1.Name = "splitter1";
+            this.splitter1.TabStop = false;
+            // 
+            // propertyGrid1
+            // 
+            resources.ApplyResources(this.propertyGrid1, "propertyGrid1");
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.SelectedObject = this.chartMain;
             // 
             // tabSql
             // 
@@ -397,9 +431,9 @@ namespace Taos.Studio
             this.mnuInfo,
             this.toolStripSeparator3,
             this.showConnectionsToolStripMenuItem,
-            this.toolStripMenuItem2});
+            this.toolStripMenuItem2,
+            this.dropDatabaseToolStripMenuItem});
             this.ctxMenuRoot.Name = "ctxMenu";
-            this.ctxMenuRoot.OwnerItem = this.mnDataBase;
             resources.ApplyResources(this.ctxMenuRoot, "ctxMenuRoot");
             this.ctxMenuRoot.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenuRoot_ItemClicked);
             // 
@@ -427,6 +461,12 @@ namespace Taos.Studio
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             this.toolStripMenuItem2.Tag = "CREATE DATABASE  IF NOT EXISTS db_name ";
+            // 
+            // dropDatabaseToolStripMenuItem
+            // 
+            this.dropDatabaseToolStripMenuItem.Name = "dropDatabaseToolStripMenuItem";
+            resources.ApplyResources(this.dropDatabaseToolStripMenuItem, "dropDatabaseToolStripMenuItem");
+            this.dropDatabaseToolStripMenuItem.Tag = "Drop Database {0}";
             // 
             // mnDataBase
             // 
@@ -512,38 +552,6 @@ namespace Taos.Studio
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
-            // txtSql
-            // 
-            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSql.ConvertTabsToSpaces = true;
-            resources.ApplyResources(this.txtSql, "txtSql");
-            this.txtSql.Highlighting = "SQL";
-            this.txtSql.Name = "txtSql";
-            this.txtSql.ShowLineNumbers = false;
-            this.txtSql.ShowVRuler = false;
-            // 
-            // txtResult
-            // 
-            resources.ApplyResources(this.txtResult, "txtResult");
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtResult.Highlighting = "JSON";
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.ShowLineNumbers = false;
-            this.txtResult.ShowVRuler = false;
-            // 
-            // propertyGrid1
-            // 
-            resources.ApplyResources(this.propertyGrid1, "propertyGrid1");
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.SelectedObject = this.chartMain;
-            // 
-            // splitter1
-            // 
-            resources.ApplyResources(this.splitter1, "splitter1");
-            this.splitter1.Name = "splitter1";
-            this.splitter1.TabStop = false;
             // 
             // MainForm
             // 
@@ -638,6 +646,7 @@ namespace Taos.Studio
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMain;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.ToolStripMenuItem dropDatabaseToolStripMenuItem;
     }
 }
 

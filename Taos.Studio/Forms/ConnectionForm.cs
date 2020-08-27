@@ -52,5 +52,19 @@ namespace Taos.Studio.Forms
         {
             System.Diagnostics.Process.Start("https://www.maikebing.com/Taos.PrivacyPolicy");
         }
+
+       
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode== Keys.Enter)
+            {
+                btnOK.PerformClick();
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://taos.studio/");
+        }
     }
 }

@@ -489,6 +489,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B30F778D3650EEA5B595A3AADF010F69"
+        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B4879F803615A65A8B2E34BF0EC11C91"
         "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
         "MsmSig" = "8:_UNDEFINED"
@@ -699,12 +705,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FA6CF5AAD571C8B6122B359D13CF8CF6"
-        "OwnerKey" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FB52A7C3E41D4E7F1B93FEE19D4F0E28"
         "OwnerKey" = "8:_8EBEB367AF0F9428CD84F1DC150C41E9"
         "MsmSig" = "8:_UNDEFINED"
@@ -772,7 +772,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FA6CF5AAD571C8B6122B359D13CF8CF6"
+        "OwnerKey" = "8:_B30F778D3650EEA5B595A3AADF010F69"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3737,6 +3737,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B30F778D3650EEA5B595A3AADF010F69"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ICSharpCode.TextEditor, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B30F778D3650EEA5B595A3AADF010F69"
+                    {
+                    "Name" = "8:ICSharpCode.TextEditor.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ICSharpCode.TextEditor.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_427716FFAE364352AADB65E024C1A33C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B4879F803615A65A8B2E34BF0EC11C91"
             {
             "AssemblyRegister" = "3:1"
@@ -4791,37 +4822,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FA6CF5AAD571C8B6122B359D13CF8CF6"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ICSharpCode.TextEditor, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_FA6CF5AAD571C8B6122B359D13CF8CF6"
-                    {
-                    "Name" = "8:ICSharpCode.TextEditor.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ICSharpCode.TextEditor.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_427716FFAE364352AADB65E024C1A33C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FB52A7C3E41D4E7F1B93FEE19D4F0E28"
             {
             "AssemblyRegister" = "3:1"
@@ -5158,7 +5158,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Taos.Studio"
         "ProductCode" = "8:{13616E15-F91B-413C-8674-2A89A8879BF1}"
-        "PackageCode" = "8:{BC632E3B-D332-43FF-9748-F5C6E4105D78}"
+        "PackageCode" = "8:{AEC456E6-50C6-4A9B-BEED-3D682B0A82E0}"
         "UpgradeCode" = "8:{7CF061CC-9020-4896-9F29-DF5932DA39E3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -5168,13 +5168,13 @@
         "ProductVersion" = "8:2.0.3"
         "Manufacturer" = "8:maikebing"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
+        "ARPHELPLINK" = "8:https://taos.studio/"
         "Title" = "8:Taos.Studio"
         "Subject" = "8:"
         "ARPCONTACT" = "8:mysticboy@live.com"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Taos.Studio  is a GUI tool for viewing and editing documents for TDengine, It's based LiteDB.Studio!"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:https://taos.studio/"
         "ARPPRODUCTICON" = "8:_0154E6C0A0E047AB8C5CE73D753A1D76"
         "ARPIconIndex" = "3:32512"
         "SearchPath" = "8:"
