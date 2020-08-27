@@ -523,8 +523,22 @@ namespace Taos.Studio
                 case "database":
                     _db.ChangeDatabase(e.Node.Name);
                     e.FillTableToTree(_db, ctxTableMenu, "dbtable", "TABLES", "table", "SHOW TABLES", "table_name");
-                    e.FillTableToTree(_db, ctxTableMenu, "dbstable", "STABLES", "stable", "SHOW STABLES ","name");
+                    e.FillTableToTree(_db, ctxTableMenu, "dbstable", "STABLES", "stable", "SHOW STABLES ", "name");
+                    var stable = e.Node.Nodes["dbstable"];
+                    var table = e.Node.Nodes["dbtable"];
+                    foreach (TreeNode item in stable.Nodes)
+                    {
+                        var jrows = _db.CreateCommand($"SELECT TBNAME FROM   {item.Name}").ExecuteReader().ToJson();
+                        jrows.ToList().ForEach(a =>
+                        {
+                            var name = a.Value<string>("tbname").RemoveNull();
+                            TreeNode tn = table.Nodes[name];
+                            table.Nodes.RemoveByKey(name);
+                            item.Nodes.Add(tn);
+                        });
+                    }
                     break;
+                case "stable":
                 case "table":
                     if (e.Node.Tag != null)
                     {
