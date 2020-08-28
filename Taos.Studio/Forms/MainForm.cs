@@ -32,7 +32,6 @@ namespace Taos.Studio
 
             // For performance https://stackoverflow.com/questions/4255148/how-to-improve-painting-performance-of-datagridview
             grdResult.DoubleBuffered(true);
-
             _synchronizationContext = SynchronizationContext.Current;
 
             _codeCompletion = new SqlCodeCompletion(txtSql, imgCodeCompletion);

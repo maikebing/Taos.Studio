@@ -4,7 +4,7 @@ A GUI tool for viewing   for TDengine 2.0.X.X
 
  
 
-Taos.Studio v2.0.3 
+[Taos.Studio v2.0.3](https://github.com/maikebing/Taos.Studio/releases/tag/v2.0.3)  
 
 更新内容:
 
@@ -14,7 +14,7 @@ Taos.Studio v2.0.3
        4. 加入图标信息 自动根据返回内容进行绘制曲线，自动去除空列不显示在图标
        5. 新版本动态库必须提前安装 TDengine-client-2.0.1.1-Windows-x64.exe 
 
-
+下载地址  https://github.com/maikebing/Taos.Studio/releases/tag/v2.0.3
 
 
 
