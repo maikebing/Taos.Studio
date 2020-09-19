@@ -130,6 +130,7 @@
             // 
             this.cbxCodePage.DataSource = this.encodingInfoBindingSource;
             this.cbxCodePage.DisplayMember = "DisplayName";
+            this.cbxCodePage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCodePage.FormattingEnabled = true;
             resources.ApplyResources(this.cbxCodePage, "cbxCodePage");
             this.cbxCodePage.Name = "cbxCodePage";
@@ -157,6 +158,7 @@
             this.MinimizeBox = false;
             this.Name = "ConnectionForm";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.ConnectionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.encodingInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

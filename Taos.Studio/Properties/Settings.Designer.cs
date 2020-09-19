@@ -25,7 +25,7 @@ namespace Taos.Studio.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string ServerIpAddress {
             get {
                 return ((string)(this["ServerIpAddress"]));

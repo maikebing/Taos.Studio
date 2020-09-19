@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ServerIpAddress" Type="System.String" Scope="User">
-      <Value Profile="(Default)">127.0.0.1</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ServerPort" Type="System.String" Scope="User">
       <Value Profile="(Default)">6030</Value>

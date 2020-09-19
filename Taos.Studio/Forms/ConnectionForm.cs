@@ -21,18 +21,13 @@ namespace Taos.Studio.Forms
         public ConnectionForm(TaosConnectionStringBuilder cs)
         {
             InitializeComponent();
+            ConnectionString = cs;
 
-            txtServerIPAddress.Text = cs.DataSource;
-            txtPort.Text = cs.Port.ToString();
-            txtUsername.Text = cs.Username;
-            txtPassword.Text = cs.Password;
-            encodingInfoBindingSource.DataSource = System.Text.Encoding.GetEncodings();
-            encodingInfoBindingSource.Position= encodingInfoBindingSource.IndexOf( System.Text.Encoding.GetEncodings().ToList().FirstOrDefault(e => e.CodePage == System.Text.Encoding.Default.CodePage));
+
         }
 
         private void BtnConnect_Click(object sender, EventArgs e)
         {
-           
 
             this.ConnectionString.DataSource = txtServerIPAddress.Text;
             this.ConnectionString.Username = txtUsername.Text;
@@ -67,6 +62,20 @@ namespace Taos.Studio.Forms
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://taos.studio/");
+        }
+
+        private void ConnectionForm_Load(object sender, EventArgs e)
+        {
+            txtServerIPAddress.Text = ConnectionString .DataSource;
+            txtPort.Text = ConnectionString.Port.ToString();
+            txtUsername.Text = ConnectionString.Username;
+            txtPassword.Text = ConnectionString.Password;
+            encodingInfoBindingSource.DataSource = System.Text.Encoding.GetEncodings();
+            encodingInfoBindingSource.Position = encodingInfoBindingSource.IndexOf(System.Text.Encoding.GetEncodings().ToList().FirstOrDefault(cp => cp.CodePage == System.Text.Encoding.Default.CodePage));
+            if (string.IsNullOrEmpty(txtServerIPAddress.Text))
+            {
+                txtServerIPAddress.Text = System.Net.Dns.GetHostName();
+            }
         }
     }
 }
