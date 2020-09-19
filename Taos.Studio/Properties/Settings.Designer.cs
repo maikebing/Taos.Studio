@@ -70,5 +70,17 @@ namespace Taos.Studio.Properties {
                 this["autoexcueing"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CodePage {
+            get {
+                return ((int)(this["CodePage"]));
+            }
+            set {
+                this["CodePage"] = value;
+            }
+        }
     }
 }

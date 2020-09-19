@@ -121,6 +121,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.zh-Hans.resx" />
     <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Text.EncodingInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

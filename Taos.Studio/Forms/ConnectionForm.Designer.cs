@@ -42,6 +42,10 @@
             this.txtPort = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.encodingInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxCodePage = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.encodingInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -113,10 +117,30 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // encodingInfoBindingSource
+            // 
+            this.encodingInfoBindingSource.DataSource = typeof(System.Text.EncodingInfo);
+            // 
+            // cbxCodePage
+            // 
+            this.cbxCodePage.DataSource = this.encodingInfoBindingSource;
+            this.cbxCodePage.DisplayMember = "DisplayName";
+            this.cbxCodePage.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxCodePage, "cbxCodePage");
+            this.cbxCodePage.Name = "cbxCodePage";
+            this.cbxCodePage.ValueMember = "CodePage";
+            // 
             // ConnectionForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbxCodePage);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
@@ -133,6 +157,7 @@
             this.MinimizeBox = false;
             this.Name = "ConnectionForm";
             this.ShowIcon = false;
+            ((System.ComponentModel.ISupportInitialize)(this.encodingInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +176,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource encodingInfoBindingSource;
+        private System.Windows.Forms.ComboBox cbxCodePage;
     }
 }
