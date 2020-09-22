@@ -32,12 +32,12 @@ namespace Taos.Studio.Forms
             this.ConnectionString.DataSource = txtServerIPAddress.Text;
             this.ConnectionString.Username = txtUsername.Text;
             this.ConnectionString.Password = txtPassword.Text;
-            ConnectionString["Charset"] = (cbxCodePage.SelectedItem as EncodingInfo).Name ?? System.Text.Encoding.Default.EncodingName;
-           if (int.TryParse(txtPort.Text,out int port ))
+            this.ConnectionString.Charset = (cbxCodePage.SelectedItem as EncodingInfo).Name ?? System.Text.Encoding.Default.EncodingName;
+            if (int.TryParse(txtPort.Text, out int port))
             {
-                this.ConnectionString.Port =  port;
+                this.ConnectionString.Port = port;
             }
-           else
+            else
             {
                 this.ConnectionString.Port = 6030;
             }
