@@ -84,24 +84,18 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Text = global::Taos.Studio.Properties.Settings.Default.UserName;
             // 
             // txtServerIPAddress
             // 
-            this.txtServerIPAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "ServerIpAddress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.txtServerIPAddress, "txtServerIPAddress");
             this.txtServerIPAddress.Name = "txtServerIPAddress";
-            this.txtServerIPAddress.Text = global::Taos.Studio.Properties.Settings.Default.ServerIpAddress;
             // 
             // txtPort
             // 
-            this.txtPort.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Taos.Studio.Properties.Settings.Default, "ServerPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.txtPort, "txtPort");
             this.txtPort.Name = "txtPort";
-            this.txtPort.Text = global::Taos.Studio.Properties.Settings.Default.ServerPort;
             // 
             // linkLabel1
             // 

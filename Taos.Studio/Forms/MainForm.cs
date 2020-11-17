@@ -460,10 +460,21 @@ namespace Taos.Studio
         {
             if (_db == null)
             {
-                var dialog = new ConnectionForm(_connectionString ?? new  TaosConnectionStringBuilder());
+                TaosConnectionStringBuilder tc=new TaosConnectionStringBuilder ();
+                try
+                {
+                    tc = _connectionString ?? new TaosConnectionStringBuilder(Properties.Settings.Default.ServeInfo ?? new TaosConnectionStringBuilder().ConnectionString);
+                }
+                catch (Exception)
+                {
+
+                }
+
+                var dialog = new ConnectionForm(tc);
 
                 dialog.ShowDialog();
-
+                Properties.Settings.Default.ServeInfo = dialog.ConnectionString.ConnectionString;
+                Properties.Settings.Default.Save();
                 if (dialog.DialogResult != DialogResult.OK) return;
 
                 this.Connect(dialog.ConnectionString);
