@@ -1,64 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -117,30 +57,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="splitMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="splitMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 62</value>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 59</value>
   </data>
   <data name="tvwDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tvwDatabase.ImageIndex" type="System.Int32, mscorlib">
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="tvwDatabase.ImageIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
-  <metadata name="imgList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>212, 17</value>
-  </metadata>
   <data name="imgList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj01LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACu
-        DwAAAk1TRnQBSQFMAgEBBwEAAdwBBAHcAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBwEAARQBBQEUAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -209,26 +146,27 @@
         AQMBgAEBAYABAQEAAQEBAAEDAYABAQL/AQABAQEAAQMBgAEBAv8BAAEBAQABAwHAAQMC/wEAAQEC/ws=
 </value>
   </data>
-  <data name="tvwDatabase.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tvwDatabase.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 0</value>
   </data>
-  <data name="tvwDatabase.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tvwDatabase.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="tvwDatabase.SelectedImageIndex" type="System.Int32, mscorlib">
+  <data name="tvwDatabase.SelectedImageIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
-  <data name="tvwDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 601</value>
+  <data name="tvwDatabase.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>233, 578</value>
   </data>
-  <data name="tvwDatabase.TabIndex" type="System.Int32, mscorlib">
+  <data name="tvwDatabase.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>9</value>
   </data>
   <data name="&gt;&gt;tvwDatabase.Name" xml:space="preserve">
     <value>tvwDatabase</value>
   </data>
   <data name="&gt;&gt;tvwDatabase.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tvwDatabase.Parent" xml:space="preserve">
     <value>splitMain.Panel1</value>
@@ -240,7 +178,7 @@
     <value>splitMain.Panel1</value>
   </data>
   <data name="&gt;&gt;splitMain.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitMain.Panel1.Parent" xml:space="preserve">
     <value>splitMain</value>
@@ -251,7 +189,7 @@
   <data name="splitRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="splitRight.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="splitRight.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>3, 26</value>
   </data>
   <data name="splitRight.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
@@ -260,23 +198,20 @@
   <data name="txtSql.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="txtSql.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9.75pt</value>
-  </data>
-  <data name="txtSql.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtSql.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 0</value>
   </data>
-  <data name="txtSql.Size" type="System.Drawing.Size, System.Drawing">
-    <value>842, 203</value>
+  <data name="txtSql.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>842, 204</value>
   </data>
-  <data name="txtSql.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="txtSql.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtSql.Name" xml:space="preserve">
     <value>txtSql</value>
   </data>
   <data name="&gt;&gt;txtSql.Type" xml:space="preserve">
-    <value>ICSharpCode.TextEditor.TextEditorControl, ICSharpCode.TextEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ICSharpCode.TextEditor.TextEditorControl, ICSharpCode.TextEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;txtSql.Parent" xml:space="preserve">
     <value>splitRight.Panel1</value>
@@ -288,7 +223,7 @@
     <value>splitRight.Panel1</value>
   </data>
   <data name="&gt;&gt;splitRight.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitRight.Panel1.Parent" xml:space="preserve">
     <value>splitRight</value>
@@ -302,23 +237,23 @@
   <data name="grdResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="grdResult.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="grdResult.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>6, 5</value>
   </data>
-  <data name="grdResult.RowHeadersWidth" type="System.Int32, mscorlib">
+  <data name="grdResult.RowHeadersWidth" type="System.Int32, System.Private.CoreLib">
     <value>51</value>
   </data>
-  <data name="grdResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>820, 293</value>
+  <data name="grdResult.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>820, 295</value>
   </data>
-  <data name="grdResult.TabIndex" type="System.Int32, mscorlib">
+  <data name="grdResult.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;grdResult.Name" xml:space="preserve">
     <value>grdResult</value>
   </data>
   <data name="&gt;&gt;grdResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;grdResult.Parent" xml:space="preserve">
     <value>tabGrid</value>
@@ -326,16 +261,16 @@
   <data name="&gt;&gt;grdResult.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabGrid.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabGrid.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
-  <data name="tabGrid.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabGrid.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>834, 308</value>
+  <data name="tabGrid.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>834, 310</value>
   </data>
-  <data name="tabGrid.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabGrid.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
   <data name="tabGrid.Text" xml:space="preserve">
@@ -345,7 +280,7 @@
     <value>tabGrid</value>
   </data>
   <data name="&gt;&gt;tabGrid.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabGrid.Parent" xml:space="preserve">
     <value>tabResult</value>
@@ -353,26 +288,23 @@
   <data name="&gt;&gt;tabGrid.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="txtResult.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="txtResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
+  <data name="txtResult.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 3</value>
   </data>
-  <data name="txtResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 4</value>
+  <data name="txtResult.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>828, 304</value>
   </data>
-  <data name="txtResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>812, 349</value>
-  </data>
-  <data name="txtResult.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="txtResult.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtResult.Name" xml:space="preserve">
     <value>txtResult</value>
   </data>
   <data name="&gt;&gt;txtResult.Type" xml:space="preserve">
-    <value>ICSharpCode.TextEditor.TextEditorControl, ICSharpCode.TextEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ICSharpCode.TextEditor.TextEditorControl, ICSharpCode.TextEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;txtResult.Parent" xml:space="preserve">
     <value>tabText</value>
@@ -380,16 +312,16 @@
   <data name="&gt;&gt;txtResult.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabText.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabText.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
-  <data name="tabText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>834, 308</value>
+  <data name="tabText.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>834, 310</value>
   </data>
-  <data name="tabText.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabText.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
   </data>
   <data name="tabText.Text" xml:space="preserve">
@@ -399,7 +331,7 @@
     <value>tabText</value>
   </data>
   <data name="&gt;&gt;tabText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabText.Parent" xml:space="preserve">
     <value>tabResult</value>
@@ -407,94 +339,67 @@
   <data name="&gt;&gt;tabText.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="chartMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="chartMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="chartMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>638, 302</value>
-  </data>
-  <data name="chartMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="chartMain.Text" xml:space="preserve">
-    <value>chart1</value>
-  </data>
-  <data name="&gt;&gt;chartMain.Name" xml:space="preserve">
-    <value>chartMain</value>
-  </data>
-  <data name="&gt;&gt;chartMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;chartMain.Parent" xml:space="preserve">
-    <value>tpChart</value>
-  </data>
-  <data name="&gt;&gt;chartMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="splitter1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="splitter1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>641, 3</value>
   </data>
-  <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 302</value>
+  <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>17, 304</value>
   </data>
-  <data name="splitter1.TabIndex" type="System.Int32, mscorlib">
+  <data name="splitter1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;splitter1.Name" xml:space="preserve">
     <value>splitter1</value>
   </data>
   <data name="&gt;&gt;splitter1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitter1.Parent" xml:space="preserve">
     <value>tpChart</value>
   </data>
   <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="propertyGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="propertyGrid1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="propertyGrid1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>658, 3</value>
   </data>
-  <data name="propertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 302</value>
+  <data name="propertyGrid1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>173, 304</value>
   </data>
-  <data name="propertyGrid1.TabIndex" type="System.Int32, mscorlib">
+  <data name="propertyGrid1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;propertyGrid1.Name" xml:space="preserve">
     <value>propertyGrid1</value>
   </data>
   <data name="&gt;&gt;propertyGrid1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PropertyGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.PropertyGrid, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;propertyGrid1.Parent" xml:space="preserve">
     <value>tpChart</value>
   </data>
   <data name="&gt;&gt;propertyGrid1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
-  <data name="tpChart.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tpChart.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
-  <data name="tpChart.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tpChart.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tpChart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>834, 308</value>
+  <data name="tpChart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>834, 310</value>
   </data>
-  <data name="tpChart.TabIndex" type="System.Int32, mscorlib">
+  <data name="tpChart.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>4</value>
   </data>
   <data name="tpChart.Text" xml:space="preserve">
@@ -504,7 +409,7 @@
     <value>tpChart</value>
   </data>
   <data name="&gt;&gt;tpChart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tpChart.Parent" xml:space="preserve">
     <value>tabResult</value>
@@ -512,20 +417,20 @@
   <data name="&gt;&gt;tpChart.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tabResult.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabResult.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 3</value>
   </data>
-  <data name="tabResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>842, 336</value>
+  <data name="tabResult.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>842, 338</value>
   </data>
-  <data name="tabResult.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabResult.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;tabResult.Name" xml:space="preserve">
     <value>tabResult</value>
   </data>
   <data name="&gt;&gt;tabResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabResult.Parent" xml:space="preserve">
     <value>splitRight.Panel2</value>
@@ -537,7 +442,7 @@
     <value>splitRight.Panel2</value>
   </data>
   <data name="&gt;&gt;splitRight.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitRight.Panel2.Parent" xml:space="preserve">
     <value>splitRight</value>
@@ -545,20 +450,20 @@
   <data name="&gt;&gt;splitRight.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="splitRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>842, 575</value>
+  <data name="splitRight.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>842, 578</value>
   </data>
-  <data name="splitRight.SplitterDistance" type="System.Int32, mscorlib">
-    <value>203</value>
+  <data name="splitRight.SplitterDistance" type="System.Int32, System.Private.CoreLib">
+    <value>204</value>
   </data>
-  <data name="splitRight.TabIndex" type="System.Int32, mscorlib">
+  <data name="splitRight.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>8</value>
   </data>
   <data name="&gt;&gt;splitRight.Name" xml:space="preserve">
     <value>splitRight</value>
   </data>
   <data name="&gt;&gt;splitRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitRight.Parent" xml:space="preserve">
     <value>splitMain.Panel2</value>
@@ -566,23 +471,23 @@
   <data name="&gt;&gt;splitRight.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabSql.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabSql.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>3, 0</value>
   </data>
-  <data name="tabSql.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabSql.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="tabSql.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabSql.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>821, 24</value>
   </data>
-  <data name="tabSql.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabSql.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>9</value>
   </data>
   <data name="&gt;&gt;tabSql.Name" xml:space="preserve">
     <value>tabSql</value>
   </data>
   <data name="&gt;&gt;tabSql.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabSql.Parent" xml:space="preserve">
     <value>splitMain.Panel2</value>
@@ -594,7 +499,7 @@
     <value>splitMain.Panel2</value>
   </data>
   <data name="&gt;&gt;splitMain.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitMain.Panel2.Parent" xml:space="preserve">
     <value>splitMain</value>
@@ -602,20 +507,20 @@
   <data name="&gt;&gt;splitMain.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="splitMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1090, 575</value>
+  <data name="splitMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>1090, 578</value>
   </data>
-  <data name="splitMain.SplitterDistance" type="System.Int32, mscorlib">
+  <data name="splitMain.SplitterDistance" type="System.Int32, System.Private.CoreLib">
     <value>233</value>
   </data>
-  <data name="splitMain.TabIndex" type="System.Int32, mscorlib">
+  <data name="splitMain.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>10</value>
   </data>
   <data name="&gt;&gt;splitMain.Name" xml:space="preserve">
     <value>splitMain</value>
   </data>
   <data name="&gt;&gt;splitMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitMain.Parent" xml:space="preserve">
     <value>$this</value>
@@ -623,53 +528,51 @@
   <data name="&gt;&gt;splitMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="stbStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="lblCursor.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblCursor.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>713, 24</value>
   </data>
-  <data name="lblCursor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="lblCursor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
     <value>MiddleLeft</value>
   </data>
-  <data name="lblResultCount.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblResultCount.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>False</value>
   </data>
-  <data name="lblResultCount.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblResultCount.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>150, 24</value>
   </data>
   <data name="lblResultCount.Text" xml:space="preserve">
     <value>0 documents</value>
   </data>
-  <data name="prgRunning.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="prgRunning.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>100, 23</value>
   </data>
-  <data name="lblElapsed.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblElapsed.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>False</value>
   </data>
-  <data name="lblElapsed.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblElapsed.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>110, 24</value>
   </data>
   <data name="lblElapsed.Text" xml:space="preserve">
     <value>00:00:00.0000</value>
   </data>
-  <data name="lblElapsed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblElapsed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
     <value>MiddleRight</value>
   </data>
-  <data name="stbStatus.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="stbStatus.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 637</value>
   </data>
-  <data name="stbStatus.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="stbStatus.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>1090, 29</value>
   </data>
-  <data name="stbStatus.TabIndex" type="System.Int32, mscorlib">
+  <data name="stbStatus.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>11</value>
   </data>
   <data name="&gt;&gt;stbStatus.Name" xml:space="preserve">
     <value>stbStatus</value>
   </data>
   <data name="&gt;&gt;stbStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;stbStatus.Parent" xml:space="preserve">
     <value>$this</value>
@@ -677,80 +580,77 @@
   <data name="&gt;&gt;stbStatus.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="tlbMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>119, 17</value>
-  </metadata>
-  <data name="btnConnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="btnConnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
     <value>Magenta</value>
   </data>
-  <data name="btnConnect.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 30</value>
+  <data name="btnConnect.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>65, 27</value>
   </data>
   <data name="btnConnect.Text" xml:space="preserve">
     <value>Connect</value>
   </data>
-  <data name="tlbSep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 33</value>
+  <data name="tlbSep1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>6, 30</value>
   </data>
-  <data name="btnRefresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="btnRefresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
     <value>Magenta</value>
   </data>
-  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 30</value>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>62, 27</value>
   </data>
   <data name="btnRefresh.Text" xml:space="preserve">
     <value>Refresh</value>
   </data>
-  <data name="tlbSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 33</value>
+  <data name="tlbSep2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>6, 30</value>
   </data>
-  <data name="btnRun.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="btnRun.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
     <value>Magenta</value>
   </data>
-  <data name="btnRun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 30</value>
+  <data name="btnRun.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>40, 27</value>
   </data>
   <data name="btnRun.Text" xml:space="preserve">
     <value>Run</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 33</value>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>6, 30</value>
   </data>
-  <data name="BtnShowConnections.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BtnShowConnections.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
     <value>Magenta</value>
   </data>
-  <data name="BtnShowConnections.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 30</value>
+  <data name="BtnShowConnections.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>118, 27</value>
   </data>
   <data name="BtnShowConnections.Text" xml:space="preserve">
     <value>Show Connections</value>
   </data>
-  <data name="btnAbout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="btnAbout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
     <value>Magenta</value>
   </data>
-  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 30</value>
+  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>47, 27</value>
   </data>
   <data name="btnAbout.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="tlbMain.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tlbMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 25</value>
   </data>
-  <data name="tlbMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tlbMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 2, 0, 2</value>
   </data>
-  <data name="tlbMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1090, 37</value>
+  <data name="tlbMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>1090, 34</value>
   </data>
-  <data name="tlbMain.TabIndex" type="System.Int32, mscorlib">
+  <data name="tlbMain.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>12</value>
   </data>
   <data name="&gt;&gt;tlbMain.Name" xml:space="preserve">
     <value>tlbMain</value>
   </data>
   <data name="&gt;&gt;tlbMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tlbMain.Parent" xml:space="preserve">
     <value>$this</value>
@@ -758,108 +658,99 @@
   <data name="&gt;&gt;tlbMain.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="ctxTableMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>307, 14</value>
-  </metadata>
-  <data name="mnuQueryAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 26</value>
+  <data name="mnuQueryAll.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>111, 22</value>
   </data>
   <data name="mnuQueryAll.Text" xml:space="preserve">
     <value>Query</value>
   </data>
-  <data name="mnuInsert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 26</value>
+  <data name="mnuInsert.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>111, 22</value>
   </data>
   <data name="mnuInsert.Text" xml:space="preserve">
     <value>Insert</value>
   </data>
-  <data name="mnuQueryCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 26</value>
+  <data name="mnuQueryCount.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>111, 22</value>
   </data>
   <data name="mnuQueryCount.Text" xml:space="preserve">
     <value>Count</value>
   </data>
-  <data name="mnuSep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 6</value>
+  <data name="mnuSep1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>108, 6</value>
   </data>
-  <data name="mnuDropCollection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 26</value>
+  <data name="mnuDropCollection.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>111, 22</value>
   </data>
   <data name="mnuDropCollection.Text" xml:space="preserve">
     <value>Drop</value>
   </data>
-  <data name="tableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>52, 21</value>
   </data>
   <data name="tableToolStripMenuItem.Text" xml:space="preserve">
     <value>Table</value>
   </data>
-  <data name="ctxTableMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 114</value>
+  <data name="ctxTableMenu.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>112, 98</value>
   </data>
   <data name="&gt;&gt;ctxTableMenu.Name" xml:space="preserve">
     <value>ctxTableMenu</value>
   </data>
   <data name="&gt;&gt;ctxTableMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="ctxMenuRoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>424, 18</value>
-  </metadata>
-  <data name="mnuInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
+  <data name="mnuInfo.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>182, 22</value>
   </data>
   <data name="mnuInfo.Text" xml:space="preserve">
     <value>Database Info</value>
   </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 6</value>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>179, 6</value>
   </data>
-  <data name="showConnectionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
+  <data name="showConnectionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>182, 22</value>
   </data>
   <data name="showConnectionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Show Connections</value>
   </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>182, 22</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Create Database</value>
   </data>
-  <data name="dropDatabaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
+  <data name="dropDatabaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>182, 22</value>
   </data>
   <data name="dropDatabaseToolStripMenuItem.Text" xml:space="preserve">
     <value>Drop Database</value>
   </data>
-  <data name="dropDatabaseToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+  <data name="dropDatabaseToolStripMenuItem.Visible" type="System.Boolean, System.Private.CoreLib">
     <value>False</value>
   </data>
-  <data name="ctxMenuRoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 114</value>
-  </data>
-  <data name="&gt;&gt;ctxMenuRoot.Name" xml:space="preserve">
-    <value>ctxMenuRoot</value>
-  </data>
-  <data name="&gt;&gt;ctxMenuRoot.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mnDataBase.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mnDataBase.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>75, 21</value>
   </data>
   <data name="mnDataBase.Text" xml:space="preserve">
     <value>DataBase</value>
   </data>
-  <metadata name="imgCodeCompletion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>530, 7</value>
-  </metadata>
+  <data name="ctxMenuRoot.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>183, 98</value>
+  </data>
+  <data name="&gt;&gt;ctxMenuRoot.Name" xml:space="preserve">
+    <value>ctxMenuRoot</value>
+  </data>
+  <data name="&gt;&gt;ctxMenuRoot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="imgCodeCompletion.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj01LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA8
-        CwAAAk1TRnQBSQFMAgEBBgEAAawBAgGsAQIBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBgEAAeQBAgHkAQIBFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -910,67 +801,61 @@
         Cw==
 </value>
   </data>
-  <metadata name="ctxDataBaseMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>806, 34</value>
-  </metadata>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 26</value>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>126, 22</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Use this </value>
   </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 6</value>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>123, 6</value>
   </data>
-  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 26</value>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>126, 22</value>
   </data>
   <data name="toolStripMenuItem4.Text" xml:space="preserve">
     <value>Drop </value>
   </data>
-  <data name="ctxDataBaseMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 62</value>
+  <data name="ctxDataBaseMenu.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>127, 54</value>
   </data>
   <data name="&gt;&gt;ctxDataBaseMenu.Name" xml:space="preserve">
     <value>ctxDataBaseMenu</value>
   </data>
   <data name="&gt;&gt;ctxDataBaseMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 72</value>
-  </metadata>
-  <data name="menuRun.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="menuRun.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>136, 22</value>
   </data>
   <data name="menuRun.Text" xml:space="preserve">
     <value>Run Active</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>52, 21</value>
   </data>
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
     <value>Tools</value>
   </data>
-  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>111, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>47, 21</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 0</value>
   </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>1090, 25</value>
   </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+  <data name="menuStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>13</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
@@ -980,7 +865,7 @@
     <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -988,22 +873,22 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>94</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
     <value>7, 15</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>1090, 666</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Segoe UI, 9pt</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAAAGAAoyAAAJgAAADAwAAAAABgAqBwAAE7IAAAoAAAAgAAAAAABAAABABgAAAAAAADA
         AAAAAAAAAAAAAAAAAAAAAAAA+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
@@ -1984,7 +1869,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
@@ -1997,204 +1882,210 @@
     <value>imgList</value>
   </data>
   <data name="&gt;&gt;imgList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblCursor.Name" xml:space="preserve">
     <value>lblCursor</value>
   </data>
   <data name="&gt;&gt;lblCursor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblResultCount.Name" xml:space="preserve">
     <value>lblResultCount</value>
   </data>
   <data name="&gt;&gt;lblResultCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;prgRunning.Name" xml:space="preserve">
     <value>prgRunning</value>
   </data>
   <data name="&gt;&gt;prgRunning.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblElapsed.Name" xml:space="preserve">
     <value>lblElapsed</value>
   </data>
   <data name="&gt;&gt;lblElapsed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnConnect.Name" xml:space="preserve">
     <value>btnConnect</value>
   </data>
   <data name="&gt;&gt;btnConnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tlbSep1.Name" xml:space="preserve">
     <value>tlbSep1</value>
   </data>
   <data name="&gt;&gt;tlbSep1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
     <value>btnRefresh</value>
   </data>
   <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tlbSep2.Name" xml:space="preserve">
     <value>tlbSep2</value>
   </data>
   <data name="&gt;&gt;tlbSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnRun.Name" xml:space="preserve">
     <value>btnRun</value>
   </data>
   <data name="&gt;&gt;btnRun.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BtnShowConnections.Name" xml:space="preserve">
     <value>BtnShowConnections</value>
   </data>
   <data name="&gt;&gt;BtnShowConnections.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
     <value>btnAbout</value>
   </data>
   <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuQueryAll.Name" xml:space="preserve">
     <value>mnuQueryAll</value>
   </data>
   <data name="&gt;&gt;mnuQueryAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuInsert.Name" xml:space="preserve">
     <value>mnuInsert</value>
   </data>
   <data name="&gt;&gt;mnuInsert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuQueryCount.Name" xml:space="preserve">
     <value>mnuQueryCount</value>
   </data>
   <data name="&gt;&gt;mnuQueryCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuSep1.Name" xml:space="preserve">
     <value>mnuSep1</value>
   </data>
   <data name="&gt;&gt;mnuSep1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuDropCollection.Name" xml:space="preserve">
     <value>mnuDropCollection</value>
   </data>
   <data name="&gt;&gt;mnuDropCollection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tableToolStripMenuItem.Name" xml:space="preserve">
     <value>tableToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;tableToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuInfo.Name" xml:space="preserve">
     <value>mnuInfo</value>
   </data>
   <data name="&gt;&gt;mnuInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;showConnectionsToolStripMenuItem.Name" xml:space="preserve">
     <value>showConnectionsToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;showConnectionsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
     <value>toolStripMenuItem2</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dropDatabaseToolStripMenuItem.Name" xml:space="preserve">
     <value>dropDatabaseToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;dropDatabaseToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnDataBase.Name" xml:space="preserve">
     <value>mnDataBase</value>
   </data>
   <data name="&gt;&gt;mnDataBase.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;imgCodeCompletion.Name" xml:space="preserve">
     <value>imgCodeCompletion</value>
   </data>
   <data name="&gt;&gt;imgCodeCompletion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
     <value>toolStripMenuItem1</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
     <value>toolStripMenuItem4</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolsToolStripMenuItem.Name" xml:space="preserve">
     <value>toolsToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;toolsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuRun.Name" xml:space="preserve">
     <value>menuRun</value>
   </data>
   <data name="&gt;&gt;menuRun.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
     <value>helpToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
     <value>aboutToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chart1.Name" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Type" xml:space="preserve">
+    <value>FastReport.DataVisualization.Charting.Chart, FastReport.DataVisualization, Version=2020.4.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

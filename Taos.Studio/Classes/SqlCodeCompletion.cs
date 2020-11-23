@@ -134,7 +134,7 @@ namespace Taos.Studio
             // get all keywords
             var words = new List<string>();
 
-            using (var stream = typeof(TextAreaControl).Assembly.GetManifestResourceStream("ICSharpCode.TextEditor.Resources.SQL-Mode.xshd"))
+            using (var stream = new MemoryStream( ICSharpCode.TextEditor.Properties.Resources.SQL_Mode))
             {
                 using (var reader = new StreamReader(stream))
                 {

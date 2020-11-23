@@ -22,7 +22,7 @@ namespace ICSharpCode.TextEditor.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ICSharpCode.TextEditor.Properties {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ICSharpCode.TextEditor.Properties.Resources", typeof(Resources).Assembly);
@@ -47,11 +47,11 @@ namespace ICSharpCode.TextEditor.Properties {
         }
         
         /// <summary>
-        ///   重写当前线程的 CurrentUICulture 属性
-        ///   重写当前线程的 CurrentUICulture 属性。
+        ///   重写当前线程的 CurrentUICulture 属性，对
+        ///   使用此强类型资源类的所有资源查找执行重写。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找类似 &amp;Copy 的本地化字符串。
         /// </summary>
-        internal static string Copy {
+        public static string Copy {
             get {
                 return ResourceManager.GetString("Copy", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap copyToolStripMenuItem {
+        public static System.Drawing.Bitmap copyToolStripMenuItem {
             get {
                 object obj = ResourceManager.GetObject("copyToolStripMenuItem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -80,9 +80,19 @@ namespace ICSharpCode.TextEditor.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap copyToolStripMenuItem1 {
+            get {
+                object obj = ResourceManager.GetObject("copyToolStripMenuItem1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 &amp;Cut 的本地化字符串。
         /// </summary>
-        internal static string Cut {
+        public static string Cut {
             get {
                 return ResourceManager.GetString("Cut", resourceCulture);
             }
@@ -91,7 +101,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap cutToolStripMenuItem {
+        public static System.Drawing.Bitmap cutToolStripMenuItem {
             get {
                 object obj = ResourceManager.GetObject("cutToolStripMenuItem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -99,9 +109,19 @@ namespace ICSharpCode.TextEditor.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap cutToolStripMenuItem1 {
+            get {
+                object obj = ResourceManager.GetObject("cutToolStripMenuItem1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 &amp;Delete 的本地化字符串。
         /// </summary>
-        internal static string Delete {
+        public static string Delete {
             get {
                 return ResourceManager.GetString("Delete", resourceCulture);
             }
@@ -110,7 +130,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] JSON_Mode {
+        public static byte[] JSON_Mode {
             get {
                 object obj = ResourceManager.GetObject("JSON_Mode", resourceCulture);
                 return ((byte[])(obj));
@@ -131,7 +151,7 @@ namespace ICSharpCode.TextEditor.Properties {
         ///		then unwind the different type definitions and refernces.
         ///		 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static string Mode {
+        public static string Mode {
             get {
                 return ResourceManager.GetString("Mode", resourceCulture);
             }
@@ -140,7 +160,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找类似 &amp;Paste 的本地化字符串。
         /// </summary>
-        internal static string Paste {
+        public static string Paste {
             get {
                 return ResourceManager.GetString("Paste", resourceCulture);
             }
@@ -149,7 +169,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap pasteToolStripMenuItem {
+        public static System.Drawing.Bitmap pasteToolStripMenuItem {
             get {
                 object obj = ResourceManager.GetObject("pasteToolStripMenuItem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -157,9 +177,19 @@ namespace ICSharpCode.TextEditor.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap pasteToolStripMenuItem1 {
+            get {
+                object obj = ResourceManager.GetObject("pasteToolStripMenuItem1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] RightArrow {
+        public static byte[] RightArrow {
             get {
                 object obj = ResourceManager.GetObject("RightArrow", resourceCulture);
                 return ((byte[])(obj));
@@ -169,7 +199,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找类似 &amp;Select All 的本地化字符串。
         /// </summary>
-        internal static string SelectAll {
+        public static string SelectAll {
             get {
                 return ResourceManager.GetString("SelectAll", resourceCulture);
             }
@@ -178,7 +208,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] SQL_Mode {
+        public static byte[] SQL_Mode {
             get {
                 object obj = ResourceManager.GetObject("SQL_Mode", resourceCulture);
                 return ((byte[])(obj));
@@ -199,7 +229,7 @@ namespace ICSharpCode.TextEditor.Properties {
         ///&lt;/SyntaxModes&gt;
         /// 的本地化字符串。
         /// </summary>
-        internal static string SyntaxModes {
+        public static string SyntaxModes {
             get {
                 return ResourceManager.GetString("SyntaxModes", resourceCulture);
             }
@@ -208,7 +238,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap TextEditorControl {
+        public static System.Drawing.Bitmap TextEditorControl {
             get {
                 object obj = ResourceManager.GetObject("TextEditorControl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -218,7 +248,7 @@ namespace ICSharpCode.TextEditor.Properties {
         /// <summary>
         ///   查找类似 &amp;Undo 的本地化字符串。
         /// </summary>
-        internal static string Undo {
+        public static string Undo {
             get {
                 return ResourceManager.GetString("Undo", resourceCulture);
             }

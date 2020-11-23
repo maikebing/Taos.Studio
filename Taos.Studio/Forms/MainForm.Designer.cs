@@ -137,6 +137,7 @@ namespace Taos.Studio
             // 
             // imgList
             // 
+            this.imgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
             this.imgList.TransparentColor = System.Drawing.Color.Transparent;
             this.imgList.Images.SetKeyName(0, "database");
@@ -210,8 +211,8 @@ namespace Taos.Studio
             // 
             // txtResult
             // 
-            resources.ApplyResources(this.txtResult, "txtResult");
             this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txtResult, "txtResult");
             this.txtResult.Highlighting = "JSON";
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
@@ -220,7 +221,6 @@ namespace Taos.Studio
             // 
             // tpChart
             // 
-            this.tpChart.Controls.Add(this.chartMain);
             this.tpChart.Controls.Add(this.splitter1);
             this.tpChart.Controls.Add(this.propertyGrid1);
             resources.ApplyResources(this.tpChart, "tpChart");
@@ -247,9 +247,6 @@ namespace Taos.Studio
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.chartMain.Series.Add(series1);
             this.chartMain.Series.Add(series2);
-            // 
-            // splitter1
-            // 
             resources.ApplyResources(this.splitter1, "splitter1");
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
@@ -320,7 +317,6 @@ namespace Taos.Studio
             // 
             // btnConnect
             // 
-            this.btnConnect.Image = global::Taos.Studio.Properties.Resources.database_connect;
             resources.ApplyResources(this.btnConnect, "btnConnect");
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Padding = new System.Windows.Forms.Padding(3);
@@ -333,7 +329,6 @@ namespace Taos.Studio
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Image = global::Taos.Studio.Properties.Resources.arrow_refresh;
             resources.ApplyResources(this.btnRefresh, "btnRefresh");
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(3);
@@ -346,7 +341,6 @@ namespace Taos.Studio
             // 
             // btnRun
             // 
-            this.btnRun.Image = global::Taos.Studio.Properties.Resources.resultset_next;
             resources.ApplyResources(this.btnRun, "btnRun");
             this.btnRun.Name = "btnRun";
             this.btnRun.Padding = new System.Windows.Forms.Padding(3);
@@ -359,14 +353,12 @@ namespace Taos.Studio
             // 
             // BtnShowConnections
             // 
-            this.BtnShowConnections.Image = global::Taos.Studio.Properties.Resources.information;
             resources.ApplyResources(this.BtnShowConnections, "BtnShowConnections");
             this.BtnShowConnections.Name = "BtnShowConnections";
             this.BtnShowConnections.Click += new System.EventHandler(this.BtnShowConnections_Click);
             // 
             // btnAbout
             // 
-            this.btnAbout.Image = global::Taos.Studio.Properties.Resources.logo;
             resources.ApplyResources(this.btnAbout, "btnAbout");
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
@@ -387,21 +379,18 @@ namespace Taos.Studio
             // 
             // mnuQueryAll
             // 
-            this.mnuQueryAll.Image = global::Taos.Studio.Properties.Resources.table_lightning;
             this.mnuQueryAll.Name = "mnuQueryAll";
             resources.ApplyResources(this.mnuQueryAll, "mnuQueryAll");
             this.mnuQueryAll.Tag = "SELECT * FROM {0};";
             // 
             // mnuInsert
             // 
-            this.mnuInsert.Image = global::Taos.Studio.Properties.Resources.table_save;
             this.mnuInsert.Name = "mnuInsert";
             resources.ApplyResources(this.mnuInsert, "mnuInsert");
             this.mnuInsert.Tag = "INSERT INTO  {0}  VALUES (   )";
             // 
             // mnuQueryCount
             // 
-            this.mnuQueryCount.Image = global::Taos.Studio.Properties.Resources.table;
             this.mnuQueryCount.Name = "mnuQueryCount";
             resources.ApplyResources(this.mnuQueryCount, "mnuQueryCount");
             this.mnuQueryCount.Tag = "SELECT COUNT(*) FROM {0};";
@@ -413,7 +402,6 @@ namespace Taos.Studio
             // 
             // mnuDropCollection
             // 
-            this.mnuDropCollection.Image = global::Taos.Studio.Properties.Resources.table_delete;
             this.mnuDropCollection.Name = "mnuDropCollection";
             resources.ApplyResources(this.mnuDropCollection, "mnuDropCollection");
             this.mnuDropCollection.Tag = "DROP TABLE {0};";
@@ -434,12 +422,12 @@ namespace Taos.Studio
             this.toolStripMenuItem2,
             this.dropDatabaseToolStripMenuItem});
             this.ctxMenuRoot.Name = "ctxMenu";
+            this.ctxMenuRoot.OwnerItem = this.mnDataBase;
             resources.ApplyResources(this.ctxMenuRoot, "ctxMenuRoot");
             this.ctxMenuRoot.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenuRoot_ItemClicked);
             // 
             // mnuInfo
             // 
-            this.mnuInfo.Image = global::Taos.Studio.Properties.Resources.information;
             this.mnuInfo.Name = "mnuInfo";
             resources.ApplyResources(this.mnuInfo, "mnuInfo");
             this.mnuInfo.Tag = "SELECT server_version();";
@@ -476,6 +464,7 @@ namespace Taos.Studio
             // 
             // imgCodeCompletion
             // 
+            this.imgCodeCompletion.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imgCodeCompletion.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCodeCompletion.ImageStream")));
             this.imgCodeCompletion.TransparentColor = System.Drawing.Color.Transparent;
             this.imgCodeCompletion.Images.SetKeyName(0, "METHOD");
@@ -497,7 +486,6 @@ namespace Taos.Studio
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Image = global::Taos.Studio.Properties.Resources.table_lightning;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Tag = "USE {0};";
@@ -509,7 +497,6 @@ namespace Taos.Studio
             // 
             // toolStripMenuItem4
             // 
-            this.toolStripMenuItem4.Image = global::Taos.Studio.Properties.Resources.table_delete;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             this.toolStripMenuItem4.Tag = "DROP DATABASE  IF EXISTS {0};";
@@ -533,7 +520,7 @@ namespace Taos.Studio
             // 
             // menuRun
             // 
-            this.menuRun.Checked = global::Taos.Studio.Properties.Settings.Default.autoexcueing;
+            this.menuRun.Checked = true;
             this.menuRun.CheckOnClick = true;
             this.menuRun.CheckState = System.Windows.Forms.CheckState.Checked;
             this.menuRun.Name = "menuRun";

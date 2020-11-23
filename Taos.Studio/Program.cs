@@ -30,17 +30,7 @@ namespace Taos.Studio
         [STAThread]
         static void Main(string[] args)
         {
-#if NETFRAMEWORK
-            try
-            {
-                SetProcessDpiAwareness((int)DpiAwareness.SystemAware);
-            }
-            catch (Exception)
-            {
-            }
-#elif NETCOREAPP
-            Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
-#endif
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm(args.Length == 0 ? null : new Maikebing.Data.Taos.TaosConnectionStringBuilder( args[0])));

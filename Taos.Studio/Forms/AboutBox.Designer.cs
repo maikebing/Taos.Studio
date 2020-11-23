@@ -56,7 +56,6 @@
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.logoPictureBox, "logoPictureBox");
-            this.logoPictureBox.Image = global::Taos.Studio.Properties.Resources.taosdata_logo;
             this.logoPictureBox.Name = "logoPictureBox";
             this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
             this.logoPictureBox.TabStop = false;
