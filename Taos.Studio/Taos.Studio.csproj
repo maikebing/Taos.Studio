@@ -16,13 +16,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Maikebing.Data.Taos" Version="2.0.194" />
-    <PackageReference Include="Maikebing.System.Windows.Forms.DataVisualization" Version="5.0.0" />
+    <PackageReference Include="Maikebing.System.Windows.Forms.DataVisualization" Version="5.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\EntityFrameworkCore.Taos\src\Maikebing.Data.Taos\Maikebing.Data.Taos.csproj" />
     <ProjectReference Include="..\ICSharpCode.TextEditor\ICSharpCode.TextEditor.csproj" />
   </ItemGroup>
 
@@ -35,12 +35,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="System.Windows.Forms.DataVisualization">
-      <HintPath>C:\Users\mysti\.nuget\packages\maikebing.system.windows.forms.datavisualization\5.0.0\System.Windows.Forms.DataVisualization.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>

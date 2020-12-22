@@ -90,48 +90,56 @@ namespace Taos.Studio
 
         internal static DataTable RemoveDataTableNullColumns(this DataTable dt)
         {
-            foreach (DataColumn column in dt.Columns.Cast<DataColumn>().ToArray())
+            try
             {
-                if (column.ColumnName != "ts")
+                foreach (DataColumn column in dt.Columns.Cast<DataColumn>().ToArray())
                 {
-                    IEnumerable<DataRow> rows = dt.Rows.OfType<DataRow>();
+                    if (column.ColumnName != "ts")
+                    {
+                        IEnumerable<DataRow> rows = dt.Rows.OfType<DataRow>();
 
-                    if (rows.All(dr => dr.IsNull(column)))
-                    {
-                        dt.Columns.Remove(column);
-                    }
-                    else
-                    {
-                        if (column.DataType == typeof(int))
+                        if (rows.All(dr => dr.IsNull(column)))
                         {
-                            if (rows.Max(r => (int)r[column]) == rows.Min(r => (int)r[column]))
-                            {
-                                dt.Columns.Remove(column);
-                            }
+                            dt.Columns.Remove(column);
                         }
-                        if (column.DataType == typeof(long))
+                        else
                         {
-                            if (rows.Max(r => (long)r[column]) == rows.Min(r => (long)r[column]))
+                            if (column.DataType == typeof(int))
                             {
-                                dt.Columns.Remove(column);
+                                if (rows.Max(r => (int)r[column]) == rows.Min(r => (int)r[column]))
+                                {
+                                    dt.Columns.Remove(column);
+                                }
                             }
-                        }
-                        else if (column.DataType == typeof(double))
-                        {
-                            if (rows.Max(r => (double)r[column]) == rows.Min(r => (double)r[column]))
+                            if (column.DataType == typeof(long))
                             {
-                                dt.Columns.Remove(column);
+                                if (rows.Max(r => (long)r[column]) == rows.Min(r => (long)r[column]))
+                                {
+                                    dt.Columns.Remove(column);
+                                }
                             }
-                        }
-                        else if (column.DataType == typeof(float))
-                        {
-                            if (rows.Max(r => (float)r[column]) == rows.Min(r => (float)r[column]))
+                            else if (column.DataType == typeof(double))
                             {
-                                dt.Columns.Remove(column);
+                                if (rows.Max(r => (double)r[column]) == rows.Min(r => (double)r[column]))
+                                {
+                                    dt.Columns.Remove(column);
+                                }
+                            }
+                            else if (column.DataType == typeof(float))
+                            {
+                                if (rows.Max(r => (float)r[column]) == rows.Min(r => (float)r[column]))
+                                {
+                                    dt.Columns.Remove(column);
+                                }
                             }
                         }
                     }
                 }
+            }
+            catch
+            {
+
+        
             }
             return dt;
         }
@@ -142,7 +150,7 @@ namespace Taos.Studio
             grd.Clear();
             text.Clear();
             chart.Series.Clear();
-
+           
             grd.DataSource = data.Result;
             DataTable dt = data.Result?.Copy().RemoveDataTableNullColumns();
             chart.DataSource = dt;

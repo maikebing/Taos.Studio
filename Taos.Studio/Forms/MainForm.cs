@@ -543,50 +543,59 @@ namespace Taos.Studio
 
         private void TvwCols_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            switch (e.Node.ImageKey)
+            try
             {
-                case "database":
-                    _db.ChangeDatabase(e.Node.Name);
-                    e.FillTableToTree(_db, ctxTableMenu, "dbtable", "TABLES", "table", "SHOW TABLES", "table_name");
-                    e.FillTableToTree(_db, ctxTableMenu, "dbstable", "STABLES", "stable", "SHOW STABLES ", "name");
-                    var stable = e.Node.Nodes["dbstable"];
-                    var table = e.Node.Nodes["dbtable"];
-                    foreach (TreeNode item in stable.Nodes)
-                    {
-                        var jrows = _db.CreateCommand($"SELECT TBNAME FROM   {item.Name}").ExecuteReader().ToJson();
-                        jrows.ToList().ForEach(a =>
+                switch (e.Node.ImageKey)
+                {
+                    case "database":
+                        _db.ChangeDatabase(e.Node.Name);
+                        e.FillTableToTree(_db, ctxTableMenu, "dbtable", "TABLES", "table", "SHOW TABLES", "table_name");
+                        e.FillTableToTree(_db, ctxTableMenu, "dbstable", "STABLES", "stable", "SHOW STABLES ", "name");
+                        var stable = e.Node.Nodes["dbstable"];
+                        var table = e.Node.Nodes["dbtable"];
+                        foreach (TreeNode item in stable.Nodes)
                         {
-                            var name = a.Value<string>("tbname").RemoveNull();
-                            TreeNode tn = table.Nodes[name];
-                            table.Nodes.RemoveByKey(name);
-                            item.Nodes.Add(tn);
-                        });
-                    }
-                    break;
-                case "stable":
-                case "table":
-                    if (e.Node.Tag != null)
-                    {
-                        var jrows = _db.CreateCommand($"DESCRIBE  {e.Node.Name}").ExecuteReader().ToJson();
-                        List<string> _fields = new List<string>();
-                        jrows.ToList().ForEach(a =>
-                        {
-                            var name = a.Value<string>("Field").RemoveNull();
-                            _fields.Add(name);
-                            if (!e.Node.Nodes.ContainsKey(name))
+                            var jrows = _db.CreateCommand($"SELECT TBNAME FROM   {item.Name}").ExecuteReader().ToJson();
+                            jrows.ToList().ForEach(a =>
                             {
-                                var node = e.Node.Nodes.Add(name, name, "field");
-                                node.Tag = a;
-                            }
-                        });
-                        AddSqlSnippet(e.Node.Text, $"SELECT  {string.Join(",", _fields)} FROM  {e.Node.Name} LIMIT  100");
-                    }
-                    break;
-                default:
-                    break;
-            }
-            e.Node.ExpandAll();
+                                var name = a.Value<string>("tbname").RemoveNull();
+                                TreeNode tn = table.Nodes[name];
+                                table.Nodes.RemoveByKey(name);
+                                item.Nodes.Add(tn);
+                            });
+                        }
+                        break;
+                    case "stable":
+                    case "table":
+                        if (e.Node.Tag != null)
+                        {
+                            var jrows = _db.CreateCommand($"DESCRIBE  {e.Node.Name}").ExecuteReader().ToJson();
+                            List<string> _fields = new List<string>();
+                            //表最多显示1024个
+                            jrows.Take(1024).ToList().ForEach(a =>
+                            {
+                                var name = a.Value<string>("Field").RemoveNull();
+                                _fields.Add(name);
+                                if (!e.Node.Nodes.ContainsKey(name))
+                                {
+                                    var node = e.Node.Nodes.Add(name, name, "field");
+                                    node.Tag = a;
+                                }
+                            });
+                            AddSqlSnippet(e.Node.Text, $"SELECT  {string.Join(",", _fields)} FROM  {e.Node.Name} LIMIT  100");
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                e.Node.ExpandAll();
 
+            }
+            catch (Exception)
+            {
+
+            
+            }
 
         }
 
@@ -701,7 +710,7 @@ namespace Taos.Studio
 
         private void grdResult_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (grdResult.Columns[ e.ColumnIndex].Name=="ts")
+            if (grdResult.Columns[ e.ColumnIndex].ValueType==typeof(DateTime))
             {
                 var dt = e.Value as DateTime?;
                 e.Value = dt.GetValueOrDefault().ToString("yyyy-MM-dd HH:mm:ss.fff zz");
