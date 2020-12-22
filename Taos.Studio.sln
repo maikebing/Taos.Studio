@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Taos.Studio.Installer", "Taos.Studio.Installer\Taos.Studio.Installer.vdproj", "{1818DFF8-EE01-4285-83C5-1EBD0880570B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICSharpCode.TextEditor", "ICSharpCode.TextEditor\ICSharpCode.TextEditor.csproj", "{FD713406-4325-4EA9-A0E5-5B200E3A6C1C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maikebing.Data.Taos", "..\EntityFrameworkCore.Taos\src\Maikebing.Data.Taos\Maikebing.Data.Taos.csproj", "{007EBE52-EA98-4CBA-BBC6-84F8C5868519}"
@@ -40,12 +38,6 @@ Global
 		{0002E0FF-C91F-4B8B-B29B-2A477E184408}.Release|x64.Build.0 = Release|Any CPU
 		{0002E0FF-C91F-4B8B-B29B-2A477E184408}.Release|x86.ActiveCfg = Release|Any CPU
 		{0002E0FF-C91F-4B8B-B29B-2A477E184408}.Release|x86.Build.0 = Release|Any CPU
-		{1818DFF8-EE01-4285-83C5-1EBD0880570B}.Debug|Any CPU.ActiveCfg = Debug
-		{1818DFF8-EE01-4285-83C5-1EBD0880570B}.Debug|x64.ActiveCfg = Debug
-		{1818DFF8-EE01-4285-83C5-1EBD0880570B}.Debug|x86.ActiveCfg = Debug
-		{1818DFF8-EE01-4285-83C5-1EBD0880570B}.Release|Any CPU.ActiveCfg = Release
-		{1818DFF8-EE01-4285-83C5-1EBD0880570B}.Release|x64.ActiveCfg = Release
-		{1818DFF8-EE01-4285-83C5-1EBD0880570B}.Release|x86.ActiveCfg = Release
 		{FD713406-4325-4EA9-A0E5-5B200E3A6C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD713406-4325-4EA9-A0E5-5B200E3A6C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD713406-4325-4EA9-A0E5-5B200E3A6C1C}.Debug|x64.ActiveCfg = Debug|Any CPU
