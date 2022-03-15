@@ -11,7 +11,7 @@ using ICSharpCode.TextEditor.Gui.CompletionWindow;
 using System.Linq;
 using System.Diagnostics;
 using ICSharpCode.TextEditor.Document;
-using Maikebing.Data.Taos;
+using IoTSharp.Data.Taos;
 
 namespace Taos.Studio
 {

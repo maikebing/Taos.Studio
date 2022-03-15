@@ -1,6 +1,6 @@
 ﻿using ICSharpCode.TextEditor;
 using Taos.Studio.Forms;
-using Maikebing.Data.Taos;
+using IoTSharp.Data.Taos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,11 +22,11 @@ namespace Taos.Studio
     {
         private readonly SynchronizationContext _synchronizationContext;
 
-        private Maikebing.Data.Taos.TaosConnection  _db = null;
-        private Maikebing.Data.Taos.TaosConnectionStringBuilder _connectionString = null;
+        private IoTSharp.Data.Taos.TaosConnection  _db = null;
+        private IoTSharp.Data.Taos.TaosConnectionStringBuilder _connectionString = null;
         private SqlCodeCompletion _codeCompletion;
 
-        public MainForm(Maikebing.Data.Taos.TaosConnectionStringBuilder  taosConnection)
+        public MainForm(IoTSharp.Data.Taos.TaosConnectionStringBuilder  taosConnection)
         {
             InitializeComponent();
 

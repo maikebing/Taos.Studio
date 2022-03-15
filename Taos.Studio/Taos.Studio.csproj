@@ -17,11 +17,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Maikebing.Data.Taos" Version="2.0.357" />
+    <PackageReference Include="IoTSharp.Data.Taos" Version="2.0.442" />
     <PackageReference Include="Maikebing.System.Windows.Forms.DataVisualization" Version="5.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
-    <PackageReference Include="TDengine.Connector" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>
