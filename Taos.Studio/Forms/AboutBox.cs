@@ -19,7 +19,10 @@ namespace Taos.Studio.Forms
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.textBoxDescription.Text = $"驱动版本:{new IoTSharp.Data.Taos.TaosConnection().ClientVersion}" + Environment.NewLine
+                + $"数据可视化:{typeof(System.Windows.Forms.DataVisualization.Charting.Chart).Assembly.GetName().Version}" + Environment.NewLine
+            + $"框架版本:{AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName}" + Environment.NewLine + Environment.NewLine
+                + AssemblyDescription;
         }
 
         #region 程序集特性访问器
