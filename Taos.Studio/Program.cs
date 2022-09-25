@@ -21,10 +21,11 @@ namespace Taos.Studio
         static void Main(string[] args)
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            DbProviderFactories.RegisterFactory("TDengine", TaosFactory.Instance);
+      
             try
             {
-                NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), DllImportResolver);
+              //  NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), DllImportResolver);
+                NativeLibrary.SetDllImportResolver(TaosFactory.Instance.GetType().Assembly, DllImportResolver);
             }
             catch (Exception)
             {
@@ -33,6 +34,7 @@ namespace Taos.Studio
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DbProviderFactories.RegisterFactory("TDengine", TaosFactory.Instance);
             Application.Run(new MainForm(args.Length == 0 ? null : new IoTSharp.Data.Taos.TaosConnectionStringBuilder( args[0])));
         }
         private static IntPtr DllImportResolver(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
