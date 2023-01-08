@@ -27,7 +27,7 @@ namespace Taos.Studio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DbProviderFactories.RegisterFactory("TDengine", TaosFactory.Instance);
-            Application.Run(new MainForm(args.Length == 0 ? null : new IoTSharp.Data.Taos.TaosConnectionStringBuilder( args[0])));
+            Application.Run(new MainForm(args.Length == 0 ? null : new IoTSharp.Data.Taos.TaosConnectionStringBuilder( args[0]).UseWebSocket()));
         }
     
     }
