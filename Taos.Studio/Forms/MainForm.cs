@@ -22,11 +22,11 @@ namespace Taos.Studio
     {
         private readonly SynchronizationContext _synchronizationContext;
 
-        private IoTSharp.Data.Taos.TaosConnection  _db = null;
+        private IoTSharp.Data.Taos.TaosConnection _db = null;
         private IoTSharp.Data.Taos.TaosConnectionStringBuilder _connectionString = null;
         private SqlCodeCompletion _codeCompletion;
 
-        public MainForm(IoTSharp.Data.Taos.TaosConnectionStringBuilder  taosConnection)
+        public MainForm(IoTSharp.Data.Taos.TaosConnectionStringBuilder taosConnection)
         {
             InitializeComponent();
 
@@ -36,7 +36,7 @@ namespace Taos.Studio
 
             _codeCompletion = new SqlCodeCompletion(txtSql, imgCodeCompletion);
 
-            if (taosConnection==null)
+            if (taosConnection == null)
             {
                 this.Disconnect();
             }
@@ -59,7 +59,7 @@ namespace Taos.Studio
             // stop all threads
             this.FormClosing += (s, e) =>
             {
-                if(_db != null)
+                if (_db != null)
                 {
                     this.Disconnect();
                 }
@@ -73,13 +73,14 @@ namespace Taos.Studio
         {
             return await Task.Run(() =>
             {
+                connectionString.UseWebSocket();
                 var tc = new TaosConnection(connectionString.ToString());
-                  tc.Open();
+                tc.Open();
                 return tc;
             });
         }
 
-        public async void Connect(TaosConnectionStringBuilder  connectionString)
+        public async void Connect(TaosConnectionStringBuilder connectionString)
         {
             lblCursor.Text = Resources.Opening + connectionString.DataSource;
             lblElapsed.Text = Resources.Reading;
@@ -158,7 +159,7 @@ namespace Taos.Studio
 
             try
             {
-             
+
 
                 _db?.Dispose();
                 _db = null;
@@ -183,7 +184,7 @@ namespace Taos.Studio
             btnRun.Enabled = enabled;
 
             BtnShowConnections.Enabled = enabled;
-          
+
         }
 
         private TaskData ActiveTask => tabSql.SelectedTab?.Tag as TaskData;
@@ -201,7 +202,7 @@ namespace Taos.Studio
 
             task.Id = task.Thread.ManagedThreadId;
 
-             tab.Name = task.Id.ToString();
+            tab.Name = task.Id.ToString();
             tab.Tag = task;
 
             if (tabSql.SelectedTab != tab)
@@ -245,10 +246,10 @@ namespace Taos.Studio
 
 
                     task.StartDateTime = DateTime.Now;
-                        using (var reader = _db.CreateCommand(task.Sql).ExecuteReader())
-                        {
-                            task.ReadResult(reader);
-                        }
+                    using (var reader = _db.CreateCommand(task.Sql).ExecuteReader())
+                    {
+                        task.ReadResult(reader);
+                    }
                     task.EndDateTime = DateTime.Now;
                     task.Elapsed = sw.Elapsed;
                     task.Exception = null;
@@ -310,14 +311,14 @@ namespace Taos.Studio
             var table = _db.CreateCommand("SHOW DATABASES").ExecuteReader().ToJson();
             table.ToList().ForEach(a =>
             {
-                var name =a.Value<string>("name")?.RemoveNull();
+                var name = a.Value<string>("name")?.RemoveNull();
                 var node = root.Nodes.Add(name, name, "database");
                 node.ContextMenuStrip = ctxDataBaseMenu;
             });
             root.ExpandAll();
         }
 
-  
+
 
         private void LoadResult(TaskData data)
         {
@@ -339,10 +340,10 @@ namespace Taos.Studio
                 lblResultCount.Visible = true;
                 lblElapsed.Text = data.Elapsed.ToString();
                 prgRunning.Style = ProgressBarStyle.Blocks;
-                lblResultCount.Text = 
+                lblResultCount.Text =
                     data.Result == null ? "" :
                     data.Result.Rows.Count == 0 ? Resources.NoDocuments :
-                    data.Result.Rows.Count  == 1 ? Resources._1Document : 
+                    data.Result.Rows.Count == 1 ? Resources._1Document :
                     data.Result.Rows.Count + (data.LimitExceeded ? "+" : "") + Resources.Documents;
 
                 if (data.Exception != null)
@@ -350,25 +351,25 @@ namespace Taos.Studio
                     txtResult.BindErrorMessage(data.Sql, data.Exception);
                     grdResult.BindErrorMessage(data.Sql, data.Exception);
                 }
-                else if(data.Result != null)
+                else if (data.Result != null)
                 {
                     if (tabResult.SelectedTab == tabGrid && data.IsGridLoaded == false)
                     {
-                        grdResult.BindBsonData(chartMain,data, txtResult);
+                        grdResult.BindBsonData(chartMain, data, txtResult);
                         grdResult.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
                         data.IsGridLoaded = true;
                     }
-                    else if(tabResult.SelectedTab == tabText && data.IsTextLoaded == false)
+                    else if (tabResult.SelectedTab == tabText && data.IsTextLoaded == false)
                     {
                         txtResult.AppendLine($"{DateTime.Now}-开始时间:{data.StartDateTime}\r\b\t\t耗时:{data.EndDateTime.Subtract(data.StartDateTime)}\r\b\t\t共计:{data.Result.Columns.Count}列{data.Result.Rows.Count}调数据 ");
                         data.IsTextLoaded = true;
                     }
-                   
+
                 }
             }
         }
 
-        private void AddSqlSnippet(string title,string sql)
+        private void AddSqlSnippet(string title, string sql)
         {
             if (txtSql.Text.Trim().Length == 0)
             {
@@ -386,7 +387,7 @@ namespace Taos.Studio
         {
             var cell = grdResult.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-           // cell.Value = JsonSerializer.Serialize(cell.Tag as BsonValue);
+            // cell.Value = JsonSerializer.Serialize(cell.Tag as BsonValue);
         }
 
         private void GrdResult_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -424,7 +425,7 @@ namespace Taos.Studio
             e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
         }
 
-      
+
 
         #endregion
 
@@ -460,7 +461,7 @@ namespace Taos.Studio
         {
             if (_db == null)
             {
-                TaosConnectionStringBuilder tc=new TaosConnectionStringBuilder ();
+                TaosConnectionStringBuilder tc = new TaosConnectionStringBuilder();
                 try
                 {
                     tc = _connectionString ?? new TaosConnectionStringBuilder(Properties.Settings.Default.ServeInfo ?? new TaosConnectionStringBuilder().ConnectionString);
@@ -469,7 +470,7 @@ namespace Taos.Studio
                 {
 
                 }
-
+                tc.UseWebSocket();
                 var dialog = new ConnectionForm(tc);
 
                 dialog.ShowDialog();
@@ -485,7 +486,7 @@ namespace Taos.Studio
             }
         }
 
-       
+
 
         #endregion
 
@@ -504,8 +505,8 @@ namespace Taos.Studio
 
         private void RunSQL(string sql)
         {
-            if (sql.ToLower().Contains("drop") ||
-                sql.ToLower().Contains("delete"))
+            if (sql?.Contains("drop", StringComparison.OrdinalIgnoreCase) == true ||
+                sql?.Contains("delete", StringComparison.OrdinalIgnoreCase) == true)
             {
                 Debug.WriteLine("不自动执行:" + sql);
             }
@@ -524,7 +525,7 @@ namespace Taos.Studio
                 var sql1 = string.Format(sql, colname);
                 sql = sql1;
             }
-            this.AddSqlSnippet(e.ClickedItem.Text,  sql);
+            this.AddSqlSnippet(e.ClickedItem.Text, sql);
 
             RunSQL(sql);
         }
@@ -594,12 +595,12 @@ namespace Taos.Studio
             catch (Exception)
             {
 
-            
+
             }
 
         }
 
-        
+
 
 
         #endregion
@@ -612,7 +613,7 @@ namespace Taos.Studio
 
             this.LoadResult(this.ActiveTask);
             this.ActiveControl =
-                tabResult.SelectedTab == tabGrid ? (Control)grdResult : (Control)txtResult ; 
+                tabResult.SelectedTab == tabGrid ? (Control)grdResult : (Control)txtResult;
         }
 
         private void TabSql_MouseClick(object sender, MouseEventArgs e)
@@ -698,7 +699,7 @@ namespace Taos.Studio
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-           new AboutBox().ShowDialog(this);
+            new AboutBox().ShowDialog(this);
         }
 
         private void menuExcueing_CheckedChanged(object sender, EventArgs e)
@@ -706,11 +707,11 @@ namespace Taos.Studio
             Properties.Settings.Default.Save();
         }
 
-      
+
 
         private void grdResult_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (grdResult.Columns[ e.ColumnIndex].ValueType==typeof(DateTime))
+            if (grdResult.Columns[e.ColumnIndex].ValueType == typeof(DateTime))
             {
                 var dt = e.Value as DateTime?;
                 e.Value = dt.GetValueOrDefault().ToString("yyyy-MM-dd HH:mm:ss.fff zz");

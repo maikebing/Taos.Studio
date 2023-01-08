@@ -32,10 +32,6 @@ namespace Taos.Studio
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.tvwDatabase = new System.Windows.Forms.TreeView();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
@@ -47,7 +43,6 @@ namespace Taos.Studio
             this.tabText = new System.Windows.Forms.TabPage();
             this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
             this.tpChart = new System.Windows.Forms.TabPage();
-            this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.tabSql = new System.Windows.Forms.TabControl();
@@ -102,7 +97,6 @@ namespace Taos.Studio
             ((System.ComponentModel.ISupportInitialize)(this.grdResult)).BeginInit();
             this.tabText.SuspendLayout();
             this.tpChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
             this.stbStatus.SuspendLayout();
             this.tlbMain.SuspendLayout();
             this.ctxTableMenu.SuspendLayout();
@@ -227,26 +221,8 @@ namespace Taos.Studio
             this.tpChart.Name = "tpChart";
             this.tpChart.UseVisualStyleBackColor = true;
             // 
-            // chartMain
+            // splitter1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartMain.ChartAreas.Add(chartArea1);
-            resources.ApplyResources(this.chartMain, "chartMain");
-            legend1.Name = "Legend1";
-            this.chartMain.Legends.Add(legend1);
-            this.chartMain.Name = "chartMain";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series2";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartMain.Series.Add(series1);
-            this.chartMain.Series.Add(series2);
             resources.ApplyResources(this.splitter1, "splitter1");
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
@@ -255,7 +231,6 @@ namespace Taos.Studio
             // 
             resources.ApplyResources(this.propertyGrid1, "propertyGrid1");
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.SelectedObject = this.chartMain;
             // 
             // tabSql
             // 
@@ -503,6 +478,7 @@ namespace Taos.Studio
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnDataBase,
             this.tableToolStripMenuItem,
@@ -565,7 +541,6 @@ namespace Taos.Studio
             ((System.ComponentModel.ISupportInitialize)(this.grdResult)).EndInit();
             this.tabText.ResumeLayout(false);
             this.tpChart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).EndInit();
             this.stbStatus.ResumeLayout(false);
             this.stbStatus.PerformLayout();
             this.tlbMain.ResumeLayout(false);

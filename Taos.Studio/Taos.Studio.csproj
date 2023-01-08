@@ -2,40 +2,31 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <Description>Taos.Studio  is a GUI tool for viewing and editing documents for TDengine, It's based LiteDB.Studio</Description>
     <Authors>maikebing</Authors>
     <Version>2.3.1.0</Version>
-    <Copyright>Copyright  2020-2022  Maikebing</Copyright>
+    <Copyright>Copyright  2020-2023  Maikebing</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/maikebing/Taos.Studio</PackageProjectUrl>
     <RepositoryUrl>https://github.com/maikebing/Taos.Studio</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
-    <ApplicationIcon>Taos.Studio.ico</ApplicationIcon>
-    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+    <ImplicitUsings>disable</ImplicitUsings>
+
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="taos_win_x64.dll" />
-    <None Remove="taos_win_x86.dll" />
+    <Content Include="Resources\favicon.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="taos_win_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="taos_win_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="IoTSharp.Data.Taos" Version="2.6.2" />
+    <PackageReference Include="IoTSharp.Data.Taos" Version="3.0.21.74" />
     <PackageReference Include="Maikebing.System.Windows.Forms.DataVisualization" Version="5.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>

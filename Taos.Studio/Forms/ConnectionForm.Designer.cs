@@ -40,7 +40,6 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtServerIPAddress = new System.Windows.Forms.TextBox();
             this.txtPort = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.encodingInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -97,13 +96,6 @@
             resources.ApplyResources(this.txtPort, "txtPort");
             this.txtPort.Name = "txtPort";
             // 
-            // linkLabel1
-            // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // linkLabel2
             // 
             resources.ApplyResources(this.linkLabel2, "linkLabel2");
@@ -137,7 +129,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxCodePage);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUsername);
@@ -170,7 +161,6 @@
         private System.Windows.Forms.TextBox txtServerIPAddress;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource encodingInfoBindingSource;

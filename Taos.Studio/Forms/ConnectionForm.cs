@@ -22,8 +22,6 @@ namespace Taos.Studio.Forms
         {
             InitializeComponent();
             ConnectionString = cs;
-
-
         }
 
         private void BtnConnect_Click(object sender, EventArgs e)
@@ -42,14 +40,11 @@ namespace Taos.Studio.Forms
                 this.ConnectionString.Port = 6030;
             }
             this.DialogResult = DialogResult.OK;
+            ConnectionString.UseWebSocket();
             this.Close();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.maikebing.com/Taos.PrivacyPolicy");
-        }
-
+   
        
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
@@ -61,7 +56,8 @@ namespace Taos.Studio.Forms
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://taos.studio/");
+
+            System.Diagnostics.Process.Start("explorer.exe", "https://gitee.com/maikebing/Taos.Studio");
         }
 
         private void ConnectionForm_Load(object sender, EventArgs e)
@@ -76,6 +72,7 @@ namespace Taos.Studio.Forms
             {
                 txtServerIPAddress.Text = System.Net.Dns.GetHostName();
             }
+
         }
     }
 }
