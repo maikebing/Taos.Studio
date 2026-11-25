@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Taos.Studio.Data;
 
 namespace Taos.Studio
 {
@@ -27,7 +28,8 @@ namespace Taos.Studio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DbProviderFactories.RegisterFactory("TDengine", TaosFactory.Instance);
-            Application.Run(new MainForm(args.Length == 0 ? null : new IoTSharp.Data.Taos.TaosConnectionStringBuilder( args[0]).UseWebSocket()));
+            var connectionOptions = args.Length == 0 ? null : DatabaseConnectionOptions.FromPersistedString(args[0]);
+            Application.Run(new MainForm(connectionOptions));
         }
     
     }

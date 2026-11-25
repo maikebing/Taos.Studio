@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Taos.Studio.Properties;
 using System.Runtime.CompilerServices;
+using Taos.Studio.Data;
 
 namespace Taos.Studio
 {
@@ -23,10 +24,12 @@ namespace Taos.Studio
         private readonly SynchronizationContext _synchronizationContext;
 
         private IoTSharp.Data.Taos.TaosConnection _db = null;
-        private IoTSharp.Data.Taos.TaosConnectionStringBuilder _connectionString = null;
+        private IoTdbRestClient _iotdb = null;
+        private DatabaseConnectionOptions _connectionOptions = null;
+        private string _currentIoTdbDatabase = "";
         private SqlCodeCompletion _codeCompletion;
 
-        public MainForm(IoTSharp.Data.Taos.TaosConnectionStringBuilder taosConnection)
+        public MainForm(DatabaseConnectionOptions connectionOptions)
         {
             InitializeComponent();
 
@@ -36,13 +39,13 @@ namespace Taos.Studio
 
             _codeCompletion = new SqlCodeCompletion(txtSql, imgCodeCompletion);
 
-            if (taosConnection == null)
+            if (connectionOptions == null)
             {
                 this.Disconnect();
             }
             else
             {
-                this.Connect(taosConnection);
+                this.Connect(connectionOptions);
             }
 
             txtSql.ActiveTextAreaControl.TextArea.Caret.PositionChanged += (s, e) =>
@@ -59,7 +62,7 @@ namespace Taos.Studio
             // stop all threads
             this.FormClosing += (s, e) =>
             {
-                if (_db != null)
+                if (_db != null || _iotdb != null)
                 {
                     this.Disconnect();
                 }
@@ -80,24 +83,48 @@ namespace Taos.Studio
             });
         }
 
-        public async void Connect(TaosConnectionStringBuilder connectionString)
+        public async void Connect(DatabaseConnectionOptions options)
         {
-            lblCursor.Text = Resources.Opening + connectionString.DataSource;
+            lblCursor.Text = Resources.Opening + options.Host;
             lblElapsed.Text = Resources.Reading;
             prgRunning.Style = ProgressBarStyle.Marquee;
             btnConnect.Enabled = false;
 
             try
             {
-                _db = await this.AsyncConnect(connectionString);
+                if (options.Provider == DatabaseProvider.IoTDB)
+                {
+                    _iotdb = await Task.Run(() =>
+                    {
+                        var client = new IoTdbRestClient(
+                            options.CreateIoTdbBaseUri(),
+                            options.Username,
+                            options.Password,
+                            TimeSpan.FromSeconds(options.TimeoutSeconds),
+                            model: options.Model);
+                        try
+                        {
+                            client.Execute("SHOW DATABASES");
+                            return client;
+                        }
+                        catch
+                        {
+                            client.Dispose();
+                            throw;
+                        }
+                    });
+                }
+                else
+                {
+                    _db = await this.AsyncConnect(options.CreateTaosConnectionString());
 
-                // force open database
-                var uv = _db.ServerVersion;
+                    // force open database
+                    var uv = _db.ServerVersion;
+                }
             }
             catch (Exception ex)
             {
-                _db?.Dispose();
-                _db = null;
+                DisposeConnections();
 
                 MessageBox.Show(ex.Message, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -115,7 +142,7 @@ namespace Taos.Studio
             lblCursor.Text = "";
             prgRunning.Style = ProgressBarStyle.Blocks;
 
-            _connectionString = connectionString;
+            _connectionOptions = options;
 
             _codeCompletion.UpdateCodeCompletion(_db);
 
@@ -147,6 +174,7 @@ namespace Taos.Studio
             txtResult.Clear();
 
             tvwDatabase.Nodes.Clear();
+            _currentIoTdbDatabase = "";
 
             btnConnect.Text = Resources.Connect;
 
@@ -157,20 +185,46 @@ namespace Taos.Studio
             tlbMain.Enabled = false;
             lblCursor.Text = Resources.Closing;
 
+            var exception = DisposeConnections();
+            lblCursor.Text = "";
+            tlbMain.Enabled = true;
+            if (exception != null)
+            {
+                MessageBox.Show(exception.Message, Resources._ERROR, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private Exception DisposeConnections()
+        {
+            Exception exception = null;
             try
             {
-
-
                 _db?.Dispose();
-                _db = null;
-
-                lblCursor.Text = "";
-                tlbMain.Enabled = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Resources._ERROR, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                exception = ex;
             }
+            finally
+            {
+                _db = null;
+            }
+
+            try
+            {
+                _iotdb?.Dispose();
+            }
+            catch (Exception ex)
+            {
+                exception = exception ?? ex;
+            }
+            finally
+            {
+                _iotdb = null;
+                _currentIoTdbDatabase = "";
+            }
+
+            return exception;
         }
 
         private void UIState(bool enabled)
@@ -183,7 +237,7 @@ namespace Taos.Studio
             tabSql.Enabled = enabled;
             btnRun.Enabled = enabled;
 
-            BtnShowConnections.Enabled = enabled;
+            BtnShowConnections.Enabled = enabled && _iotdb == null;
 
         }
 
@@ -246,10 +300,7 @@ namespace Taos.Studio
 
 
                     task.StartDateTime = DateTime.Now;
-                    using (var reader = _db.CreateCommand(task.Sql).ExecuteReader())
-                    {
-                        task.ReadResult(reader);
-                    }
+                    task.Result = ExecuteQuery(task.Sql);
                     task.EndDateTime = DateTime.Now;
                     task.Elapsed = sw.Elapsed;
                     task.Exception = null;
@@ -305,9 +356,24 @@ namespace Taos.Studio
         private void LoadTreeView()
         {
             tvwDatabase.Nodes.Clear();
-            var root = tvwDatabase.Nodes.Add(_connectionString.DataSource);
+            var root = tvwDatabase.Nodes.Add(_connectionOptions?.Host ?? "Database");
             root.ImageKey = "folder";
-            root.ContextMenuStrip = ctxMenuRoot;
+            root.ContextMenuStrip = _iotdb == null ? ctxMenuRoot : null;
+
+            if (_iotdb != null)
+            {
+                var databases = _iotdb.Execute("SHOW DATABASES");
+                foreach (DataRow row in databases.Rows)
+                {
+                    var name = GetRowValue(row, "database", "database_name", "name");
+                    if (string.IsNullOrWhiteSpace(name)) continue;
+                    var node = root.Nodes.Add(name, name, "database");
+                    node.Tag = "iotdb";
+                }
+                root.ExpandAll();
+                return;
+            }
+
             var table = _db.CreateCommand("SHOW DATABASES").ExecuteReader().ToJson();
             table.ToList().ForEach(a =>
             {
@@ -316,6 +382,35 @@ namespace Taos.Studio
                 node.ContextMenuStrip = ctxDataBaseMenu;
             });
             root.ExpandAll();
+        }
+
+        private DataTable ExecuteQuery(string sql)
+        {
+            if (_iotdb != null)
+            {
+                var database = _connectionOptions?.Model == IoTdbModel.Table ? _currentIoTdbDatabase : null;
+                return _iotdb.Execute(sql, database);
+            }
+
+            using (var reader = _db.CreateCommand(sql).ExecuteReader())
+            {
+                return reader.ToDataTable();
+            }
+        }
+
+        private static string GetRowValue(DataRow row, params string[] candidates)
+        {
+            foreach (var candidate in candidates)
+            {
+                var column = row.Table.Columns.Cast<DataColumn>()
+                    .FirstOrDefault(item => item.ColumnName.Equals(candidate, StringComparison.OrdinalIgnoreCase));
+                if (column != null && row[column] != DBNull.Value)
+                {
+                    return Convert.ToString(row[column]);
+                }
+            }
+
+            return row.Table.Columns.Count == 0 || row[0] == DBNull.Value ? "" : Convert.ToString(row[0]);
         }
 
 
@@ -459,26 +554,25 @@ namespace Taos.Studio
 
         private void BtnConnect_Click(object sender, EventArgs e)
         {
-            if (_db == null)
+            if (_db == null && _iotdb == null)
             {
-                TaosConnectionStringBuilder tc = new TaosConnectionStringBuilder();
+                var options = _connectionOptions;
                 try
                 {
-                    tc = _connectionString ?? new TaosConnectionStringBuilder(Properties.Settings.Default.ServeInfo ?? new TaosConnectionStringBuilder().ConnectionString);
+                    options = options ?? DatabaseConnectionOptions.FromPersistedString(Properties.Settings.Default.ServeInfo);
                 }
                 catch (Exception)
                 {
-
                 }
-                tc.UseWebSocket();
-                var dialog = new ConnectionForm(tc);
 
-                dialog.ShowDialog();
-                Properties.Settings.Default.ServeInfo = dialog.ConnectionString.ConnectionString;
-                Properties.Settings.Default.Save();
-                if (dialog.DialogResult != DialogResult.OK) return;
-
-                this.Connect(dialog.ConnectionString);
+                using (var dialog = new ConnectionForm(options ?? new DatabaseConnectionOptions()))
+                {
+                    if (dialog.ShowDialog() != DialogResult.OK) return;
+                    _connectionOptions = dialog.Options;
+                    Properties.Settings.Default.ServeInfo = dialog.Options.ToPersistedString();
+                    Properties.Settings.Default.Save();
+                    this.Connect(dialog.Options);
+                }
             }
             else
             {
@@ -546,6 +640,13 @@ namespace Taos.Studio
         {
             try
             {
+                if (_iotdb != null)
+                {
+                    LoadIoTdbNode(e.Node);
+                    e.Node.ExpandAll();
+                    return;
+                }
+
                 switch (e.Node.ImageKey)
                 {
                     case "database":
@@ -592,16 +693,82 @@ namespace Taos.Studio
                 e.Node.ExpandAll();
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                if (_iotdb != null)
+                {
+                    MessageBox.Show(ex.Message, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
         }
 
+        private void LoadIoTdbNode(TreeNode node)
+        {
+            switch (node.ImageKey)
+            {
+                case "database":
+                    _currentIoTdbDatabase = node.Name;
+                    if (node.Nodes.Count == 0)
+                    {
+                        if (_connectionOptions?.Model == IoTdbModel.Table)
+                        {
+                            node.Nodes.Add("tables", "Tables", "iotdb-tables-group");
+                        }
+                        else
+                        {
+                            node.Nodes.Add("timeseries", "Time Series", "iotdb-timeseries-group");
+                        }
+                    }
+                    break;
+                case "iotdb-timeseries-group":
+                    RefreshIoTdbChildren(node, _iotdb.Execute("SHOW TIMESERIES " + GetTreePathPattern(node.Parent.Name)),
+                        new[] { "timeseries", "path", "name" }, "iotdb-timeseries");
+                    break;
+                case "iotdb-tables-group":
+                    _currentIoTdbDatabase = node.Parent.Name;
+                    RefreshIoTdbChildren(node, _iotdb.Execute("SHOW TABLES", _currentIoTdbDatabase),
+                        new[] { "tableName", "table_name", "name" }, "iotdb-table");
+                    break;
+                case "iotdb-timeseries":
+                    AddSqlSnippet(node.Text, "SELECT * FROM " + node.Name + " LIMIT 100");
+                    break;
+                case "iotdb-table":
+                    _currentIoTdbDatabase = node.Parent.Parent.Name;
+                    var tableName = QuoteIdentifier(node.Text);
+                    var columns = _iotdb.Execute("DESCRIBE " + tableName, _currentIoTdbDatabase);
+                    foreach (DataRow row in columns.Rows.Cast<DataRow>().Take(1024))
+                    {
+                        var fieldName = GetRowValue(row, "columnName", "column_name", "column", "name", "measurement");
+                        if (string.IsNullOrWhiteSpace(fieldName) || node.Nodes.ContainsKey(fieldName)) continue;
+                        node.Nodes.Add(fieldName, fieldName, "field");
+                    }
+                    AddSqlSnippet(node.Text, "SELECT * FROM " + tableName + " LIMIT 100");
+                    break;
+            }
+        }
 
+        private static void RefreshIoTdbChildren(TreeNode parent, DataTable rows, string[] columnNames, string imageKey)
+        {
+            parent.Nodes.Clear();
+            foreach (DataRow row in rows.Rows)
+            {
+                var name = GetRowValue(row, columnNames);
+                if (string.IsNullOrWhiteSpace(name) || parent.Nodes.ContainsKey(name)) continue;
+                parent.Nodes.Add(name, name, imageKey);
+            }
+        }
 
+        private static string GetTreePathPattern(string database)
+        {
+            var path = (database ?? "").TrimEnd('.');
+            return path.EndsWith(".**", StringComparison.Ordinal) ? path : path + ".**";
+        }
+
+        private static string QuoteIdentifier(string identifier)
+        {
+            return "`" + (identifier ?? "").Replace("`", "``") + "`";
+        }
 
         #endregion
 
@@ -725,7 +892,18 @@ namespace Taos.Studio
 
         private void tvwDatabase_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            dropDatabaseToolStripMenuItem.Visible = e.Node.ImageKey == "database";
+            dropDatabaseToolStripMenuItem.Visible = _iotdb == null && e.Node.ImageKey == "database";
+            if (_iotdb != null && _connectionOptions?.Model == IoTdbModel.Table)
+            {
+                var databaseNode = FindIoTdbDatabaseNode(e.Node);
+                if (databaseNode != null) _currentIoTdbDatabase = databaseNode.Name;
+            }
+        }
+
+        private static TreeNode FindIoTdbDatabaseNode(TreeNode node)
+        {
+            while (node != null && node.ImageKey != "database") node = node.Parent;
+            return node;
         }
     }
 }
